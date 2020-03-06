@@ -447,7 +447,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    615
+                    563
                 </div>
                 
 
@@ -472,7 +472,7 @@
             <div id="articleContent">
                 <h2 id="什么是-Docker"><a href="#什么是-Docker" class="headerlink" title="什么是 Docker"></a>什么是 Docker</h2><p>Docker 是基于 Go 语言并遵从 Apache 协议开源的一个开源的应用容器引擎，支持将软件编译成一个镜像并设置镜像中各软件的配置，获得镜像的其他使用者可以直接使用镜像。Docker 容器是完全使用沙箱机制的，相互之间不会有任何接口，更重要的是容器性能开销极低。</p>
 <h2 id="Docker-核心概念"><a href="#Docker-核心概念" class="headerlink" title="Docker 核心概念"></a>Docker 核心概念</h2><p>Docker 主机从仓库下载所需镜像并通过 daemon 运行镜像产生容器之后，Docker 客户端就可以连接主机进行操作。</p>
-<img src="/.com//3096723d/coreConceptsOfDocker.png" class="" title="Docker 核心概念图">
+<img src="/.com//3096723d/coreConceptsOfDocker.png" class title="Docker 核心概念图">
 <ol>
 <li>Docker 镜像（Images）：Docker 镜像是用于创建 Docker 容器的模板。</li>
 <li>Docker 容器（Container）：容器是独立运行的一个或一组应用。</li>
@@ -493,25 +493,7 @@
 | 启动 | docker start container-name/container-id | 启动指定的容器。 |
 | 删除 | docker rm container-id | 删除指定容器。 |
 | 端口映射 | 输入运行容器命令时添加`-p`命令 &lt;br&gt;例：docker run -d -p 6379:6379 镜像名 | `-p`主机端口映射至容器内部的端口。 |
-| 容器日志 | docker logs container-name/container-id | 查看容器日志。 |</code></pre><script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+| 容器日志 | docker logs container-name/container-id | 查看容器日志。 |</code></pre>
             </div>
             <hr/>
 
@@ -941,7 +923,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

@@ -447,7 +447,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1k
                 </div>
                 
 
@@ -476,12 +476,12 @@
 </ul>
 </li>
 <li>method 取值必须是 Post。</li>
-<li>提供文件选择域<code>&lt;input type="file" name=""&gt;</code>，该标签 name 属性必须有，否者会导致 fileItem 获取不到值。</li>
+<li>提供文件选择域<code>&lt;input type=&quot;file&quot; name=&quot;&quot;&gt;</code>，该标签 name 属性必须有，否者会导致 fileItem 获取不到值。</li>
 </ol>
 <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><ol>
 <li>当 form 表单的 enctype 取值不是默认值后，request.getParameter()将失效。</li>
-<li>当<code>enctype="application/x-www-form-urlencoded"</code>时，form 表单的正文内容是：<code>key=value&amp;key=value</code>。</li>
-<li>当<code>enctype="multipart/form-data"</code>时， form 表单的正文内容就变成每一部分都是 MIME 类型描述的正文。</li>
+<li>当<code>enctype=&quot;application/x-www-form-urlencoded&quot;</code>时，form 表单的正文内容是：<code>key=value&amp;key=value</code>。</li>
+<li>当<code>enctype=&quot;multipart/form-data&quot;</code>时， form 表单的正文内容就变成每一部分都是 MIME 类型描述的正文。</li>
 <li>后端解析请求体获取 MIME 类型描述的正文（即上传的文件），并将上传文件写回磁盘存储。</li>
 </ol>
 <h2 id="传统方式"><a href="#传统方式" class="headerlink" title="传统方式"></a>传统方式</h2><ul>
@@ -639,25 +639,7 @@
   </form></code></pre>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1087,7 +1069,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

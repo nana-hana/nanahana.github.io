@@ -447,14 +447,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    5 分
                 </div>
                 
 
@@ -567,14 +567,14 @@
 <td>消息代理，表示消息队列服务器的实体</td>
 </tr>
 </tbody></table>
-<img src="/.com//2b1dfb69/rabbitMQ.png" class="" title="RabbitMQ 结构图">
+<img src="/.com//2b1dfb69/rabbitMQ.png" class title="RabbitMQ 结构图">
 <h3 id="Exchange-类型"><a href="#Exchange-类型" class="headerlink" title="Exchange 类型"></a>Exchange 类型</h3><ol>
 <li><p>direct：当消息中的路由键和 Binding 中的 binding key 一致时，交换器就将消息发到对应的队列中。</p>
- <img src="/.com//2b1dfb69/direct_exchange.jpg" class="" title="direct exchange 类型"></li>
+ <img src="/.com//2b1dfb69/direct_exchange.jpg" class title="direct exchange 类型"></li>
 <li><p>fanout：交换器会将消息发送到所有与自己绑定的队列上，速度是交换器中最快的（类似广播）。</p>
- <img src="/.com//2b1dfb69/fanout_exchange.jpg" class="" title="fanout exchange 类型"></li>
+ <img src="/.com//2b1dfb69/fanout_exchange.jpg" class title="fanout exchange 类型"></li>
 <li><p>topic：交换器通过模式匹配分配消息的路由键属性，将路由器和某一个模式进行匹配，此时队列需要绑定到一个模式上。通过识别两个通配符<code>#</code>和<code>*</code>对路由键和绑定键的字符串进行切分，其中前者匹配0个或多个单词，后者匹配一个单词。</p>
- <img src="/.com//2b1dfb69/topic_exchange.jpg" class="" title="topic exchange 类型"></li>
+ <img src="/.com//2b1dfb69/topic_exchange.jpg" class title="topic exchange 类型"></li>
 <li><p>header：header 匹配 AMQP 消息的 header 而不是路由键，与 direct 交换器类似但性能差许多，通常不用。</p>
 </li>
 </ol>
@@ -663,25 +663,7 @@
  <span class="token punctuation">}</span></code></pre>
 </li>
 </ol>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1111,7 +1093,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

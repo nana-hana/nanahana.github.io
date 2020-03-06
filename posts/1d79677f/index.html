@@ -447,7 +447,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    955
                 </div>
                 
 
@@ -474,7 +474,7 @@
 <h2 id="SLF4j"><a href="#SLF4j" class="headerlink" title="SLF4j"></a>SLF4j</h2><ol>
 <li>SLF4j 是针对日志框架开发的一个统一接口层，因此只需实现 SLF4j 即可使用日志功能，这样分层的好处是更改日志接口的实现框架依赖便可完成日志框架的升级。</li>
 <li>SpringBoot 的底层是 Spring 框架，而 Spring 框架默认是用 JCL 日志接口，但是 SpringBoot 默认排除了 JCL 依赖，使用 SLF4j 和 Logback 作为自己的日志框架。</li>
-<li>SLF4j 针对按自己接口实现的日志框架只需导入日志实现框架依赖即可，而针对不是按自己接口的日志实现框架则需要额外导入一个适配依赖，才能完成日志功能。适配依赖的原理即实现 SLF4j 接口，实现方式就是包装对应的日志实现框架方法。 <img src="/.com//1d79677f/concreteBindings.png" class="" title="SLF4j 与日志实现类的绑定图"></li>
+<li>SLF4j 针对按自己接口实现的日志框架只需导入日志实现框架依赖即可，而针对不是按自己接口的日志实现框架则需要额外导入一个适配依赖，才能完成日志功能。适配依赖的原理即实现 SLF4j 接口，实现方式就是包装对应的日志实现框架方法。 <img src="/.com//1d79677f/concreteBindings.png" class title="SLF4j 与日志实现类的绑定图"></li>
 <li>每个日志实现框架都有自己的配置文件，即使使用了 SLF4j，配置文件还是使用日志实现框架的配置文件。</li>
 </ol>
 <h2 id="统一日志框架"><a href="#统一日志框架" class="headerlink" title="统一日志框架"></a>统一日志框架</h2><p>SpringBoot 整合了许多框架，而每一个框架使用的可能都不是同一个日志框架，因此需要对这些框架的日志框架进行统一。将日志框架统一成 SLF4j 的步骤如下：</p>
@@ -483,7 +483,7 @@
 <li>用中间包来替换排除的日志实现框架依赖，否则会报错。中间包的原理即覆写排除了的日志实现框架，将其所有方法的原有调用都转为调用 SLF4j 的方法，这样即可防止报错并实现功能。</li>
 <li>之后导入 SLF4j 和日志实现框架依赖。（根据日志实现框架选择是否需要添加适配依赖）</li>
 </ol>
-<img src="/.com//1d79677f/legacy.png" class="" title="统一日志框架为 SLF4j">
+<img src="/.com//1d79677f/legacy.png" class title="统一日志框架为 SLF4j">
 
 <h2 id="日志默认配置"><a href="#日志默认配置" class="headerlink" title="日志默认配置"></a>日志默认配置</h2><h3 id="全局常规设置"><a href="#全局常规设置" class="headerlink" title="全局常规设置"></a>全局常规设置</h3><p>SpringBoot 自配配置了默认的日志配置，可以在<code>application.yml</code>中修改部分配置。</p>
 <h3 id="修改日志输出文件位置"><a href="#修改日志输出文件位置" class="headerlink" title="修改日志输出文件位置"></a>修改日志输出文件位置</h3><p>在<code>application.yml</code>中可以通过<code>logging.file</code>和<code>logging.path</code>指定配置文件位置。（只能二选一，两个都写默认生效<code>logging.file</code>）</p>
@@ -496,25 +496,7 @@
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>springProfile</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dev<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
     <span class="token comment" spellcheck="true">&lt;!-- 可以指定该日志配置只在 dev 应该环境下才被加载。修改 dev 可以修改为其它应用环境。 --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>springProfile</span><span class="token punctuation">></span></span></code></pre>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -944,7 +926,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

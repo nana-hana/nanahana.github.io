@@ -476,7 +476,7 @@
 <li>自定义模式<br> 通过查看 SpringBoot 源码中的<code>WebMvcAutoConfiguration</code>和<code>ResourceProperties</code>类的<code>SERVLET_LOCATIONS</code>和<code>CLASSPATH_RESOURCE_LOCATIONS</code>常量，可以得出静态资源的默认存储位置为<code>classpath:/META-INF/resources/</code>、<code>classpath:/resources/</code>、<code>classpath:/static/</code>、<code>classpath:/public/</code>和<code>/</code>。调用方式与 webjars 模式类似，例如静态文件存储于<code>classpath:/static/</code>，则调用方式如<code>http://localhost:8080/所需资源名</code>即可。<h3 id="欢迎页"><a href="#欢迎页" class="headerlink" title="欢迎页"></a>欢迎页</h3>静态资源文件夹下的所有<code>index.html</code>页面都会被映射为<code>/</code>，也就是说当你输入<code>http://localhost:8080/</code>时，就会自动跳转至<code>index.html</code>页面。<h3 id="修改静态资源位置"><a href="#修改静态资源位置" class="headerlink" title="修改静态资源位置"></a>修改静态资源位置</h3>可以在<code>application.yml</code>中通过<code>spring.resources.static-locations</code>设置默认的静态资源位置，使用该条命令会使 SpringBoot 本身的默认静态资源位置失效，因此不推荐修改。</li>
 </ol>
 <h2 id="Thymeleaf-模板引擎"><a href="#Thymeleaf-模板引擎" class="headerlink" title="Thymeleaf 模板引擎"></a>Thymeleaf 模板引擎</h2><ul>
-<li>模板引擎用于将视图和数据进行整合解析，而不同的模板引擎之间的区别仅在于模板引擎获取数据的语法不同。  <img src="/.com//4fa653eb/templateEngine.png" class="" title="模板引擎原理图"></li>
+<li>模板引擎用于将视图和数据进行整合解析，而不同的模板引擎之间的区别仅在于模板引擎获取数据的语法不同。  <img src="/.com//4fa653eb/templateEngine.png" class title="模板引擎原理图"></li>
 <li>SpringBoot 推荐使用 Thymeleaf 模板引擎，因为其语法更简洁，功能共强大。通过 MAVEN 引入 Thymeleaf 模板引擎的依赖。（如需修改 thymeleaf 版本则需注意<code>thymeleaf-layout-dialect.version</code>）<pre class=" language-xml"><code class="language-xml">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-thymeleaf<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
@@ -506,7 +506,7 @@
 </ol>
 </li>
 </ul>
-<h2 id="WebMvc-扩展与全面接管"><a href="#WebMvc-扩展与全面接管" class="headerlink" title="WebMvc 扩展与全面接管"></a>WebMvc 扩展与全面接管</h2><p>SpringBoot 在自动配置组件时，会先扫描容器中是否有用户自定义的配置，如果有则使用用户自定义的配置文件或将用户自定义的配置文件与默认的自动配置文件组合起来，没有则执行 SpringBoot 的自动配置。例如<code>&lt;mvc:view-controller path="/hello" view-name="hello"/&gt;</code>映射<code>/hello</code>至<code>hello.html</code>页面。而在 SpringBoot 中可以通过<code>@Configuration</code>注解 + 实现<code>WebMvcConfigurer</code>接口中<code>addViewControllers</code>方法的形式实现该功能，SpringBoot 不仅保留了所有的自动配置，而且还加载了自定义的扩展功能。</p>
+<h2 id="WebMvc-扩展与全面接管"><a href="#WebMvc-扩展与全面接管" class="headerlink" title="WebMvc 扩展与全面接管"></a>WebMvc 扩展与全面接管</h2><p>SpringBoot 在自动配置组件时，会先扫描容器中是否有用户自定义的配置，如果有则使用用户自定义的配置文件或将用户自定义的配置文件与默认的自动配置文件组合起来，没有则执行 SpringBoot 的自动配置。例如<code>&lt;mvc:view-controller path=&quot;/hello&quot; view-name=&quot;hello&quot;/&gt;</code>映射<code>/hello</code>至<code>hello.html</code>页面。而在 SpringBoot 中可以通过<code>@Configuration</code>注解 + 实现<code>WebMvcConfigurer</code>接口中<code>addViewControllers</code>方法的形式实现该功能，SpringBoot 不仅保留了所有的自动配置，而且还加载了自定义的扩展功能。</p>
 <pre class=" language-java"><code class="language-java"><span class="token annotation punctuation">@Configuration</span>
 <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyMvcConfig</span> <span class="token keyword">implements</span> <span class="token class-name">WebMvcConfigurer</span> <span class="token punctuation">{</span>
     <span class="token annotation punctuation">@Override</span>
@@ -680,25 +680,7 @@
 <p>内嵌式的 Servlet 容器切换方法：只需将默认的 Tomcat 依赖排除，然后引入其他内嵌式 Servlet 容器依赖即可。</p>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1128,7 +1110,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

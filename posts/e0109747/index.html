@@ -447,14 +447,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    19 分
+                    18 分
                 </div>
                 
 
@@ -474,11 +474,11 @@
 <h3 id="垂直应用架构"><a href="#垂直应用架构" class="headerlink" title="垂直应用架构"></a>垂直应用架构</h3><p>当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率。此时，用于加速前端页面开发的 Web 框架（MVC）是关键。</p>
 <h3 id="分布式服务架构"><a href="#分布式服务架构" class="headerlink" title="分布式服务架构"></a>分布式服务架构</h3><p>当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。此时，用于提高业务复用及整合的分布式服务框架（RPC）是关键。在分布式系统中，国内常用 Dubbo + Zookeeper 组合，而 SpringBoot 推荐使用全栈的 Spring、SpringBoot + SpringCloud。</p>
 <h3 id="流动计算架构"><a href="#流动计算架构" class="headerlink" title="流动计算架构"></a>流动计算架构</h3><p>当服务越来越多，容量的评估，小服务资源的浪费等现象逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。此时，用于提高机器利用率的资源调度和治理中心（SOA）是关键。</p>
-<img src="/.com//e0109747/architectureRoadMap.jpg" class="" title="应用架构升级图">
+<img src="/.com//e0109747/architectureRoadMap.jpg" class title="应用架构升级图">
 
 <h2 id="Zookeeper-和-Dubbo"><a href="#Zookeeper-和-Dubbo" class="headerlink" title="Zookeeper 和 Dubbo"></a>Zookeeper 和 Dubbo</h2><h3 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h3><p>Zookeeper 是一个分布式的，开放源码的分布式应用程序协调服务（即注册中心）。它是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步和组服务等。</p>
 <h3 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h3><p>Dubbo 是 Alibaba 开源的分布式服务框架，它最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或最大限度地松耦合）。从服务模型的角度来看，Dubbo 采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象处服务提供方（Provider）和服务消费方（Consumer）两个角色。</p>
-<img src="/.com//e0109747/dubboArchitecture.png" class="" title="Dubbo 架构图">
+<img src="/.com//e0109747/dubboArchitecture.png" class title="Dubbo 架构图">
 <ol>
 <li>Container 在启动时负责加载运行 Provider。</li>
 <li>Provider 在运行时将所拥有的服务信息注册至 Registry。</li>
@@ -1061,25 +1061,7 @@
 <span class="token punctuation">}</span></code></pre>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1509,7 +1491,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

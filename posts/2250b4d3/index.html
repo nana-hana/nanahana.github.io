@@ -447,14 +447,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    1.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    7 分
                 </div>
                 
 
@@ -534,7 +534,7 @@
      */
     @Data
     @Component
-    @ConfigurationProperties("person")
+    @ConfigurationProperties(&quot;person&quot;)
     public class Person {
         private String lastName;
         private Integer age;
@@ -555,11 +555,11 @@
     @Data
     @Component
     public class Person {
-        @Value("${person.lastName}")
+        @Value(&quot;${person.lastName}&quot;)
         private String lastName;
-        @Value("#{11*2}")
+        @Value(&quot;#{11*2}&quot;)
         private Integer age;
-        @Value("false")
+        @Value(&quot;false&quot;)
         private Boolean boss;
         private Date birth;
         private Map&lt;String, Object&gt; map;
@@ -576,7 +576,7 @@
      */
     @Data
     @Component
-    @ConfigurationProperties("person")
+    @ConfigurationProperties(&quot;person&quot;)
     @validated
     public class Person {
         @Email
@@ -720,25 +720,7 @@ person.dog.age=2</code></pre><pre class=" language-java"><code class="language-j
 <li><code>@Configuration</code>注解类上的<code>@PropertySource</code>。</li>
 <li>通过 SpringApplication.setDefaultProperties 指定的默认属性。</li>
 </ol>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1168,7 +1150,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

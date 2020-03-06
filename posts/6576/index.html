@@ -404,12 +404,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/problem/">
-                                <span class="chip bg-color">problem</span>
-                            </a>
-                        
                             <a href="/tags/java/">
                                 <span class="chip bg-color">java</span>
+                            </a>
+                        
+                            <a href="/tags/problem/">
+                                <span class="chip bg-color">problem</span>
                             </a>
                         
                     </div>
@@ -447,7 +447,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    227
+                    175
                 </div>
                 
 
@@ -471,10 +471,10 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在创建 maven 项目时，选择 org.apache.maven.archetypes:maven-archetype-webapp 的 archetype 时，出现项目初始化失败的情况。报错情况如下：</p>
-<img src="/.com//6576/maven_archetype_warning.png" class="" title="archetype_warning">
+<img src="/.com//6576/maven_archetype_warning.png" class title="archetype_warning">
 
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在创建项目时，配置 archetypeCatalog 的属性为 internal 即可解决问题。</p>
-<img src="/.com//6576/maven_archetype_resolve.png" class="" title="archetype_resolve">
+<img src="/.com//6576/maven_archetype_resolve.png" class title="archetype_resolve">
 
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>给 maven 配置了阿里源导致了如上问题，可能是阿里源的 archetype-catalog.xml 文件出现了问题。其中 archetype-catalog.xml 能提供 Archetype 的信息，常用的属性有 internal、local 和 remote 三个属性。</p>
 <ul>
@@ -482,25 +482,7 @@
 <li>local：指向本地的 Archetype Catalog ，其位置为~/.m2/archetype-catalog.xml。需要注意的是，该文件默认是不存在的。</li>
 <li>remote：指向了Maven中央仓库的Archetype Catalog。</li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -563,12 +545,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/problem/">
-                                    <span class="chip bg-color">problem</span>
-                                </a>
-                            
                                 <a href="/tags/java/">
                                     <span class="chip bg-color">java</span>
+                                </a>
+                            
+                                <a href="/tags/problem/">
+                                    <span class="chip bg-color">problem</span>
                                 </a>
                             
                         </div>
@@ -930,7 +912,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

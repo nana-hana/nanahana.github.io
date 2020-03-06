@@ -471,8 +471,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="实例化方式"><a href="#实例化方式" class="headerlink" title="实例化方式"></a>实例化方式</h2><p>bean 有3种实例化的方式：默认构造、静态工厂和实例化工厂。</p>
-<h3 id="默认构造"><a href="#默认构造" class="headerlink" title="默认构造"></a>默认构造</h3><p>通过<code>&lt;bean id="" class="要装配的实现类全限定类名" /&gt;</code>的方式装配 bean 便是自动使用了默认构造。</p>
-<h3 id="静态工厂"><a href="#静态工厂" class="headerlink" title="静态工厂"></a>静态工厂</h3><p>静态工厂用于生成实例对象，且所有的方法必须是静态的。常用于 Spring 整合其他框架（工具）。<br>通过<code>&lt;bean id="" class="要整合的工厂实现类全限定类名" factory-method="静态方法名" /&gt;</code>进行 bean 的装配。<br>代码演示如下：</p>
+<h3 id="默认构造"><a href="#默认构造" class="headerlink" title="默认构造"></a>默认构造</h3><p>通过<code>&lt;bean id=&quot;&quot; class=&quot;要装配的实现类全限定类名&quot; /&gt;</code>的方式装配 bean 便是自动使用了默认构造。</p>
+<h3 id="静态工厂"><a href="#静态工厂" class="headerlink" title="静态工厂"></a>静态工厂</h3><p>静态工厂用于生成实例对象，且所有的方法必须是静态的。常用于 Spring 整合其他框架（工具）。<br>通过<code>&lt;bean id=&quot;&quot; class=&quot;要整合的工厂实现类全限定类名&quot; factory-method=&quot;静态方法名&quot; /&gt;</code>进行 bean 的装配。<br>代码演示如下：</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
  * @Author 喵粮都输光了
  * @Date 2019/9/1 14:07
@@ -575,26 +575,26 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myBeanFactory<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>com.kuukokawaii.di.MyBeanFactory<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bean</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>staticFactoryService<span class="token punctuation">"</span></span> <span class="token attr-name">factory-bean</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>myBeanFactory<span class="token punctuation">"</span></span> <span class="token attr-name">factory-method</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>createService<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span></code></pre>
-<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>Spring 的作用域用于确定创建的 bean 的实例个数。通过 XML 配置 bean 时，添加<code>scope</code>属性进行配置（如<code>&lt;bean id="" class="" scope="" /&gt;</code>）。<br>常用的<code>scope</code>属性有<code>singleton</code>（单例）和<code>prototype</code>（多例）。</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>Spring 的作用域用于确定创建的 bean 的实例个数。通过 XML 配置 bean 时，添加<code>scope</code>属性进行配置（如<code>&lt;bean id=&quot;&quot; class=&quot;&quot; scope=&quot;&quot; /&gt;</code>）。<br>常用的<code>scope</code>属性有<code>singleton</code>（单例）和<code>prototype</code>（多例）。</p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>可以将 bean 的生命周期划分为11个部分，具体如下图所示：</p>
-<img src="/.com//4364/LifeCycle.jpg" class="" title="Spring 中 bean 的生命周期">
+<img src="/.com//4364/LifeCycle.jpg" class title="Spring 中 bean 的生命周期">
 <p>图中各部分效用如下：</p>
 <ol>
 <li>Instantiate：初始化 bean，调用构造函数创建实例。</li>
 <li>Populate properties：封装属性，即进行 DI 操作。</li>
-<li>BeanNameAware's setBeanName()：调用 BeanNameAware 接口的 setBeanName 方法获取 BeanName。</li>
-<li>BeanFactoryAware's setBeanFactory()：调用 BeanFactoryAware 接口的 setBeanFactory 方法获取 BeanFactory。</li>
+<li>BeanNameAware&#39;s setBeanName()：调用 BeanNameAware 接口的 setBeanName 方法获取 BeanName。</li>
+<li>BeanFactoryAware&#39;s setBeanFactory()：调用 BeanFactoryAware 接口的 setBeanFactory 方法获取 BeanFactory。</li>
 <li>Pre-initialization BeanPostProcessors：如果存在类实现 BeanPostProcessor,则执行 postProcessBeforeInitialization 方法进行预处理。</li>
-<li>InitializingBean's afterPropertiesSet()：如果 bean 实现 InitializingBean，则执行 afterPropertiesSet 方法。</li>
+<li>InitializingBean&#39;s afterPropertiesSet()：如果 bean 实现 InitializingBean，则执行 afterPropertiesSet 方法。</li>
 <li>Call custom init-method：调用自定义的 init-method 方法。</li>
 <li>Post-initialization BeanPostProcessors：如果存在类实现 BeanPostProcessor,执行 postProcessAfterInitialization 方法进行后处理。</li>
 <li>Bean is ready to use / Container is Shutdown：执行业务处理。</li>
-<li>DisposableBean's destroy()：如果 bean 实现 DisposableBean，则执行 destroy 方法。</li>
+<li>DisposableBean&#39;s destroy()：如果 bean 实现 DisposableBean，则执行 destroy 方法。</li>
 <li>Call custom destroy-method：调用自定义的 destroy-method。</li>
 </ol>
 <p>bean 生命周期常用操作：</p>
 <ul>
-<li>初始化和摧毁<br>如果需要进行初始化或摧毁的操作，可以通过使用<code>init-method</code>和<code>destroy-method</code>属性进行设置，其中destroy-method 只有在 <code>scope=singleton</code> 的时候才会生效。（如<code>&lt;bean id="" class="" init-method="" destory-method=""/&gt;</code>）。<blockquote>
+<li>初始化和摧毁<br>如果需要进行初始化或摧毁的操作，可以通过使用<code>init-method</code>和<code>destroy-method</code>属性进行设置，其中destroy-method 只有在 <code>scope=singleton</code> 的时候才会生效。（如<code>&lt;bean id=&quot;&quot; class=&quot;&quot; init-method=&quot;&quot; destory-method=&quot;&quot;/&gt;</code>）。<blockquote>
 <p>1.在 beans 标签下的<code>default-init-method</code>可以设置所有默认的属性。<br>2.优先级：InitializationBean 和 DisposableBean &gt; init-method 和 destroy-method &gt; default。</p>
 </blockquote>
 </li>
@@ -673,7 +673,7 @@
           applicationContext<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span>
   <span class="token punctuation">}</span></code></pre>
-  输出结果如下：  <img src="/.com//4364/PrintResult.png" class="" title="输出结果">
+  输出结果如下：  <img src="/.com//4364/PrintResult.png" class title="输出结果">
 
 </li>
 </ul>
@@ -701,7 +701,7 @@
         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>property</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>homeAddress<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>家庭地址<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bean</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span></code></pre>
-<h3 id="P-命名空间"><a href="#P-命名空间" class="headerlink" title="P 命名空间"></a>P 命名空间</h3><p>对 setter 方法注入进行简化，替换<code>&lt;property name="属性名"/&gt;</code>为<code>&lt;bean p:属性名="值" p:属性名-ref="引用值"</code>。P 命名空间需要在 xml 头部增加<code>xmlns:p="http://www.springframework.org/schema/p"</code>。<br>关键代码如下：</p>
+<h3 id="P-命名空间"><a href="#P-命名空间" class="headerlink" title="P 命名空间"></a>P 命名空间</h3><p>对 setter 方法注入进行简化，替换<code>&lt;property name=&quot;属性名&quot;/&gt;</code>为<code>&lt;bean p:属性名=&quot;值&quot; p:属性名-ref=&quot;引用值&quot;</code>。P 命名空间需要在 xml 头部增加<code>xmlns:p=&quot;http://www.springframework.org/schema/p&quot;</code>。<br>关键代码如下：</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
        <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
@@ -772,25 +772,7 @@
 <li>生命周期<br>初始化：@PostConstruct<br>销毁：@PreDestroy</li>
 <li>作用域：@Scope(“属性”)</li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1220,7 +1202,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             

@@ -454,7 +454,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    7 分
                 </div>
                 
 
@@ -668,7 +668,7 @@
 <li>通过<code>@Query</code>自定义查询，定制查询 SQL。</li>
 <li>支持动态查询（Specifications 查询）。</li>
 </ol>
-<img src="/.com//fd098bd4/spring_data_jpa.png" class="" title="SpringBoot使用SpringDataJPA结构图"></li>
+<img src="/.com//fd098bd4/spring_data_jpa.png" class title="SpringBoot使用SpringDataJPA结构图"></li>
 <li><p>引入 JPA 依赖</p>
 <pre class=" language-xml"><code class="language-xml">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
@@ -728,7 +728,7 @@
    */</span>
   <span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserRepository</span> <span class="token keyword">extends</span> <span class="token class-name">JpaRepository</span><span class="token operator">&lt;</span>User<span class="token punctuation">,</span> Integer<span class="token operator">></span> <span class="token punctuation">{</span><span class="token punctuation">}</span></code></pre>
 </li>
-<li><p><code>JpaRepository</code>接口的使用。如果 get 方法出现<code>com.fasterxml.jackson.databind.exc.InvalidDefinitionException:</code>错误，则需要在实体类上加<code>@JsonIgnoreProperties(value={"hibernateLazyInitializer"})</code>的注解，防止<code>jsonplugin</code>操作<code>hibernateLazyInitializer</code>属性。</p>
+<li><p><code>JpaRepository</code>接口的使用。如果 get 方法出现<code>com.fasterxml.jackson.databind.exc.InvalidDefinitionException:</code>错误，则需要在实体类上加<code>@JsonIgnoreProperties(value={&quot;hibernateLazyInitializer&quot;})</code>的注解，防止<code>jsonplugin</code>操作<code>hibernateLazyInitializer</code>属性。</p>
 <pre class=" language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
    * @Author 喵粮都输光了
    * @Date 2019/11/29 16:38
@@ -752,25 +752,7 @@
   <span class="token punctuation">}</span></code></pre>
 </li>
 </ul>
-<script>
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return; }
-            const img = document.createElement('img');
-            img.style = 'display:none !important;';
-            img.src = el.dataset.src;
-            img.addEventListener('error', () => {
-              img.remove();
-              el.style.color = 'inherit';
-              el.style.backgroundImage = 'none';
-              el.style.background = 'none';
-            });
-            img.addEventListener('load', () => {
-              img.remove();
-            });
-            document.body.appendChild(img);
-          });
-      </script>
+
             </div>
             <hr/>
 
@@ -1200,7 +1182,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67k</span>&nbsp;字
+                class="white-color">64.8k</span>&nbsp;字
             
             
             
