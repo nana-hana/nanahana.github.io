@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
@@ -470,9 +470,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>在策略模式中，一个类的行为或其算法可以在运行时更改。这种类型的设计模式属于行为型模式。</p>
-<a id="more"></a>
-<h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><ul>
+                <h2 id="策略模式"><a href="#策略模式" class="headerlink" title="策略模式"></a>策略模式</h2><ul>
 <li>策略模式定义了算法族，分别封装起来，让它们之间可以互相替换，此模式让算法的变化独立于使用算法的客户。即将各个功能拆分封装成模块，最终通过组合的方式实现效果。</li>
 <li>设计原则<br>  <span id="principle1"></span><ol>
 <li>找出应用中可能需要变化之处，把它们独立出来，不要和哪些不需要变化的代码混在一起。<br><span id="principle2"></span></li>
@@ -620,7 +618,7 @@
   <span class="token punctuation">}</span></code></pre>
 <h2 id="阶段二"><a href="#阶段二" class="headerlink" title="阶段二"></a>阶段二</h2></li>
 <li>问题：<br>  阶段一的解决方法2导致重复的代码变多了。每个鸭子子类都需要对飞行功能和叫声功能进行修改。</li>
-<li>解决：<br>  使用<a href="#principle1">设计原则1</a>提取变化的部分进行封装。此处封装的部分为 fly 和 quack 功能，并对封装的部分进行实现，最后通过在子类中初始化实例变量时调用所需接口即可。  </li>
+<li>解决：<br>  使用<a href="#principle1">设计原则1</a>提取变化的部分进行封装。此处封装的部分为 fly 和 quack 功能，并对封装的部分进行实现，最后通过在子类中初始化实例变量时调用所需接口即可。  <img src="/.com//36970/strategyUML.jpg" class="" title="策略模式 UML"></li>
 <li>代码演示：<pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
 * @Author 喵粮都输光了
 * @Date 2019/10/9 17:46
@@ -991,16 +989,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            延迟加载即按需加载，只有在需要时才真正执行数据查询加载。
-
-立即加载和延迟加载
-疑问在一对多中，当我们有一个用户，它有100个账户。
-在查询用户的时候，要不要查询关联的账户。
-在查询账户的时候，是否需要查询关联的用户。
-
-
-解决
-在查询用户
+                            延迟加载即按需加载，只有在需要时才真正执行数据查询加载。<br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -1053,12 +1042,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            mybatis 中多表查询时的一对一、一对多和多对多三种关系。
-
-一对多、一对一
-案例说明：用户和账户
-一个用户可以有多个账户，使用 collection。
-一个账户只能属于一个用户，使用 association。（多个账户也可以属于同一个
+                            mybatis 中多表查询时的一对一、一对多和多对多三种关系。<br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -1284,7 +1268,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

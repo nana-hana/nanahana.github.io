@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
@@ -470,13 +470,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringBoot 默认使用 SLF4j 和 Logback 日志框架。</p>
-<a id="more"></a>
-<h2 id="日志框架"><a href="#日志框架" class="headerlink" title="日志框架"></a>日志框架</h2><p>市场上存在多种日志框架，日志接口有 JCL、SLF4j 和 jboss-logging，日志具体实现有 Log4j、Logback、JUL 和 Log4j2。其中 JUL 是 JAVA 官方日志；JCL 和 Log4j2 是 apache 开发的日志接口；SLF4j、Log4j 和 Logback 是由同一作者开发完成，所以适配性较好，当中的 Log4j 存在性能问题，其升级版为 Logback。</p>
+                <h2 id="日志框架"><a href="#日志框架" class="headerlink" title="日志框架"></a>日志框架</h2><p>市场上存在多种日志框架，日志接口有 JCL、SLF4j 和 jboss-logging，日志具体实现有 Log4j、Logback、JUL 和 Log4j2。其中 JUL 是 JAVA 官方日志；JCL 和 Log4j2 是 apache 开发的日志接口；SLF4j、Log4j 和 Logback 是由同一作者开发完成，所以适配性较好，当中的 Log4j 存在性能问题，其升级版为 Logback。</p>
 <h2 id="SLF4j"><a href="#SLF4j" class="headerlink" title="SLF4j"></a>SLF4j</h2><ol>
 <li>SLF4j 是针对日志框架开发的一个统一接口层，因此只需实现 SLF4j 即可使用日志功能，这样分层的好处是更改日志接口的实现框架依赖便可完成日志框架的升级。</li>
 <li>SpringBoot 的底层是 Spring 框架，而 Spring 框架默认是用 JCL 日志接口，但是 SpringBoot 默认排除了 JCL 依赖，使用 SLF4j 和 Logback 作为自己的日志框架。</li>
-<li>SLF4j 针对按自己接口实现的日志框架只需导入日志实现框架依赖即可，而针对不是按自己接口的日志实现框架则需要额外导入一个适配依赖，才能完成日志功能。适配依赖的原理即实现 SLF4j 接口，实现方式就是包装对应的日志实现框架方法。 </li>
+<li>SLF4j 针对按自己接口实现的日志框架只需导入日志实现框架依赖即可，而针对不是按自己接口的日志实现框架则需要额外导入一个适配依赖，才能完成日志功能。适配依赖的原理即实现 SLF4j 接口，实现方式就是包装对应的日志实现框架方法。 <img src="/.com//1d79677f/concreteBindings.png" class="" title="SLF4j 与日志实现类的绑定图"></li>
 <li>每个日志实现框架都有自己的配置文件，即使使用了 SLF4j，配置文件还是使用日志实现框架的配置文件。</li>
 </ol>
 <h2 id="统一日志框架"><a href="#统一日志框架" class="headerlink" title="统一日志框架"></a>统一日志框架</h2><p>SpringBoot 整合了许多框架，而每一个框架使用的可能都不是同一个日志框架，因此需要对这些框架的日志框架进行统一。将日志框架统一成 SLF4j 的步骤如下：</p>
@@ -485,7 +483,7 @@
 <li>用中间包来替换排除的日志实现框架依赖，否则会报错。中间包的原理即覆写排除了的日志实现框架，将其所有方法的原有调用都转为调用 SLF4j 的方法，这样即可防止报错并实现功能。</li>
 <li>之后导入 SLF4j 和日志实现框架依赖。（根据日志实现框架选择是否需要添加适配依赖）</li>
 </ol>
-
+<img src="/.com//1d79677f/legacy.png" class="" title="统一日志框架为 SLF4j">
 
 <h2 id="日志默认配置"><a href="#日志默认配置" class="headerlink" title="日志默认配置"></a>日志默认配置</h2><h3 id="全局常规设置"><a href="#全局常规设置" class="headerlink" title="全局常规设置"></a>全局常规设置</h3><p>SpringBoot 自配配置了默认的日志配置，可以在<code>application.yml</code>中修改部分配置。</p>
 <h3 id="修改日志输出文件位置"><a href="#修改日志输出文件位置" class="headerlink" title="修改日志输出文件位置"></a>修改日志输出文件位置</h3><p>在<code>application.yml</code>中可以通过<code>logging.file</code>和<code>logging.path</code>指定配置文件位置。（只能二选一，两个都写默认生效<code>logging.file</code>）</p>
@@ -667,9 +665,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringBoot Web开发中常用的 Thymeleaf、Web 定制和容器定制。
-
-静态资源映射规则SpringBoot 的静态资源与 SSM 框架整合的静态资源所在位置不同，SSM 框架静态资源存储于 webapp 的 static
+                            SpringBoot Web开发中常用的 Thymeleaf、Web 定制和容器定制。<br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -723,8 +719,6 @@
                     <div class="summary block-with-text">
                         
                             SpringBoot 通过使用全局配置文件 application.properties 或 application.yml 修改一些 SpringBoot 自动配置的默认值。
-
-YAMLSpringBoot 可以使用 YAML 进行全局配
                         
                     </div>
                     <div class="publish-info">
@@ -950,7 +944,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

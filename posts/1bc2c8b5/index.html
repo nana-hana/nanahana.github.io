@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
@@ -470,11 +470,9 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringBoot 是简化 Spring 应用开发的一个库的集合体，是 Spring 技术栈的一个大整合。</p>
-<a id="more"></a>
-<h2 id="服务架构"><a href="#服务架构" class="headerlink" title="服务架构"></a>服务架构</h2><ol>
-<li>传统 WEB 应用服务架构是单体应用模式，即一个 WAR 包包含了项目所有功能，其所带来的优势是使得项目的开发，测试和部署极其方便。但是所带来的缺陷也是极其明显的，当某一功能进行修改时，项目需要重新进行部署。</li>
-<li>微服务架构即一个应用便是一组小型服务的集合，并且各个服务之间可以通过 HTTP 协议进行互通。当使用微服务架构时，每一个功能元素最终都是一个可独立替换或独立升级的软件单元，而 SpringBoot 可以快速的开发每一个软件单元，之后可通过 SpringCloud 将所开发软件单元联系起来。
+                <h2 id="服务架构"><a href="#服务架构" class="headerlink" title="服务架构"></a>服务架构</h2><ol>
+<li>传统 WEB 应用服务架构是单体应用模式，即一个 WAR 包包含了项目所有功能，其所带来的优势是使得项目的开发，测试和部署极其方便。但是所带来的缺陷也是极其明显的，当某一功能进行修改时，项目需要重新进行部署。<img src="/.com//1bc2c8b5/singleApplicationMode.png" class="" title="单应用模式图"></li>
+<li>微服务架构即一个应用便是一组小型服务的集合，并且各个服务之间可以通过 HTTP 协议进行互通。当使用微服务架构时，每一个功能元素最终都是一个可独立替换或独立升级的软件单元，而 SpringBoot 可以快速的开发每一个软件单元，之后可通过 SpringCloud 将所开发软件单元联系起来。<img src="/.com//1bc2c8b5/microservices.png" class="" title="微服务架构图">
 
 </li>
 </ol>
@@ -489,7 +487,7 @@
 <li><strong>天然集成云计算</strong></li>
 </ul>
 <h2 id="SpringBoot-环境搭建"><a href="#SpringBoot-环境搭建" class="headerlink" title="SpringBoot 环境搭建"></a>SpringBoot 环境搭建</h2><ol>
-<li>搭建完成的目录层级。<br></li>
+<li>搭建完成的目录层级。<br><img src="/.com//1bc2c8b5/directoryLevel.png" class="" title="目录层级"></li>
 <li>通过 IDEA 创建 MAVEN 项目。</li>
 <li>配置 pom.xml 文件（可参考 SpringBoot 构建 <a href="https://spring.io/guides/gs/rest-service/" target="_blank" rel="noopener">RESTful 项目</a>）。<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>project</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maven.apache.org/POM/4.0.0<span class="token punctuation">"</span></span>
@@ -570,8 +568,8 @@
 <h2 id="SpringBoot-应用快速构建"><a href="#SpringBoot-应用快速构建" class="headerlink" title="SpringBoot 应用快速构建"></a>SpringBoot 应用快速构建</h2><p>此处以 IDEA 为例通过 Spring Initializr 快速构建 SpringBoot 项目。</p>
 <ol>
 <li>通过 <code>New -&gt; Project -&gt; Spring Initializr</code> 单击下一步。</li>
-<li>填写项目配置之后单击下一步。</li>
-<li>勾选项目所需服务之后单击下一步后，IDEA 自动从 Spring 官网下载快速构建的项目。
+<li>填写项目配置之后单击下一步。<img src="/.com//1bc2c8b5/springInitializer1.png" class="" title="SpringBoot 快速构建1"></li>
+<li>勾选项目所需服务之后单击下一步后，IDEA 自动从 Spring 官网下载快速构建的项目。<img src="/.com//1bc2c8b5/springInitializer2.png" class="" title="SpringBoot 快速构建2">
 
 </li>
 </ol>
@@ -749,8 +747,6 @@
                     <div class="summary block-with-text">
                         
                             SpringBoot 通过使用全局配置文件 application.properties 或 application.yml 修改一些 SpringBoot 自动配置的默认值。
-
-YAMLSpringBoot 可以使用 YAML 进行全局配
                         
                     </div>
                     <div class="publish-info">
@@ -804,9 +800,6 @@ YAMLSpringBoot 可以使用 YAML 进行全局配
                     <div class="summary block-with-text">
                         
                             通过 XML 配置+注解的方式整合 Spring、SpringMVC、Mybatis 框架。其中 XML 配置环境，而注解用于实现注入等功能。
-
-目录层级
-web.xml 配置文件&lt;?xml version="1.0" encodin
                         
                     </div>
                     <div class="publish-info">
@@ -1032,7 +1025,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

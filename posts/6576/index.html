@@ -404,12 +404,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/java/">
-                                <span class="chip bg-color">java</span>
-                            </a>
-                        
                             <a href="/tags/problem/">
                                 <span class="chip bg-color">problem</span>
+                            </a>
+                        
+                            <a href="/tags/java/">
+                                <span class="chip bg-color">java</span>
                             </a>
                         
                     </div>
@@ -440,14 +440,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    234
+                    227
                 </div>
                 
 
@@ -470,13 +470,11 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>[WARNING] No archetype found in remote catalog.</p>
-<a id="more"></a>
-<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在创建 maven 项目时，选择 org.apache.maven.archetypes:maven-archetype-webapp 的 archetype 时，出现项目初始化失败的情况。报错情况如下：</p>
-
+                <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>在创建 maven 项目时，选择 org.apache.maven.archetypes:maven-archetype-webapp 的 archetype 时，出现项目初始化失败的情况。报错情况如下：</p>
+<img src="/.com//6576/maven_archetype_warning.png" class="" title="archetype_warning">
 
 <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>在创建项目时，配置 archetypeCatalog 的属性为 internal 即可解决问题。</p>
-
+<img src="/.com//6576/maven_archetype_resolve.png" class="" title="archetype_resolve">
 
 <h2 id="分析"><a href="#分析" class="headerlink" title="分析"></a>分析</h2><p>给 maven 配置了阿里源导致了如上问题，可能是阿里源的 archetype-catalog.xml 文件出现了问题。其中 archetype-catalog.xml 能提供 Archetype 的信息，常用的属性有 internal、local 和 remote 三个属性。</p>
 <ul>
@@ -565,12 +563,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/java/">
-                                    <span class="chip bg-color">java</span>
-                                </a>
-                            
                                 <a href="/tags/problem/">
                                     <span class="chip bg-color">problem</span>
+                                </a>
+                            
+                                <a href="/tags/java/">
+                                    <span class="chip bg-color">java</span>
                                 </a>
                             
                         </div>
@@ -653,17 +651,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringMVC 工作流程代码解析。
-
-案例说明
-
-启动服务器时加载一些配置文件。
-DispatcherServlet 对象创建。
-SpringMVC 配置文件加载。
-HelloController 对象创建。
-
-
-发送请求，通过 Hel
+                            SpringMVC 工作流程代码解析。<br> <br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -717,8 +705,6 @@ HelloController 对象创建。
                     <div class="summary block-with-text">
                         
                             SpringMVC 是 Spring 框架的一个模块，它分离了控制器、模型对象、过滤器以及处理程序对象的角色，这种分离让它们更容易进行定制。
-
-服务器三层架构JavaEE 常基于 B/S 架构进行开发，而在 B/S 架构中系统标准的三层架构
                         
                     </div>
                     <div class="publish-info">
@@ -944,7 +930,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

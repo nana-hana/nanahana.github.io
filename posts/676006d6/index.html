@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
@@ -470,9 +470,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>JSR-107、Spring 缓存抽象、整合 Redis</p>
-<a id="more"></a>
-<h2 id="JSR-107"><a href="#JSR-107" class="headerlink" title="JSR-107"></a>JSR-107</h2><p>Java Caching 定义了5个核心接口，分别为：</p>
+                <h2 id="JSR-107"><a href="#JSR-107" class="headerlink" title="JSR-107"></a>JSR-107</h2><p>Java Caching 定义了5个核心接口，分别为：</p>
 <ol>
 <li>CachingProvider：定义了创建、配置、获取、管理和控制多个 CacheManager。一个应用可以在运行期间访问多个 CachingProvider。</li>
 <li>CacheManager：定义了创建、配置、获取、管理和控制多个唯一命名的 Cache，这些 Cache 存在于 CacheManager 的上下文中。且一个 CacheManager 仅被一个 CachingProvider 所拥有。</li>
@@ -480,7 +478,7 @@
 <li>Entry： 存储在 Cache 中的 Key-Value 对。</li>
 <li>Expiry： 每一个存储在 Cache 中的条目有一个定义的有效期。一旦超过这个时间，Entry 就变为了过期状态。一旦过期，Entry 将不可访问、更新和删除。缓存有效期可以通过 <code>ExpiryPolicy</code>设置。</li>
 </ol>
-
+<img src="/.com//676006d6/JSR107.png" class="" title="应用调用JSR107示意图">
 <p>JSR-107 只需引入如下依赖即可使用：</p>
 <pre class=" language-xml"><code class="language-xml"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>javax.cache<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
@@ -854,8 +852,6 @@
                     <div class="summary block-with-text">
                         
                             消息队列常见规范 JMS（JAVA消息服务）、AMQP（高级消息队列协议），SpringBoot 整合 RabbitMQ。
-
-消息队列大多应用中可通过消息服务中间件来提升系统异步通信、扩展解耦能力。在消息服务中有消息代理和目的地两个重要的概
                         
                     </div>
                     <div class="publish-info">
@@ -908,9 +904,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringBoot 底层使用 SpringData 作为数据访问的默认处理方式。
-
-SpringDataSpringData 主要用于简化数据库的访问，开发者只需声明持久层接口即可。SpringData 支持 NoSQL 和关系数据库存储
+                            SpringBoot 底层使用 SpringData 作为数据访问的默认处理方式。<br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -1136,7 +1130,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-06T10:29:29.998Z</updated>
+  <updated>2020-03-06T12:05:53.982Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -21,11 +21,18 @@
     <link href="https://blog.kuukokawaii.com/posts/93e4730e/"/>
     <id>https://blog.kuukokawaii.com/posts/93e4730e/</id>
     <published>2020-03-02T05:00:25.000Z</published>
-    <updated>2020-03-06T10:29:29.998Z</updated>
+    <updated>2020-03-06T12:05:53.982Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;高等数学知识点总结。   &lt;/p&gt;
+      
+      
+        
+        
+          &lt;img src=&quot;/.com//93e4730e/higherMathematics.png&quot; class=&quot;&quot;&gt;
+&lt;h2 id=&quot;函数与极限&quot;&gt;&lt;a href=&quot;#函数与极限&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -44,11 +51,17 @@
     <link href="https://blog.kuukokawaii.com/posts/c23efd5b/"/>
     <id>https://blog.kuukokawaii.com/posts/c23efd5b/</id>
     <published>2020-01-18T06:41:20.000Z</published>
-    <updated>2020-03-06T10:08:20.496Z</updated>
+    <updated>2020-03-06T12:16:58.053Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;线性代数知识点总结。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;行列式&quot;&gt;&lt;a href=&quot;#行列式&quot; class=&quot;headerlink&quot; title=&quot;行列式&quot;&gt;&lt;/a&gt;行列式&lt;/h2&gt;&lt;h3 id=&quot;行列式定义&quot;&gt;&lt;a href=&quot;#行列式定义&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -67,11 +80,17 @@
     <link href="https://blog.kuukokawaii.com/posts/b179370b/"/>
     <id>https://blog.kuukokawaii.com/posts/b179370b/</id>
     <published>2019-12-21T13:15:33.000Z</published>
-    <updated>2019-12-23T00:56:33.712Z</updated>
+    <updated>2020-03-06T12:17:50.185Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;ORM 通过 pymysql（Django低版本） 或 mysqlclient(Django高版本)连接数据库。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;ORM&quot;&gt;&lt;a href=&quot;#ORM&quot; class=&quot;headerlink&quot; title=&quot;ORM&quot;&gt;&lt;/a&gt;ORM&lt;/h2&gt;&lt;p&gt;Django ORM 默认使用 SQLite
+        
+      
     
     </summary>
     
@@ -90,11 +109,17 @@
     <link href="https://blog.kuukokawaii.com/posts/1e026f1b/"/>
     <id>https://blog.kuukokawaii.com/posts/1e026f1b/</id>
     <published>2019-12-21T08:43:22.000Z</published>
-    <updated>2019-12-25T02:18:58.408Z</updated>
+    <updated>2020-03-06T12:17:36.842Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Django 是一个由 Python 写成且开放源代码的 Web 应用框架。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;MTV-框架模式&quot;&gt;&lt;a href=&quot;#MTV-框架模式&quot; class=&quot;headerlink&quot; title=&quot;MTV 框架模式&quot;&gt;&lt;/a&gt;MTV 框架模式&lt;/h2&gt;&lt;p&gt;Django 是一个遵循 MVC 设计模式的框架，采用了 MTV 的框架模式（T 即
+        
+      
     
     </summary>
     
@@ -113,11 +138,17 @@
     <link href="https://blog.kuukokawaii.com/posts/1530706b/"/>
     <id>https://blog.kuukokawaii.com/posts/1530706b/</id>
     <published>2019-12-17T00:55:21.000Z</published>
-    <updated>2019-12-18T11:56:42.721Z</updated>
+    <updated>2020-03-06T12:18:09.679Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Python 基于 SMTP 协议发送邮件。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;发送模板&quot;&gt;&lt;a href=&quot;#发送模板&quot; class=&quot;headerlink&quot; title=&quot;发送模板&quot;&gt;&lt;/a&gt;发送模板&lt;/h2&gt;&lt;pre class=&quot; language-python&quot;&gt;&lt;code
+        
+      
     
     </summary>
     
@@ -136,11 +167,17 @@
     <link href="https://blog.kuukokawaii.com/posts/81ac1c26/"/>
     <id>https://blog.kuukokawaii.com/posts/81ac1c26/</id>
     <published>2019-12-06T07:30:31.000Z</published>
-    <updated>2019-12-06T08:34:55.320Z</updated>
+    <updated>2020-03-06T12:18:22.756Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 提供了准生产环境下的应该用监控和管理功能。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;监控管理&quot;&gt;&lt;a href=&quot;#监控管理&quot; class=&quot;headerlink&quot; title=&quot;监控管理&quot;&gt;&lt;/a&gt;监控管理&lt;/h2&gt;&lt;p&gt;SpringBoot 通过引入 actuator 依赖，可以获得应用监控和管理功能。可以通过 HTTP、JMX 和 SSH
+        
+      
     
     </summary>
     
@@ -159,11 +196,17 @@
     <link href="https://blog.kuukokawaii.com/posts/64a44bcd/"/>
     <id>https://blog.kuukokawaii.com/posts/64a44bcd/</id>
     <published>2019-12-06T06:19:11.000Z</published>
-    <updated>2019-12-06T07:24:42.315Z</updated>
+    <updated>2020-03-06T12:18:33.608Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;JAVA 热部署。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;热部署&quot;&gt;&lt;a href=&quot;#热部署&quot; class=&quot;headerlink&quot; title=&quot;热部署&quot;&gt;&lt;/a&gt;热部署&lt;/h2&gt;&lt;p&gt;在开发中修改一个 Java
+        
+      
     
     </summary>
     
@@ -182,11 +225,17 @@
     <link href="https://blog.kuukokawaii.com/posts/e0109747/"/>
     <id>https://blog.kuukokawaii.com/posts/e0109747/</id>
     <published>2019-12-04T14:29:05.000Z</published>
-    <updated>2019-12-06T06:13:56.969Z</updated>
+    <updated>2020-03-06T12:18:48.986Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 分布式、Dubbo/Zookeeper 和 Spring Boot/Cloud。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;应用架构&quot;&gt;&lt;a href=&quot;#应用架构&quot; class=&quot;headerlink&quot; title=&quot;应用架构&quot;&gt;&lt;/a&gt;应用架构&lt;/h2&gt;&lt;h3 id=&quot;单一应用架构&quot;&gt;&lt;a href=&quot;#单一应用架构&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -205,11 +254,17 @@
     <link href="https://blog.kuukokawaii.com/posts/f4c26338/"/>
     <id>https://blog.kuukokawaii.com/posts/f4c26338/</id>
     <published>2019-12-04T09:54:41.000Z</published>
-    <updated>2019-12-05T03:57:08.194Z</updated>
+    <updated>2020-03-06T12:18:48.976Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 底层采用 Spring Security 作为安全框架。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;安全机制&quot;&gt;&lt;a href=&quot;#安全机制&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -228,11 +283,17 @@
     <link href="https://blog.kuukokawaii.com/posts/454051ae/"/>
     <id>https://blog.kuukokawaii.com/posts/454051ae/</id>
     <published>2019-12-04T06:16:25.000Z</published>
-    <updated>2019-12-05T03:57:08.240Z</updated>
+    <updated>2020-03-06T12:19:21.924Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 异步任务、定时任务和邮件任务。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;异步任务&quot;&gt;&lt;a href=&quot;#异步任务&quot; class=&quot;headerlink&quot; title=&quot;异步任务&quot;&gt;&lt;/a&gt;异步任务&lt;/h2&gt;&lt;p&gt;spring
+        
+      
     
     </summary>
     
@@ -251,11 +312,18 @@
     <link href="https://blog.kuukokawaii.com/posts/8146c289/"/>
     <id>https://blog.kuukokawaii.com/posts/8146c289/</id>
     <published>2019-12-02T15:02:04.000Z</published>
-    <updated>2019-12-05T03:57:08.201Z</updated>
+    <updated>2020-03-06T12:19:19.317Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;ElasticSearch 可以快速的存储、搜索和分析海量数据，是目前全文搜索引擎的首选。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;ElasticSearch&quot;&gt;&lt;a href=&quot;#ElasticSearch&quot; class=&quot;headerlink&quot; title=&quot;ElasticSearch&quot;&gt;&lt;/a&gt;ElasticSearch&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ElasticSearch
+        
+      
     
     </summary>
     
@@ -274,11 +342,17 @@
     <link href="https://blog.kuukokawaii.com/posts/2b1dfb69/"/>
     <id>https://blog.kuukokawaii.com/posts/2b1dfb69/</id>
     <published>2019-12-01T02:51:55.000Z</published>
-    <updated>2019-12-05T03:57:08.419Z</updated>
+    <updated>2020-03-06T12:11:55.408Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;消息队列常见规范 JMS（JAVA消息服务）、AMQP（高级消息队列协议），SpringBoot 整合 RabbitMQ。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;消息队列&quot;&gt;&lt;a href=&quot;#消息队列&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -297,11 +371,17 @@
     <link href="https://blog.kuukokawaii.com/posts/676006d6/"/>
     <id>https://blog.kuukokawaii.com/posts/676006d6/</id>
     <published>2019-11-30T04:06:19.000Z</published>
-    <updated>2019-12-05T03:57:08.309Z</updated>
+    <updated>2020-03-06T12:19:48.960Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;JSR-107、Spring 缓存抽象、整合 Redis&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;JSR-107&quot;&gt;&lt;a href=&quot;#JSR-107&quot; class=&quot;headerlink&quot; title=&quot;JSR-107&quot;&gt;&lt;/a&gt;JSR-107&lt;/h2&gt;&lt;p&gt;Java Caching
+        
+      
     
     </summary>
     
@@ -320,11 +400,17 @@
     <link href="https://blog.kuukokawaii.com/posts/fd098bd4/"/>
     <id>https://blog.kuukokawaii.com/posts/fd098bd4/</id>
     <published>2019-11-27T05:15:47.000Z</published>
-    <updated>2019-12-05T03:57:08.162Z</updated>
+    <updated>2020-03-06T12:19:43.345Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 底层使用 SpringData 作为数据访问的默认处理方式。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;SpringData&quot;&gt;&lt;a href=&quot;#SpringData&quot; class=&quot;headerlink&quot; title=&quot;SpringData&quot;&gt;&lt;/a&gt;SpringData&lt;/h2&gt;&lt;p&gt;SpringData
+        
+      
     
     </summary>
     
@@ -343,11 +429,17 @@
     <link href="https://blog.kuukokawaii.com/posts/3096723d/"/>
     <id>https://blog.kuukokawaii.com/posts/3096723d/</id>
     <published>2019-11-27T01:45:29.000Z</published>
-    <updated>2019-12-05T03:57:08.221Z</updated>
+    <updated>2020-03-06T12:10:50.950Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;Docker 可以打包应用以及依赖包至一个可移植的镜像中，该镜像可发布到任意平台且可实行虚拟化。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;什么是-Docker&quot;&gt;&lt;a href=&quot;#什么是-Docker&quot; class=&quot;headerlink&quot; title=&quot;什么是 Docker&quot;&gt;&lt;/a&gt;什么是 Docker&lt;/h2&gt;&lt;p&gt;Docker 是基于 Go 语言并遵从 Apache
+        
+      
     
     </summary>
     
@@ -366,11 +458,17 @@
     <link href="https://blog.kuukokawaii.com/posts/4fa653eb/"/>
     <id>https://blog.kuukokawaii.com/posts/4fa653eb/</id>
     <published>2019-11-24T06:27:09.000Z</published>
-    <updated>2019-12-05T03:57:08.351Z</updated>
+    <updated>2020-03-06T12:20:05.574Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot Web开发中常用的 Thymeleaf、Web 定制和容器定制。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;静态资源&quot;&gt;&lt;a href=&quot;#静态资源&quot; class=&quot;headerlink&quot; title=&quot;静态资源&quot;&gt;&lt;/a&gt;静态资源&lt;/h2&gt;&lt;h3 id=&quot;映射规则&quot;&gt;&lt;a href=&quot;#映射规则&quot; class=&quot;headerlink&quot;
+        
+      
     
     </summary>
     
@@ -389,11 +487,17 @@
     <link href="https://blog.kuukokawaii.com/posts/1d79677f/"/>
     <id>https://blog.kuukokawaii.com/posts/1d79677f/</id>
     <published>2019-11-23T02:39:48.000Z</published>
-    <updated>2019-12-05T03:57:08.207Z</updated>
+    <updated>2020-03-06T12:20:08.623Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 默认使用 SLF4j 和 Logback 日志框架。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;日志框架&quot;&gt;&lt;a href=&quot;#日志框架&quot; class=&quot;headerlink&quot; title=&quot;日志框架&quot;&gt;&lt;/a&gt;日志框架&lt;/h2&gt;&lt;p&gt;市场上存在多种日志框架，日志接口有 JCL、SLF4j 和 jboss-logging，日志具体实现有
+        
+      
     
     </summary>
     
@@ -412,11 +516,17 @@
     <link href="https://blog.kuukokawaii.com/posts/2250b4d3/"/>
     <id>https://blog.kuukokawaii.com/posts/2250b4d3/</id>
     <published>2019-11-22T01:43:31.000Z</published>
-    <updated>2019-12-05T03:57:08.248Z</updated>
+    <updated>2020-03-06T12:10:59.220Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 通过使用全局配置文件 application.properties 或 application.yml 修改一些 SpringBoot 自动配置的默认值。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;YAML&quot;&gt;&lt;a href=&quot;#YAML&quot; class=&quot;headerlink&quot; title=&quot;YAML&quot;&gt;&lt;/a&gt;YAML&lt;/h2&gt;&lt;p&gt;SpringBoot 可以使用 YAML 进行全局配置。YAML 是以数据为中心的标记语言，比 JSON、XML
+        
+      
     
     </summary>
     
@@ -435,11 +545,18 @@
     <link href="https://blog.kuukokawaii.com/posts/1bc2c8b5/"/>
     <id>https://blog.kuukokawaii.com/posts/1bc2c8b5/</id>
     <published>2019-11-21T04:31:51.000Z</published>
-    <updated>2019-12-05T03:57:08.281Z</updated>
+    <updated>2020-03-06T12:20:24.698Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;SpringBoot 是简化 Spring 应用开发的一个库的集合体，是 Spring 技术栈的一个大整合。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;服务架构&quot;&gt;&lt;a href=&quot;#服务架构&quot; class=&quot;headerlink&quot; title=&quot;服务架构&quot;&gt;&lt;/a&gt;服务架构&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;传统 WEB 应用服务架构是单体应用模式，即一个 WAR
+        
+      
     
     </summary>
     
@@ -458,11 +575,17 @@
     <link href="https://blog.kuukokawaii.com/posts/12cc57d7/"/>
     <id>https://blog.kuukokawaii.com/posts/12cc57d7/</id>
     <published>2019-11-20T02:54:59.000Z</published>
-    <updated>2019-12-05T03:57:08.322Z</updated>
+    <updated>2020-03-06T12:14:34.815Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;通过 XML 配置+注解的方式整合 Spring、SpringMVC、Mybatis 框架。其中 XML 配置环境，而注解用于实现注入等功能。&lt;/p&gt;
+      
+      
+        
+        
+          &lt;h2 id=&quot;目录层级&quot;&gt;&lt;a href=&quot;#目录层级&quot; class=&quot;headerlink&quot; title=&quot;目录层级&quot;&gt;&lt;/a&gt;目录层级&lt;/h2&gt;&lt;img src=&quot;/.com//12cc57d7/directoryLevel.png&quot; class=&quot;&quot;
+        
+      
     
     </summary>
     

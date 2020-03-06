@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
@@ -470,9 +470,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Spring 中可以通过 XML 或 annotation 装配 bean。</p>
-<a id="more"></a>
-<h2 id="实例化方式"><a href="#实例化方式" class="headerlink" title="实例化方式"></a>实例化方式</h2><p>bean 有3种实例化的方式：默认构造、静态工厂和实例化工厂。</p>
+                <h2 id="实例化方式"><a href="#实例化方式" class="headerlink" title="实例化方式"></a>实例化方式</h2><p>bean 有3种实例化的方式：默认构造、静态工厂和实例化工厂。</p>
 <h3 id="默认构造"><a href="#默认构造" class="headerlink" title="默认构造"></a>默认构造</h3><p>通过<code>&lt;bean id="" class="要装配的实现类全限定类名" /&gt;</code>的方式装配 bean 便是自动使用了默认构造。</p>
 <h3 id="静态工厂"><a href="#静态工厂" class="headerlink" title="静态工厂"></a>静态工厂</h3><p>静态工厂用于生成实例对象，且所有的方法必须是静态的。常用于 Spring 整合其他框架（工具）。<br>通过<code>&lt;bean id="" class="要整合的工厂实现类全限定类名" factory-method="静态方法名" /&gt;</code>进行 bean 的装配。<br>代码演示如下：</p>
 <pre class=" language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
@@ -579,7 +577,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span></code></pre>
 <h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>Spring 的作用域用于确定创建的 bean 的实例个数。通过 XML 配置 bean 时，添加<code>scope</code>属性进行配置（如<code>&lt;bean id="" class="" scope="" /&gt;</code>）。<br>常用的<code>scope</code>属性有<code>singleton</code>（单例）和<code>prototype</code>（多例）。</p>
 <h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>可以将 bean 的生命周期划分为11个部分，具体如下图所示：</p>
-
+<img src="/.com//4364/LifeCycle.jpg" class="" title="Spring 中 bean 的生命周期">
 <p>图中各部分效用如下：</p>
 <ol>
 <li>Instantiate：初始化 bean，调用构造函数创建实例。</li>
@@ -675,7 +673,7 @@
           applicationContext<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span>
   <span class="token punctuation">}</span></code></pre>
-  输出结果如下：  
+  输出结果如下：  <img src="/.com//4364/PrintResult.png" class="" title="输出结果">
 
 </li>
 </ul>
@@ -944,8 +942,6 @@
                     <div class="summary block-with-text">
                         
                             面向切面编程（Aspect Oriented Programming，缩写为AOP），通过预编译方式和运行期动态代理实现程序功能的统一维护的一种技术。
-
-什么是 AOPAOP 是 OOP（Object Oriented Programmin
                         
                     </div>
                     <div class="publish-info">
@@ -999,8 +995,6 @@
                     <div class="summary block-with-text">
                         
                             依赖注入（Dependency Injection，缩写为 DI），在 Spring 框架负责创建 Bean 对象时，动态的将依赖对象注入到 Bean 组件。
-
-什么是 DI在依赖注入中，如果对象 A 中使用到对象 B，则称对象 A 依赖于
                         
                     </div>
                     <div class="publish-info">
@@ -1226,7 +1220,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

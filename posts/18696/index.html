@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
@@ -454,7 +454,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    3 分
                 </div>
                 
 
@@ -470,22 +470,20 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringMVC 是 Spring 框架的一个模块，它分离了控制器、模型对象、过滤器以及处理程序对象的角色，这种分离让它们更容易进行定制。</p>
-<a id="more"></a>
-<h2 id="服务器三层架构"><a href="#服务器三层架构" class="headerlink" title="服务器三层架构"></a>服务器三层架构</h2><p>JavaEE 常基于 B/S 架构进行开发，而在 B/S 架构中系统标准的三层架构包括：表现层、业务层和持久层。</p>
+                <h2 id="服务器三层架构"><a href="#服务器三层架构" class="headerlink" title="服务器三层架构"></a>服务器三层架构</h2><p>JavaEE 常基于 B/S 架构进行开发，而在 B/S 架构中系统标准的三层架构包括：表现层、业务层和持久层。</p>
 <ul>
 <li>表现层（web 层）<br>表现层用于接收客户端请求，并向客户端响应结果。它包括展示层和控制层，其中展示层负责展示结果，而控制层负责接收请求。因此表现层依赖于业务层，当接收到客户端的请求时一般会调用业务层进行处理，并将处理结果返回给客户端。</li>
 <li>业务层（service 层）<br>业务层负责业务逻辑的处理，当需要对数据进行持久化操作时需要保证事务的一致性，因此业务层可能依赖于持久层，且事务应该在业务层进行控制。</li>
 <li>持久层（dao 层）<br>持久层负责数据持久化操作，包括数据层即数据库和数据访问层，其中数据库是对数据进行持久化的载体，而数据访问层是业务层和持久层交互的接口。业务层需要通过数据访问层将数据持久化到数据库中。</li>
 </ul>
-
+<img src="/.com//18696/3-tierArchitecture.jpg" class="" title="三层服务器架构">
 <h2 id="MVC-设计模型"><a href="#MVC-设计模型" class="headerlink" title="MVC 设计模型"></a>MVC 设计模型</h2><p>MVC（Model View Controller）是一种用于设计创建 Web 应用程序表现层的模式，它包括 Model、View 和 Controller 三部分：</p>
 <ul>
 <li>Model（模型）：常指数据模型，一般用于封装数据。例如 JavaBean。</li>
 <li>View（视图）：常指前端视图，一般用于显示数据。例如 Html。</li>
 <li>Controller（控制器）：是应用程序中处理用户交互的部分，一般用于处理程序逻辑。例如 Servlet。</li>
 </ul>
-
+<img src="/.com//18696/MVC.jpg" class="" title="MVC 设计模型">
 <h2 id="SpringMVC-架构"><a href="#SpringMVC-架构" class="headerlink" title="SpringMVC 架构"></a>SpringMVC 架构</h2><ul>
 <li>SpringMVC 是一种基于 Java 的实现 MVC 设计模型的请求驱动类型的轻量级 Web 框架。它通过一套注解让一个简单的 Java 类成为处理请求的控制器，而无需实现任何接口。同时它还支持 RESTful 编程风格的请求。</li>
 <li>SpringMVC 拥有诸多优势，例如：<ol>
@@ -497,11 +495,11 @@
 </ol>
 </li>
 </ul>
-
+<img src="/.com//18696/springMVC.jpg" class="" title="SpringMVC 架构">
 
 <h2 id="SpringMVC-工作流程"><a href="#SpringMVC-工作流程" class="headerlink" title="SpringMVC 工作流程"></a>SpringMVC 工作流程</h2><ul>
 <li>概念<br>DispatcherServlet：Spring 前端控制器（中央调度器），它是整个请求响应的控制中心，组件的调用由它统一调度。<br>HandlerMapping：处理器映射器，它根据用户访问的 URL 映射到对应的后端处理器 Handler。<br>HandlerAdapter：处理器适配器，它调用 Handler 执行具体的业务操作并返回逻辑视图 ModelAndView 对象。<br>Handler：Handler，对用户具体请求进行处理（相当于 controller 类）。<br>ModelAndView 对象：逻辑视图。<br>ViewResolver：视图解析器，将 ModelAndView 逻辑视图解析为具体的视图。</li>
-<li>工作流程
+<li>工作流程<img src="/.com//18696/SpringMVCWorkflow.jpg" class="" title="SpringMVC 工作流程">
 如图工作流程可以大致划分为如下步骤：<ol>
 <li>用户向服务器发送请求，请求被 DispatcherServlet 捕获。</li>
 <li>DispatcherServlet 对请求的 URL 进行解析，得到 URI。然后根据 URI 调用 HandlerMapping 获得具体的处理器 Handler 并返回给 DispatcherServlet。</li>
@@ -685,9 +683,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            [WARNING] No archetype found in remote catalog.
-
-问题在创建 maven 项目时，选择 org.apache.maven.archetypes:maven-archetype-webapp 的
+                            WARNING：No archetype found in remote catalog.<br> <br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -709,12 +705,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/java/">
-                        <span class="chip bg-color">java</span>
-                    </a>
-                    
                     <a href="/tags/problem/">
                         <span class="chip bg-color">problem</span>
+                    </a>
+                    
+                    <a href="/tags/java/">
+                        <span class="chip bg-color">java</span>
                     </a>
                     
                 </div>
@@ -741,8 +737,6 @@
                     <div class="summary block-with-text">
                         
                             Spring 本身并不实现事务，其本质是底层数据库对事务的支持，因此没有数据库事务的支持，Spring 事务就不会生效。
-
-什么是事务（Transaction）事务是逻辑上的一组操作，要么都执行，要么都不执行。例如某人要在商店使用电子货币购
                         
                     </div>
                     <div class="publish-info">
@@ -968,7 +962,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

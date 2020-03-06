@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
@@ -470,9 +470,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>消息队列常见规范 JMS（JAVA消息服务）、AMQP（高级消息队列协议），SpringBoot 整合 RabbitMQ。</p>
-<a id="more"></a>
-<h2 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h2><p>大多应用中可通过消息服务中间件来提升系统异步通信、扩展解耦能力。在消息服务中有消息代理和目的地两个重要的概念，即当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。在消息队列中主要拥有两种形式的目的地，分别为队列和主题，前者用于点对点消息通信，后者用于发布/订阅消息通信。</p>
+                <h2 id="消息队列"><a href="#消息队列" class="headerlink" title="消息队列"></a>消息队列</h2><p>大多应用中可通过消息服务中间件来提升系统异步通信、扩展解耦能力。在消息服务中有消息代理和目的地两个重要的概念，即当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。在消息队列中主要拥有两种形式的目的地，分别为队列和主题，前者用于点对点消息通信，后者用于发布/订阅消息通信。</p>
 <h3 id="JMS-和-AMQP-比对"><a href="#JMS-和-AMQP-比对" class="headerlink" title="JMS 和 AMQP 比对"></a>JMS 和 AMQP 比对</h3><table>
 <thead>
 <tr>
@@ -569,14 +567,14 @@
 <td>消息代理，表示消息队列服务器的实体</td>
 </tr>
 </tbody></table>
-
+<img src="/.com//2b1dfb69/rabbitMQ.png" class="" title="RabbitMQ 结构图">
 <h3 id="Exchange-类型"><a href="#Exchange-类型" class="headerlink" title="Exchange 类型"></a>Exchange 类型</h3><ol>
 <li><p>direct：当消息中的路由键和 Binding 中的 binding key 一致时，交换器就将消息发到对应的队列中。</p>
- </li>
+ <img src="/.com//2b1dfb69/direct_exchange.jpg" class="" title="direct exchange 类型"></li>
 <li><p>fanout：交换器会将消息发送到所有与自己绑定的队列上，速度是交换器中最快的（类似广播）。</p>
- </li>
+ <img src="/.com//2b1dfb69/fanout_exchange.jpg" class="" title="fanout exchange 类型"></li>
 <li><p>topic：交换器通过模式匹配分配消息的路由键属性，将路由器和某一个模式进行匹配，此时队列需要绑定到一个模式上。通过识别两个通配符<code>#</code>和<code>*</code>对路由键和绑定键的字符串进行切分，其中前者匹配0个或多个单词，后者匹配一个单词。</p>
- </li>
+ <img src="/.com//2b1dfb69/topic_exchange.jpg" class="" title="topic exchange 类型"></li>
 <li><p>header：header 匹配 AMQP 消息的 header 而不是路由键，与 direct 交换器类似但性能差许多，通常不用。</p>
 </li>
 </ol>
@@ -834,10 +832,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ElasticSearch 可以快速的存储、搜索和分析海量数据，是目前全文搜索引擎的首选。
-
-ElasticSearch
-ElasticSearch 是一个开源的分布式搜索服务，且提供 Restful API，底层基于 Lucene，采用多
+                            ElasticSearch 可以快速的存储、搜索和分析海量数据，是目前全文搜索引擎的首选。<br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -890,11 +885,7 @@ ElasticSearch 是一个开源的分布式搜索服务，且提供 Restful API，
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JSR-107、Spring 缓存抽象、整合 Redis
-
-JSR-107Java Caching 定义了5个核心接口，分别为：
-
-CachingProvider：定义了创建、配置、获取、管理和控制多个 CacheManager。一个应用可
+                            JSR-107、Spring 缓存抽象、整合 Redis。<br> <br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -1120,7 +1111,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

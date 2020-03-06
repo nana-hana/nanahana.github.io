@@ -440,7 +440,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-06
+                    2020-03-06
                 </div>
                 
 
@@ -470,17 +470,15 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringBoot 分布式、Dubbo/Zookeeper 和 Spring Boot/Cloud。</p>
-<a id="more"></a>
-<h2 id="应用架构"><a href="#应用架构" class="headerlink" title="应用架构"></a>应用架构</h2><h3 id="单一应用架构"><a href="#单一应用架构" class="headerlink" title="单一应用架构"></a>单一应用架构</h3><p>当网站流量很小时，只需一个应用将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架（ORM）是关键。</p>
+                <h2 id="应用架构"><a href="#应用架构" class="headerlink" title="应用架构"></a>应用架构</h2><h3 id="单一应用架构"><a href="#单一应用架构" class="headerlink" title="单一应用架构"></a>单一应用架构</h3><p>当网站流量很小时，只需一个应用将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架（ORM）是关键。</p>
 <h3 id="垂直应用架构"><a href="#垂直应用架构" class="headerlink" title="垂直应用架构"></a>垂直应用架构</h3><p>当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率。此时，用于加速前端页面开发的 Web 框架（MVC）是关键。</p>
 <h3 id="分布式服务架构"><a href="#分布式服务架构" class="headerlink" title="分布式服务架构"></a>分布式服务架构</h3><p>当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。此时，用于提高业务复用及整合的分布式服务框架（RPC）是关键。在分布式系统中，国内常用 Dubbo + Zookeeper 组合，而 SpringBoot 推荐使用全栈的 Spring、SpringBoot + SpringCloud。</p>
 <h3 id="流动计算架构"><a href="#流动计算架构" class="headerlink" title="流动计算架构"></a>流动计算架构</h3><p>当服务越来越多，容量的评估，小服务资源的浪费等现象逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。此时，用于提高机器利用率的资源调度和治理中心（SOA）是关键。</p>
-
+<img src="/.com//e0109747/architectureRoadMap.jpg" class="" title="应用架构升级图">
 
 <h2 id="Zookeeper-和-Dubbo"><a href="#Zookeeper-和-Dubbo" class="headerlink" title="Zookeeper 和 Dubbo"></a>Zookeeper 和 Dubbo</h2><h3 id="Zookeeper"><a href="#Zookeeper" class="headerlink" title="Zookeeper"></a>Zookeeper</h3><p>Zookeeper 是一个分布式的，开放源码的分布式应用程序协调服务（即注册中心）。它是一个为分布式应用提供一致性服务的软件，提供的功能包括：配置维护、域名服务、分布式同步和组服务等。</p>
 <h3 id="Dubbo"><a href="#Dubbo" class="headerlink" title="Dubbo"></a>Dubbo</h3><p>Dubbo 是 Alibaba 开源的分布式服务框架，它最大的特点是按照分层的方式来架构，使用这种方式可以使各个层之间解耦合（或最大限度地松耦合）。从服务模型的角度来看，Dubbo 采用的是一种非常简单的模型，要么是提供方提供服务，要么是消费方消费服务，所以基于这一点可以抽象处服务提供方（Provider）和服务消费方（Consumer）两个角色。</p>
-
+<img src="/.com//e0109747/dubboArchitecture.png" class="" title="Dubbo 架构图">
 <ol>
 <li>Container 在启动时负责加载运行 Provider。</li>
 <li>Provider 在运行时将所拥有的服务信息注册至 Registry。</li>
@@ -1232,11 +1230,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            JAVA 热部署。
-
-热部署在开发中修改一个 Java 文件后想要看到效果不得不重启应用，这将导致花费大量的时间，因此希望在不重启应用的情况下，程序可以自动部署（热部署）。
-热部署方式模板引擎
-在 Spring Boot 中开发情况下禁用模
+                            JAVA 热部署。<br> <br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -1289,11 +1283,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringBoot 底层采用 Spring Security 作为安全框架。
-
-安全机制安全机制主要包含认证（注册主体）和授权（访问权限控制）两个区域的控制。
-
-认证：是建立一个声明主体的过程（主体通常指用户、设备或一些可以在应用程序中执
+                            SpringBoot 底层采用 Spring Security 作为安全框架。<br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -1519,7 +1509,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

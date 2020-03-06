@@ -440,14 +440,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2k
                 </div>
                 
 
@@ -470,15 +470,13 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringBoot Web开发中常用的 Thymeleaf、Web 定制和容器定制。</p>
-<a id="more"></a>
-<h2 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h2><h3 id="映射规则"><a href="#映射规则" class="headerlink" title="映射规则"></a>映射规则</h3><p>SpringBoot 的静态资源与 SSM 框架整合的静态资源所在位置不同，SSM 框架静态资源存储于 webapp 的 static 中，而 SpringBoot 的静态资源存储于 resources 中。SpringBoot 默认有两种静态资源映射模式：</p>
+                <h2 id="静态资源"><a href="#静态资源" class="headerlink" title="静态资源"></a>静态资源</h2><h3 id="映射规则"><a href="#映射规则" class="headerlink" title="映射规则"></a>映射规则</h3><p>SpringBoot 的静态资源与 SSM 框架整合的静态资源所在位置不同，SSM 框架静态资源存储于 webapp 的 static 中，而 SpringBoot 的静态资源存储于 resources 中。SpringBoot 默认有两种静态资源映射模式：</p>
 <ol>
 <li>webjars 模式<br> 应用使用 MAVEN 导入 <a href="https://www.webjars.org/" target="_blank" rel="noopener">webjars</a> 的静态资源依赖，则所有通过该方法导入的静态资源都存储于<code>classpath:/META-INF/resources/webjars/</code>中。需要访问时，只需要通过类似<code>http://localhost:8080/webjars/所需资源名</code>的方式即可完成调用。</li>
 <li>自定义模式<br> 通过查看 SpringBoot 源码中的<code>WebMvcAutoConfiguration</code>和<code>ResourceProperties</code>类的<code>SERVLET_LOCATIONS</code>和<code>CLASSPATH_RESOURCE_LOCATIONS</code>常量，可以得出静态资源的默认存储位置为<code>classpath:/META-INF/resources/</code>、<code>classpath:/resources/</code>、<code>classpath:/static/</code>、<code>classpath:/public/</code>和<code>/</code>。调用方式与 webjars 模式类似，例如静态文件存储于<code>classpath:/static/</code>，则调用方式如<code>http://localhost:8080/所需资源名</code>即可。<h3 id="欢迎页"><a href="#欢迎页" class="headerlink" title="欢迎页"></a>欢迎页</h3>静态资源文件夹下的所有<code>index.html</code>页面都会被映射为<code>/</code>，也就是说当你输入<code>http://localhost:8080/</code>时，就会自动跳转至<code>index.html</code>页面。<h3 id="修改静态资源位置"><a href="#修改静态资源位置" class="headerlink" title="修改静态资源位置"></a>修改静态资源位置</h3>可以在<code>application.yml</code>中通过<code>spring.resources.static-locations</code>设置默认的静态资源位置，使用该条命令会使 SpringBoot 本身的默认静态资源位置失效，因此不推荐修改。</li>
 </ol>
 <h2 id="Thymeleaf-模板引擎"><a href="#Thymeleaf-模板引擎" class="headerlink" title="Thymeleaf 模板引擎"></a>Thymeleaf 模板引擎</h2><ul>
-<li>模板引擎用于将视图和数据进行整合解析，而不同的模板引擎之间的区别仅在于模板引擎获取数据的语法不同。  </li>
+<li>模板引擎用于将视图和数据进行整合解析，而不同的模板引擎之间的区别仅在于模板引擎获取数据的语法不同。  <img src="/.com//4fa653eb/templateEngine.png" class="" title="模板引擎原理图"></li>
 <li>SpringBoot 推荐使用 Thymeleaf 模板引擎，因为其语法更简洁，功能共强大。通过 MAVEN 引入 Thymeleaf 模板引擎的依赖。（如需修改 thymeleaf 版本则需注意<code>thymeleaf-layout-dialect.version</code>）<pre class=" language-xml"><code class="language-xml">  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dependency</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groupId</span><span class="token punctuation">></span></span>org.springframework.boot<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groupId</span><span class="token punctuation">></span></span>
       <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>artifactId</span><span class="token punctuation">></span></span>spring-boot-starter-thymeleaf<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>artifactId</span><span class="token punctuation">></span></span>
@@ -852,8 +850,6 @@
                     <div class="summary block-with-text">
                         
                             Docker 可以打包应用以及依赖包至一个可移植的镜像中，该镜像可发布到任意平台且可实行虚拟化。
-
-什么是 DockerDocker 是基于 Go 语言并遵从 Apache 协议开源的一个开源的应用容器引擎，支持将软件编译成一个镜像并设置镜
                         
                     </div>
                     <div class="publish-info">
@@ -906,9 +902,7 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            SpringBoot 默认使用 SLF4j 和 Logback 日志框架。
-
-日志框架市场上存在多种日志框架，日志接口有 JCL、SLF4j 和 jboss-logging，日志具体实现有 Log4j、Logback、JUL 和 Log4j
+                            SpringBoot 默认使用 SLF4j 和 Logback 日志框架。<br> <br>
                         
                     </div>
                     <div class="publish-info">
@@ -1134,7 +1128,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             

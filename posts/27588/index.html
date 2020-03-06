@@ -440,14 +440,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2019-12-05
+                    2020-03-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    731
+                    697
                 </div>
                 
 
@@ -470,16 +470,14 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>SpringMVC 的拦截器（Interceptor）类似于 Servlet 开发中的过滤器（Filter），用于对处理器（Controller）进行预处理和后处理。</p>
-<a id="more"></a>
-<h2 id="Filter-与-Interceptor-的区别"><a href="#Filter-与-Interceptor-的区别" class="headerlink" title="Filter 与 Interceptor 的区别"></a>Filter 与 Interceptor 的区别</h2><h3 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h3><p>Filter 依赖于 Servlet 容器，它的实现基于函数回调，几乎可以对所有的请求进行过滤，通常于容器初始化时调用。</p>
+                <h2 id="Filter-与-Interceptor-的区别"><a href="#Filter-与-Interceptor-的区别" class="headerlink" title="Filter 与 Interceptor 的区别"></a>Filter 与 Interceptor 的区别</h2><h3 id="Filter"><a href="#Filter" class="headerlink" title="Filter"></a>Filter</h3><p>Filter 依赖于 Servlet 容器，它的实现基于函数回调，几乎可以对所有的请求进行过滤，通常于容器初始化时调用。</p>
 <h3 id="Interceptor"><a href="#Interceptor" class="headerlink" title="Interceptor"></a>Interceptor</h3><p>Interceptor 依赖于 SpringMVC 框架，它的实现基于 Java 的反射机制，属于 AOP 的一种运用。通常对处理器方法进行预处理和后处理。</p>
 <h2 id="案例说明"><a href="#案例说明" class="headerlink" title="案例说明"></a>案例说明</h2><ol>
 <li>编写两个拦截器类，实现 HandlerInterceptor 接口。其中预处理方法中返回值为布尔型，作用分别如下：<ul>
 <li>true：表放行，执行下一个拦截器，没有则执行 controller 中的方法。</li>
 <li>false：表不放行，会执行 preHandle() 和 afterCompletion() 方法，但不对 controller 中的方法和 postHandle() 进行执行。<blockquote>
 <p>两个拦截器分别为拦截器1和拦截器2，执行顺序为：<br>1pre()→2pre()→controller方法→2post()→1post()→2after()→1after()  </p>
-</blockquote>
+<img src="/.com//27588/executeSequence.jpg" class="" title="拦截器方法执行顺序"></blockquote>
 </li>
 </ul>
 </li>
@@ -747,9 +745,6 @@
                     <div class="summary block-with-text">
                         
                             Mybatis 是一个优秀的基于 java 的持久层框架，其内部封装了 jdbc，使开发者只需要关注 sql 语句本身。
-
-Mybatis 概述
-Mybatis 封装了 jdbc，让开发无需花费精力去处理加载驱动、创建连接、创建 state
                         
                     </div>
                     <div class="publish-info">
@@ -803,10 +798,6 @@ Mybatis 封装了 jdbc，让开发无需花费精力去处理加载驱动、创�
                     <div class="summary block-with-text">
                         
                             SpringMVC 统一处理异常将所有异常处理从各处理过程中解耦出来，保证了功能块的单一性，也实行了异常信息的统一处理和维护。
-
-异常处理方式SpringMVC 常用的异常处理方式有两种：
-
-使用 SpringMVC 提供的 Handler
                         
                     </div>
                     <div class="publish-info">
@@ -1032,7 +1023,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">68.1k</span>&nbsp;字
+                class="white-color">67k</span>&nbsp;字
             
             
             
