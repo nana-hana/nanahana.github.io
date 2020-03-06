@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>喵窝</title>
+  
+  <subtitle>喵萝卜</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.kuukokawaii.com/"/>
+  <updated>2020-03-06T10:29:29.998Z</updated>
+  <id>https://blog.kuukokawaii.com/</id>
+  
+  <author>
+    <name>喵粮都输光了</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>高等数学</title>
+    <link href="https://blog.kuukokawaii.com/posts/93e4730e/"/>
+    <id>https://blog.kuukokawaii.com/posts/93e4730e/</id>
+    <published>2020-03-02T05:00:25.000Z</published>
+    <updated>2020-03-06T10:29:29.998Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;高等数学知识点总结。   &lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="高等数学" scheme="https://blog.kuukokawaii.com/categories/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数学" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>线性代数</title>
+    <link href="https://blog.kuukokawaii.com/posts/c23efd5b/"/>
+    <id>https://blog.kuukokawaii.com/posts/c23efd5b/</id>
+    <published>2020-01-18T06:41:20.000Z</published>
+    <updated>2020-03-06T10:08:20.496Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;线性代数知识点总结。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="线性代数" scheme="https://blog.kuukokawaii.com/categories/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="数学" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django（二）：ORM</title>
+    <link href="https://blog.kuukokawaii.com/posts/b179370b/"/>
+    <id>https://blog.kuukokawaii.com/posts/b179370b/</id>
+    <published>2019-12-21T13:15:33.000Z</published>
+    <updated>2019-12-23T00:56:33.712Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ORM 通过 pymysql（Django低版本） 或 mysqlclient(Django高版本)连接数据库。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="django" scheme="https://blog.kuukokawaii.com/categories/django/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="python" scheme="https://blog.kuukokawaii.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Django（一）：简介</title>
+    <link href="https://blog.kuukokawaii.com/posts/1e026f1b/"/>
+    <id>https://blog.kuukokawaii.com/posts/1e026f1b/</id>
+    <published>2019-12-21T08:43:22.000Z</published>
+    <updated>2019-12-25T02:18:58.408Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Django 是一个由 Python 写成且开放源代码的 Web 应用框架。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="django" scheme="https://blog.kuukokawaii.com/categories/django/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="python" scheme="https://blog.kuukokawaii.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python：邮件发布</title>
+    <link href="https://blog.kuukokawaii.com/posts/1530706b/"/>
+    <id>https://blog.kuukokawaii.com/posts/1530706b/</id>
+    <published>2019-12-17T00:55:21.000Z</published>
+    <updated>2019-12-18T11:56:42.721Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Python 基于 SMTP 协议发送邮件。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="python" scheme="https://blog.kuukokawaii.com/categories/python/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="python" scheme="https://blog.kuukokawaii.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（十四）：监控管理</title>
+    <link href="https://blog.kuukokawaii.com/posts/81ac1c26/"/>
+    <id>https://blog.kuukokawaii.com/posts/81ac1c26/</id>
+    <published>2019-12-06T07:30:31.000Z</published>
+    <updated>2019-12-06T08:34:55.320Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 提供了准生产环境下的应该用监控和管理功能。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（十三）：热部署</title>
+    <link href="https://blog.kuukokawaii.com/posts/64a44bcd/"/>
+    <id>https://blog.kuukokawaii.com/posts/64a44bcd/</id>
+    <published>2019-12-06T06:19:11.000Z</published>
+    <updated>2019-12-06T07:24:42.315Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JAVA 热部署。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（十二）：分布式</title>
+    <link href="https://blog.kuukokawaii.com/posts/e0109747/"/>
+    <id>https://blog.kuukokawaii.com/posts/e0109747/</id>
+    <published>2019-12-04T14:29:05.000Z</published>
+    <updated>2019-12-06T06:13:56.969Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 分布式、Dubbo/Zookeeper 和 Spring Boot/Cloud。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（十一）：安全</title>
+    <link href="https://blog.kuukokawaii.com/posts/f4c26338/"/>
+    <id>https://blog.kuukokawaii.com/posts/f4c26338/</id>
+    <published>2019-12-04T09:54:41.000Z</published>
+    <updated>2019-12-05T03:57:08.194Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 底层采用 Spring Security 作为安全框架。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（十）：任务</title>
+    <link href="https://blog.kuukokawaii.com/posts/454051ae/"/>
+    <id>https://blog.kuukokawaii.com/posts/454051ae/</id>
+    <published>2019-12-04T06:16:25.000Z</published>
+    <updated>2019-12-05T03:57:08.240Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 异步任务、定时任务和邮件任务。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（九）：检索</title>
+    <link href="https://blog.kuukokawaii.com/posts/8146c289/"/>
+    <id>https://blog.kuukokawaii.com/posts/8146c289/</id>
+    <published>2019-12-02T15:02:04.000Z</published>
+    <updated>2019-12-05T03:57:08.201Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;ElasticSearch 可以快速的存储、搜索和分析海量数据，是目前全文搜索引擎的首选。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（八）：消息队列</title>
+    <link href="https://blog.kuukokawaii.com/posts/2b1dfb69/"/>
+    <id>https://blog.kuukokawaii.com/posts/2b1dfb69/</id>
+    <published>2019-12-01T02:51:55.000Z</published>
+    <updated>2019-12-05T03:57:08.419Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;消息队列常见规范 JMS（JAVA消息服务）、AMQP（高级消息队列协议），SpringBoot 整合 RabbitMQ。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（七）：缓存</title>
+    <link href="https://blog.kuukokawaii.com/posts/676006d6/"/>
+    <id>https://blog.kuukokawaii.com/posts/676006d6/</id>
+    <published>2019-11-30T04:06:19.000Z</published>
+    <updated>2019-12-05T03:57:08.309Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;JSR-107、Spring 缓存抽象、整合 Redis&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（六）：数据访问</title>
+    <link href="https://blog.kuukokawaii.com/posts/fd098bd4/"/>
+    <id>https://blog.kuukokawaii.com/posts/fd098bd4/</id>
+    <published>2019-11-27T05:15:47.000Z</published>
+    <updated>2019-12-05T03:57:08.162Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 底层使用 SpringData 作为数据访问的默认处理方式。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（五）：Docker</title>
+    <link href="https://blog.kuukokawaii.com/posts/3096723d/"/>
+    <id>https://blog.kuukokawaii.com/posts/3096723d/</id>
+    <published>2019-11-27T01:45:29.000Z</published>
+    <updated>2019-12-05T03:57:08.221Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Docker 可以打包应用以及依赖包至一个可移植的镜像中，该镜像可发布到任意平台且可实行虚拟化。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（四）：WEB 开发</title>
+    <link href="https://blog.kuukokawaii.com/posts/4fa653eb/"/>
+    <id>https://blog.kuukokawaii.com/posts/4fa653eb/</id>
+    <published>2019-11-24T06:27:09.000Z</published>
+    <updated>2019-12-05T03:57:08.351Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot Web开发中常用的 Thymeleaf、Web 定制和容器定制。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（三）：日志</title>
+    <link href="https://blog.kuukokawaii.com/posts/1d79677f/"/>
+    <id>https://blog.kuukokawaii.com/posts/1d79677f/</id>
+    <published>2019-11-23T02:39:48.000Z</published>
+    <updated>2019-12-05T03:57:08.207Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 默认使用 SLF4j 和 Logback 日志框架。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（二）：配置文件</title>
+    <link href="https://blog.kuukokawaii.com/posts/2250b4d3/"/>
+    <id>https://blog.kuukokawaii.com/posts/2250b4d3/</id>
+    <published>2019-11-22T01:43:31.000Z</published>
+    <updated>2019-12-05T03:57:08.248Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 通过使用全局配置文件 application.properties 或 application.yml 修改一些 SpringBoot 自动配置的默认值。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot（一）：简介</title>
+    <link href="https://blog.kuukokawaii.com/posts/1bc2c8b5/"/>
+    <id>https://blog.kuukokawaii.com/posts/1bc2c8b5/</id>
+    <published>2019-11-21T04:31:51.000Z</published>
+    <updated>2019-12-05T03:57:08.281Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;SpringBoot 是简化 Spring 应用开发的一个库的集合体，是 Spring 技术栈的一个大整合。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SSM整合</title>
+    <link href="https://blog.kuukokawaii.com/posts/12cc57d7/"/>
+    <id>https://blog.kuukokawaii.com/posts/12cc57d7/</id>
+    <published>2019-11-20T02:54:59.000Z</published>
+    <updated>2019-12-05T03:57:08.322Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;通过 XML 配置+注解的方式整合 Spring、SpringMVC、Mybatis 框架。其中 XML 配置环境，而注解用于实现注入等功能。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="SSM" scheme="https://blog.kuukokawaii.com/categories/SSM/"/>
+    
+    
+      <category term="笔记" scheme="https://blog.kuukokawaii.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
+  
+</feed>
