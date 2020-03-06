@@ -538,11 +538,8 @@
 <li>$\lim \frac{\beta}{\alpha}=0$，则$\beta$是比$\alpha$高阶的无穷小，记作$\beta=o(\alpha)$。<br> $\lim \frac{\beta}{\alpha}=\infty$，则$\beta$是比$\alpha$低阶的无穷小。<br> $\lim \frac{\beta}{\alpha}=c≠0$，则$\beta$与$\alpha$是同阶无穷小。<br> $\lim \frac{\beta}{\alpha^k}=c≠0$，则$\beta$是关于$\alpha$的k阶无穷小<br> $\lim \frac{\beta}{\alpha}=1$，则$\beta$与$\alpha$是等价无穷小，记作$\alpha\sim\beta$。</li>
 <li>$\beta$与$\alpha$等价。$\Leftrightarrow$$\beta=\alpha+o(\alpha)$。</li>
 <li>$\alpha\sim\widetilde{\alpha}$，$\beta\sim\widetilde{\beta}$，且$\lim \frac{\widetilde{\beta}}{\widetilde{\alpha}}$存在，则$\lim \frac{\beta}{\alpha}=\lim \frac{\widetilde{\beta}}{\widetilde{\alpha}}$</li>
-<li>当$x \to 0$时，求两个无穷小比(做乘除运算)的极限时，分子及分母可用等价无穷小来替换。常用等价替换：<table><tbody><tr><td>$sinx\sim x$</td><td>$tanx\sim x$</td><td>$arcsinx\sim x$</td></tr><tr><td>$arctanx\sim x$</td><td>$ln(1+x)\sim x$</td><td>$e^x-1\sim x$</td></tr><tr><td>$a^x\sim 1+xlna$</td><td>$1-cosx\sim \frac{1}{2}x^2$</td><td>$(1+x)^\frac{1}{n}-1\sim \frac{1}{n}x$</td></tr><tr><td>$(1+x)^\alpha\sim 1+\alpha x$</td><td></td><td></td></tr></tbody></table>
-
-</li>
-</ol>
-<h3 id="函数的连续性与间断点"><a href="#函数的连续性与间断点" class="headerlink" title="函数的连续性与间断点"></a>函数的连续性与间断点</h3><ol>
+<li>当$x \to 0$时，求两个无穷小比(做乘除运算)的极限时，分子及分母可用等价无穷小来替换。常用等价替换：<table><tbody><tr><td>$sinx\sim x$</td><td>$tanx\sim x$</td></tr><tr><td>$arcsinx\sim x$</td><td>$arctanx\sim x$</td></tr><tr><td>$ln(1+x)\sim x$</td><td>$e^x-1\sim x$</td></tr><tr><td>$a^x\sim 1+xlna$</td><td>$1-cosx\sim \frac{1}{2}x^2$</td></tr><tr><td>$(1+x)^\frac{1}{n}-1\sim \frac{1}{n}x$</td><td>$(1+x)^\alpha\sim 1+\alpha x$</td></tr></tbody></table>
+<h3 id="函数的连续性与间断点"><a href="#函数的连续性与间断点" class="headerlink" title="函数的连续性与间断点"></a>函数的连续性与间断点</h3></li>
 <li>$\lim \limits_{\Delta x \to 0} \Delta y=\lim \limits_{\Delta x \to 0} [f(x_0+\Delta x)-f(x_0)]=0$。</li>
 <li>$\lim \limits_{x \to x_0} f(x)=f(x_0)$。即连续性的条件为$\begin{cases} 1.在x_0处有极限。\\2.在x_0处有定义。\\3.极限等于函数值。 \end{cases}$</li>
 <li>连续。$\Leftrightarrow$左、右连续。<br> 左连续：$\lim \limits_{x \to x_0^-} f(x)=f(x_0)$。<br> 右连续：$\lim \limits_{x \to x_0^+} f(x)=f(x_0)$。</li>
@@ -578,14 +575,14 @@
 <li>可导必连续，连续不一定可导。（$\lim \limits_{\Delta x \to 0} \frac{\Delta y}{\Delta x}$存在即可导，$\lim \limits_{\Delta x \to 0} \Delta y=0$即连续。）</li>
 </ol>
 <h3 id="函数的求导法则"><a href="#函数的求导法则" class="headerlink" title="函数的求导法则"></a>函数的求导法则<span id="derivative_formula"></span></h3><ol>
-<li>常数和基本初等函数的导数公式：<table><tbody><tr><td>$(C)^\prime=0$</td><td>$(x^\mu)^\prime=\mu x^{\mu-1}$</td><td>$(a^x)^\prime=a^xlna(a&gt;0, a≠1)$</td></tr><tr><td>$(e^x)^\prime=e^x$</td><td>$(lnx)^\prime=\frac{1}{x}$</td><td>$(log_ax)^\prime=\frac{1}{xlna}(a&gt;0, a≠1)$</td></tr><tr><td>$(sinx)^\prime=cosx$</td><td>$(cosx)^\prime=-sinx$</td><td>$(tanx)^\prime=sec^2x$</td></tr><tr><td>$(cotx)^\prime=-csc^2x$</td><td>$(sec)^\prime=secxtanx$</td><td>$(cscx)^\prime=-cscxcotx$</td></tr><tr><td>$(arcsinx)^\prime=\frac{1}{\sqrt{1-x^2}}$</td><td>$(arccosx)^\prime=-\frac{1}{\sqrt{1-x^2}}$</td><td>$(arctanx)^\prime=\frac{1}{1+x^2}$</td></tr><tr><td>$(arccotx)^\prime=-\frac{1}{1+x^2}$</td><td>$(shx)^\prime=chx$</td><td>$(chx)^\prime=shx$</td></tr><tr><td>$(thx)^\prime=\frac{1}{ch^2x}$</td><td>$(arshx)^\prime=\frac{1}{\sqrt{1+x^2}}$</td><td>$(archx)^\prime=\frac{1}{\sqrt{x^2-1}}$</td></tr><tr><td>$(arthx)^\prime=\frac{1}{1-x^2}$</td><td></td><td></td></tr></tbody></table></li>
+<li>常数和基本初等函数的导数公式：<table><tbody><tr><td>$(C)^\prime=0$</td><td>$(x^\mu)^\prime=\mu x^{\mu-1}$</td></tr><tr><td>$(a^x)^\prime=a^xlna(a&gt;0, a≠1)$</td><td>$(e^x)^\prime=e^x$</td></tr><tr><td>$(lnx)^\prime=\frac{1}{x}$</td><td>$(log_ax)^\prime=\frac{1}{xlna}(a&gt;0, a≠1)$</td></tr><tr><td>$(sinx)^\prime=cosx$</td><td>$(cosx)^\prime=-sinx$</td></tr><tr><td>$(tanx)^\prime=sec^2x$</td><td>$(cotx)^\prime=-csc^2x$</td></tr><tr><td>$(sec)^\prime=secxtanx$</td><td>$(cscx)^\prime=-cscxcotx$</td></tr><tr><td>$(arcsinx)^\prime=\frac{1}{\sqrt{1-x^2}}$</td><td>$(arccosx)^\prime=-\frac{1}{\sqrt{1-x^2}}$</td></tr><tr><td>$(arctanx)^\prime=\frac{1}{1+x^2}$</td><td>$(arccotx)^\prime=-\frac{1}{1+x^2}$</td></tr><tr><td>$(shx)^\prime=chx$</td><td>$(chx)^\prime=shx$</td></tr><tr><td>$(thx)^\prime=\frac{1}{ch^2x}$</td><td>$(arshx)^\prime=\frac{1}{\sqrt{1+x^2}}$</td></tr><tr><td>$(archx)^\prime=\frac{1}{\sqrt{x^2-1}}$</td><td>$(arthx)^\prime=\frac{1}{1-x^2}$</td></tr></tbody></table></li>
 <li>函数的和、差、积、商的求导法则：<table><tbody><tr><td>$(u±v)^\prime=u^\prime±v^\prime$</td><td>$(Cu)^\prime=Cu^\prime(C是常数)$</td></tr><tr><td>$(uv)^\prime=u^\prime v+uv^\prime$</td><td>$(\frac{u}{v})^\prime=\frac{u^\prime v-uv^\prime}{v^2}$</td></tr></tbody></table></li>
 <li>反函数求导：$x=f(y)$在$I_y$内单调、可导且$f^\prime(y)≠0$，则其反函数$y=f^\prime(x)$在对应区间内也可导，$[f^\prime(x)]^\prime=\frac{1}{f^\prime(y)}$或$\frac{dy}{dx}=\frac{1}{\frac{dx}{dy}}$。即反函数的导数等于直接函数导数的倒数。</li>
 <li>复合函数求导：若$u=g(x)$在点x可导，而$y=f(u)$在点$u=g(x)$可导，则$y=f[g(x)]$在点x可导，$\frac{dy}{dx}=f^\prime(u)·g^\prime(x)$或$\frac{dy}{dx}=\frac{dy}{du}·\frac{du}{dx}$。</li>
 </ol>
 <h3 id="高阶导数"><a href="#高阶导数" class="headerlink" title="高阶导数"></a>高阶导数</h3><ol>
 <li>对函数做n次求导叫做n阶导数，记作$\frac{d^ny}{dx^n}$或$y^{(n)}(x)$。</li>
-<li>常用高阶导数：<table><tbody><tr><td>$(a^x)^{(n)}=a^x(lna)^n$</td><td>$(sinx)^{(n)}=sin(x+\frac{n\pi}{2})$</td><td>$(cosx)^{(n)}=cos(x+\frac{n\pi}{2})$</td></tr><tr><td>$(x^n)^{(n)}=n!$</td><td>$(x^n)^{(n+k)}=0(k=1, 2, \dots)$</td><td>$(uv)^{(n)}=\sum_{k=0}^n C_n^ku^{(n-k)}v^{(k)}$</td></tr><tr><td>$[ln(1+x)]^{(n)}=(-1)^{(n-1)}\frac{(n-1)!}{(1+x)^n}$</td><td></td><td></td></tr></tbody></table>
+<li>常用高阶导数：<table><tbody><tr><td>$(a^x)^{(n)}=a^x(lna)^n$</td><td>$(sinx)^{(n)}=sin(x+\frac{n\pi}{2})$</td></tr><tr><td>$(cosx)^{(n)}=cos(x+\frac{n\pi}{2})$</td><td>$(x^n)^{(n)}=n!$</td></tr><tr><td>$(x^n)^{(n+k)}=0(k=1, 2, \dots)$</td><td>$(uv)^{(n)}=\sum_{k=0}^n C_n^ku^{(n-k)}v^{(k)}$</td></tr><tr><td>$[ln(1+x)]^{(n)}=(-1)^{(n-1)}\frac{(n-1)!}{(1+x)^n}$</td><td></td></tr></tbody></table>
 
 </li>
 </ol>
