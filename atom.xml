@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-07T08:35:21.759Z</updated>
+  <updated>2020-03-09T04:33:46.081Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>概率论与数理统计</title>
+    <link href="https://blog.kuukokawaii.com/posts/28d5cef4/"/>
+    <id>https://blog.kuukokawaii.com/posts/28d5cef4/</id>
+    <published>2020-03-07T10:50:02.000Z</published>
+    <updated>2020-03-09T04:33:46.081Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;概率论的基本概念&quot;&gt;&lt;a href=&quot;#概率论的基本概念&quot; class=&quot;headerlink&quot; title=&quot;概率论的基本概念&quot;&gt;&lt;/a&gt;概率论的基本概念&lt;/h2&gt;&lt;h3 id=&quot;随机试验&quot;&gt;&lt;a href=&quot;#随机试验&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="概率论与数理统计" scheme="https://blog.kuukokawaii.com/categories/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1/"/>
+    
+    
+      <category term="数学" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>高等数学</title>
@@ -48,7 +75,7 @@
     <link href="https://blog.kuukokawaii.com/posts/c23efd5b/"/>
     <id>https://blog.kuukokawaii.com/posts/c23efd5b/</id>
     <published>2020-01-18T06:41:20.000Z</published>
-    <updated>2020-03-07T08:35:21.630Z</updated>
+    <updated>2020-03-07T10:43:28.782Z</updated>
     
     <summary type="html">
     
@@ -56,7 +83,7 @@
       
         
         
-          &lt;h2 id=&quot;行列式&quot;&gt;&lt;a href=&quot;#行列式&quot; class=&quot;headerlink&quot; title=&quot;行列式&quot;&gt;&lt;/a&gt;行列式&lt;/h2&gt;&lt;h3 id=&quot;行列式定义&quot;&gt;&lt;a href=&quot;#行列式定义&quot; class=&quot;headerlink&quot;
+          &lt;p&gt;&lt;img src=&quot;/medias/loading.gif&quot; alt=&quot;&quot;
         
       
     
@@ -525,33 +552,6 @@
     
     
       <category term="SpringBoot" scheme="https://blog.kuukokawaii.com/categories/SpringBoot/"/>
-    
-    
-      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SSM整合</title>
-    <link href="https://blog.kuukokawaii.com/posts/12cc57d7/"/>
-    <id>https://blog.kuukokawaii.com/posts/12cc57d7/</id>
-    <published>2019-11-20T02:54:59.000Z</published>
-    <updated>2020-03-07T08:35:21.668Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;目录层级&quot;&gt;&lt;a href=&quot;#目录层级&quot; class=&quot;headerlink&quot; title=&quot;目录层级&quot;&gt;&lt;/a&gt;目录层级&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;/medias/loading.gif&quot; alt=&quot;&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="SSM" scheme="https://blog.kuukokawaii.com/categories/SSM/"/>
     
     
       <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
