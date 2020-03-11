@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-11T07:36:30.511Z</updated>
+  <updated>2020-03-11T15:20:24.638Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://blog.kuukokawaii.com/posts/bf53f1b3/"/>
     <id>https://blog.kuukokawaii.com/posts/bf53f1b3/</id>
     <published>2020-03-11T07:23:40.000Z</published>
-    <updated>2020-03-11T07:36:30.511Z</updated>
+    <updated>2020-03-11T15:20:24.638Z</updated>
     
     <summary type="html">
     
@@ -29,11 +29,7 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;h2 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot;
         
       
     
