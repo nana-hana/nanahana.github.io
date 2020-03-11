@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-11T07:27:33.879Z</updated>
+  <updated>2020-03-11T07:36:30.511Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式之工厂模式</title>
+    <link href="https://blog.kuukokawaii.com/posts/bf53f1b3/"/>
+    <id>https://blog.kuukokawaii.com/posts/bf53f1b3/</id>
+    <published>2020-03-11T07:23:40.000Z</published>
+    <updated>2020-03-11T07:36:30.511Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>设计模式之装饰者模式</title>
+    <link href="https://blog.kuukokawaii.com/posts/2ba79d9e/"/>
+    <id>https://blog.kuukokawaii.com/posts/2ba79d9e/</id>
+    <published>2020-03-11T04:12:09.000Z</published>
+    <updated>2020-03-11T07:36:32.686Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;装饰者模式&quot;&gt;&lt;a href=&quot;#装饰者模式&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式之观察者模式</title>
@@ -494,60 +552,6 @@
         
         
           &lt;h2 id=&quot;静态资源&quot;&gt;&lt;a href=&quot;#静态资源&quot; class=&quot;headerlink&quot; title=&quot;静态资源&quot;&gt;&lt;/a&gt;静态资源&lt;/h2&gt;&lt;h3 id=&quot;映射规则&quot;&gt;&lt;a href=&quot;#映射规则&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://blog.kuukokawaii.com/categories/java/"/>
-    
-    
-      <category term="springboot" scheme="https://blog.kuukokawaii.com/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot（三）：日志</title>
-    <link href="https://blog.kuukokawaii.com/posts/1d79677f/"/>
-    <id>https://blog.kuukokawaii.com/posts/1d79677f/</id>
-    <published>2019-11-23T02:39:48.000Z</published>
-    <updated>2020-03-11T07:30:11.412Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;日志框架&quot;&gt;&lt;a href=&quot;#日志框架&quot; class=&quot;headerlink&quot; title=&quot;日志框架&quot;&gt;&lt;/a&gt;日志框架&lt;/h2&gt;&lt;p&gt;市场上存在多种日志框架，日志接口有 JCL、SLF4j 和 jboss-logging，日志具体实现有
-        
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://blog.kuukokawaii.com/categories/java/"/>
-    
-    
-      <category term="springboot" scheme="https://blog.kuukokawaii.com/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot（二）：配置文件</title>
-    <link href="https://blog.kuukokawaii.com/posts/2250b4d3/"/>
-    <id>https://blog.kuukokawaii.com/posts/2250b4d3/</id>
-    <published>2019-11-22T01:43:31.000Z</published>
-    <updated>2020-03-11T07:30:11.941Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;YAML&quot;&gt;&lt;a href=&quot;#YAML&quot; class=&quot;headerlink&quot; title=&quot;YAML&quot;&gt;&lt;/a&gt;YAML&lt;/h2&gt;&lt;p&gt;SpringBoot 可以使用 YAML 进行全局配置。YAML 是以数据为中心的标记语言，比 JSON、XML
         
       
     
