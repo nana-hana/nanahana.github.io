@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-12T11:17:18.243Z</updated>
+  <updated>2020-03-13T08:14:29.418Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式之适配器模式与外观模式</title>
+    <link href="https://blog.kuukokawaii.com/posts/aa979c82/"/>
+    <id>https://blog.kuukokawaii.com/posts/aa979c82/</id>
+    <published>2020-03-13T06:12:37.000Z</published>
+    <updated>2020-03-13T08:14:29.418Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;适配器模式&quot;&gt;&lt;a href=&quot;#适配器模式&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式之命令模式</title>
@@ -519,33 +546,6 @@
         
         
           &lt;h2 id=&quot;JSR-107&quot;&gt;&lt;a href=&quot;#JSR-107&quot; class=&quot;headerlink&quot; title=&quot;JSR-107&quot;&gt;&lt;/a&gt;JSR-107&lt;/h2&gt;&lt;p&gt;Java Caching
-        
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://blog.kuukokawaii.com/categories/java/"/>
-    
-    
-      <category term="springboot" scheme="https://blog.kuukokawaii.com/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot（六）：数据访问</title>
-    <link href="https://blog.kuukokawaii.com/posts/fd098bd4/"/>
-    <id>https://blog.kuukokawaii.com/posts/fd098bd4/</id>
-    <published>2019-11-27T05:15:47.000Z</published>
-    <updated>2020-03-11T07:30:11.711Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;SpringData&quot;&gt;&lt;a href=&quot;#SpringData&quot; class=&quot;headerlink&quot; title=&quot;SpringData&quot;&gt;&lt;/a&gt;SpringData&lt;/h2&gt;&lt;p&gt;SpringData
         
       
     
