@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-16T05:46:05.598Z</updated>
+  <updated>2020-03-17T10:06:26.660Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式之代理模式</title>
+    <link href="https://blog.kuukokawaii.com/posts/907a70d0/"/>
+    <id>https://blog.kuukokawaii.com/posts/907a70d0/</id>
+    <published>2020-03-17T01:49:06.000Z</published>
+    <updated>2020-03-17T10:06:26.660Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;代理模式&quot;&gt;&lt;a href=&quot;#代理模式&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式之状态模式</title>
@@ -516,33 +543,6 @@
         
         
           &lt;h2 id=&quot;安全机制&quot;&gt;&lt;a href=&quot;#安全机制&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://blog.kuukokawaii.com/categories/java/"/>
-    
-    
-      <category term="springboot" scheme="https://blog.kuukokawaii.com/tags/springboot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot（十）：任务</title>
-    <link href="https://blog.kuukokawaii.com/posts/454051ae/"/>
-    <id>https://blog.kuukokawaii.com/posts/454051ae/</id>
-    <published>2019-12-04T06:16:25.000Z</published>
-    <updated>2020-03-09T11:05:14.382Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;异步任务&quot;&gt;&lt;a href=&quot;#异步任务&quot; class=&quot;headerlink&quot; title=&quot;异步任务&quot;&gt;&lt;/a&gt;异步任务&lt;/h2&gt;&lt;p&gt;spring
         
       
     
