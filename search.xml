@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>数据结构之串、数组与广义表</title>
+      <link href="/posts/2844cbbf/"/>
+      <url>/posts/2844cbbf/</url>
+      
+        <content type="html"><![CDATA[<h2 id="串"><a href="#串" class="headerlink" title="串"></a>串</h2><ul><li>串（string或字符串）是内容受限的线性表，限定了表中的元素为字符。</li><li>串的两种基本存储结构为顺序存储和链式存储。通常采用顺序存储结构。</li></ul><h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><ul><li>数组是由类型相同的数据元素构成的有序集合，数组中存储的数据可以是带有结构的同一数据类型的数据。数组一般采用顺序存储结构，其存储方式也可分为按行存储(较多)和按列存储。</li><li>多维数组实质上是 n 个线性表的组合，其每一维都是一个线性表，因此多维数组可以看成是线性表的推广。</li><li>特殊矩阵压缩存储，可以将多个值相同的元只分配一个存储空间，对零元不分配空间。常见的有对称矩阵，三角矩阵和对角矩阵：<ul><li>对称矩阵：一维数组array[k]与矩阵$a_{ij}$之间的对应关系：$$k=\begin{cases}\frac{i(i-1)}{2}+j-1&amp;当i≥j，\\ \frac{j(j-1)}{2}+i-1&amp;当i\lt j。 \end{cases}$$对称矩阵只需要存储包含对角线及以上或者以下元素，因此存储空间可以从$n^2$减小到$\frac{n(n+1)}{2}$。假设当作下三角来看，第一行1个元素，第二行2个元素，直到第n行n个元素。可以知道$a_{ij}$就是第1行到第i-1行的元素个数加上第i行的元素个数再减去一（一维数组下标从0开始），即$\frac{i(i-1)}{2}+j-1$。由于对称矩阵是对称的，将刚得出的公式中的i和j互换即可获得一样的下标。</li><li>三角矩阵：<ul><li>下三角矩阵：矩阵下三角(不含对角线)的元素均为某一常数或零。一维数组array[k]与矩阵$a_{ij}$之间的对应关系：$$k=\begin{cases}\frac{i(i-1)}{2}+j-1&amp;当i≥j，\\ \frac{n(n+1)}{2}&amp;当i\lt j。 \end{cases}$$矩阵下三角第一行1个元素，第二行2个元素，直到n行n个元素。元素总和为$\frac{n(n+1)}{2}$。因此当需要计算$a_{ij}$时，首先需要计算1至i-1行有多少个元素在加上第i行的j个元素，还要减一（一维数组下标从0开始）。均为某一常数或零就存储在最后一个位置上。</li><li>上三角矩阵：与下三角矩阵相反。一维数组array[k]与矩阵$a_{ij}$之间的对应关系：$$k=\begin{cases}\frac{(i-1)(2n-i+2)}{2}+(j-i) &amp;当i≤j，\\ \frac{n(n+1)}{2} &amp;当i\gt j。 \end{cases}$$矩阵上三角第一行n个元素，第二行n-1个元素，直到第n行1个元素。由此可知这是一个等差数列，i行的元素个数为$n-i+1$个，再根据公式$S_n=\frac{n(a_1+a_n)}{2}$可得1至i-1行有$\frac{(i-1)(n+n-(i-1)+1)}{2}=\frac{(i-1)(2n-i+2)}{2}$个元素，加上第i行的(j-i+1)个元素（看$a_{11}，j-i为0，还要加上1才能表示有一个元素$），还要减一（一维数组下标从0开始）。均为某一常数或零就存储在最后一个位置上。</li></ul></li><li>对角矩阵：对角矩阵所有的非零元都集中在以主对角线为中心的带状区域中，即除了对角线上和在对角线上、下方若干条对角线上的数据外，其他数据都为零。可以通过以行或列为主，或以对角线顺序将其压缩到一维数组上。</li></ul></li></ul><h2 id="广义表"><a href="#广义表" class="headerlink" title="广义表"></a>广义表</h2><ul><li>广义表是另外一种线性表的推广形式，表中的元素可以是称为原子的单个元素，也可以是一个子表，所以线性表可以看成广义表的特例。</li><li>广义表的常用操作有取表头和取表尾。<ul><li>取表头：取出的表头为非空广义表的第一个元素，可以是单原子也可以是子表。</li><li>取表尾：取出的表尾为去表头之外其余元素所构成的表，尾表一定是一个广义表。</li></ul></li><li>广义表通常采用链式存储结构：头尾链表的存储结构和扩展线性链表的存储结构。<ul><li>头尾链表的存储结构：表结点由标志域(1表子表，0表原子)、指示表头的指针域和指示表尾的指针域构成。原子结点由标志域和值域构成。</li><li>扩展线性链表的存储结构：无论表结点还是原子结点均由三个域组成，即标志域、指示表头的指针域(表结点或原子结点)和指示表尾的指针域。</li></ul></li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>数据结构之栈与队列</title>
       <link href="/posts/2442d660/"/>
       <url>/posts/2442d660/</url>
