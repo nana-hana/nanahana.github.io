@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-20T07:06:40.859Z</updated>
+  <updated>2020-03-20T11:55:56.836Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据结构之栈与队列</title>
+    <link href="https://blog.kuukokawaii.com/posts/2442d660/"/>
+    <id>https://blog.kuukokawaii.com/posts/2442d660/</id>
+    <published>2020-03-20T07:09:59.000Z</published>
+    <updated>2020-03-20T11:55:56.836Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;栈&quot;&gt;&lt;a href=&quot;#栈&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="https://blog.kuukokawaii.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数据结构之线性表</title>
     <link href="https://blog.kuukokawaii.com/posts/91054329/"/>
     <id>https://blog.kuukokawaii.com/posts/91054329/</id>
     <published>2020-03-19T12:26:13.000Z</published>
-    <updated>2020-03-20T07:06:40.859Z</updated>
+    <updated>2020-03-20T10:32:55.029Z</updated>
     
     <summary type="html">
     
@@ -526,33 +553,6 @@
     
     
       <category term="python" scheme="https://blog.kuukokawaii.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringBoot（十四）：监控管理</title>
-    <link href="https://blog.kuukokawaii.com/posts/81ac1c26/"/>
-    <id>https://blog.kuukokawaii.com/posts/81ac1c26/</id>
-    <published>2019-12-06T07:30:31.000Z</published>
-    <updated>2020-03-18T09:52:15.330Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;监控管理&quot;&gt;&lt;a href=&quot;#监控管理&quot; class=&quot;headerlink&quot; title=&quot;监控管理&quot;&gt;&lt;/a&gt;监控管理&lt;/h2&gt;&lt;p&gt;SpringBoot 通过引入 actuator 依赖，可以获得应用监控和管理功能。可以通过 HTTP、JMX 和 SSH
-        
-      
-    
-    </summary>
-    
-    
-      <category term="java" scheme="https://blog.kuukokawaii.com/categories/java/"/>
-    
-    
-      <category term="springboot" scheme="https://blog.kuukokawaii.com/tags/springboot/"/>
     
   </entry>
   
