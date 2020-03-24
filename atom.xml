@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-22T04:43:49.612Z</updated>
+  <updated>2020-03-24T03:35:09.870Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>数据结构之图</title>
+    <link href="https://blog.kuukokawaii.com/posts/f932ba85/"/>
+    <id>https://blog.kuukokawaii.com/posts/f932ba85/</id>
+    <published>2020-03-22T04:49:06.000Z</published>
+    <updated>2020-03-24T03:35:09.870Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;图$($Graph$)$由顶点$($V, vertex$)$和表示顶点之间关系的边$($E, edge, 弧$)$所组成。$V(G)$和$E(G)$分别表示图G的顶点集和边集，$E(G)$可为空集。&lt;/p&gt;
+&lt;h2 id=&quot;基本术语&quot;&gt;&lt;a href=&quot;#基本术语&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="数据结构" scheme="https://blog.kuukokawaii.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="数据结构" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>数据结构之树</title>
     <link href="https://blog.kuukokawaii.com/posts/6c17d6bd/"/>
     <id>https://blog.kuukokawaii.com/posts/6c17d6bd/</id>
     <published>2020-03-21T00:48:15.000Z</published>
-    <updated>2020-03-22T04:43:49.612Z</updated>
+    <updated>2020-03-23T03:57:21.600Z</updated>
     
     <summary type="html">
     
@@ -526,33 +554,6 @@
     
     
       <category term="数学" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Django（二）：ORM</title>
-    <link href="https://blog.kuukokawaii.com/posts/b179370b/"/>
-    <id>https://blog.kuukokawaii.com/posts/b179370b/</id>
-    <published>2019-12-21T13:15:33.000Z</published>
-    <updated>2020-03-18T08:33:01.876Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;ORM&quot;&gt;&lt;a href=&quot;#ORM&quot; class=&quot;headerlink&quot; title=&quot;ORM&quot;&gt;&lt;/a&gt;ORM&lt;/h2&gt;&lt;p&gt;Django ORM 默认使用 SQLite
-        
-      
-    
-    </summary>
-    
-    
-      <category term="python" scheme="https://blog.kuukokawaii.com/categories/python/"/>
-    
-    
-      <category term="django" scheme="https://blog.kuukokawaii.com/tags/django/"/>
     
   </entry>
   

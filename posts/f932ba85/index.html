@@ -1,0 +1,904 @@
+<!-- build time:Tue Mar 24 2020 11:41:26 GMT+0800 (GMT+08:00) --><!DOCTYPE HTML><html lang="zh-CN"><head><meta charset="utf-8"><meta name="keywords" content="数据结构,图"><meta name="description" content=""><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"><meta name="renderer" content="webkit|ie-stand|ie-comp"><meta name="mobile-web-app-capable" content="yes"><meta name="format-detection" content="telephone=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><title>数据结构之图 | 喵窝</title><link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/favicon.png"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/awesome/css/all.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/materialize/materialize.min.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/aos/aos.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/animate/animate.min.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/lightGallery/css/lightgallery.min.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/css/matery.css"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/css/my.css"><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/jquery/jquery.min.js"></script><meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/atom.xml" title="喵窝" type="application/atom+xml"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head><body><header class="navbar-fixed"><nav id="headNav" class="bg-color nav-transparent"><div id="navContainer" class="nav-wrapper container"><div class="brand-logo"><a href="/" class="waves-effect waves-light"><div><img src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/loading.gif" alt="" data-original="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/logo.png" class="logo-img" alt="LOGO"> <span class="logo-span">喵窝</span></div></a></div><a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a><ul class="right nav-menu"><li class="hide-on-med-and-down nav-item"><a href="/" class="waves-effect waves-light"><i class="fas fa-home" style="zoom:.6"></i> <span>首页</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fas fa-tags" style="zoom:.6"></i> <span>标签</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fas fa-bookmark" style="zoom:.6"></i> <span>分类</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fas fa-archive" style="zoom:.6"></i> <span>归档</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/about" class="waves-effect waves-light"><i class="fas fa-user-circle" style="zoom:.6"></i> <span>关于</span></a></li><li class="hide-on-med-and-down nav-item"><a href="/contact" class="waves-effect waves-light"><i class="fas fa-comments" style="zoom:.6"></i> <span>留言板</span></a></li><li><a href="#searchModal" class="modal-trigger waves-effect waves-light"><i id="searchIcon" class="fas fa-search" title="搜索" style="zoom:.85"></i></a></li></ul><div id="mobile-nav" class="side-nav sidenav"><div class="mobile-head bg-color"><img src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/loading.gif" alt="" data-original="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/logo.png" class="logo-img circle responsive-img"><div class="logo-name">喵窝</div><div class="logo-desc">Never really desperate, only the lost of the soul.</div></div><ul class="menu-list mobile-menu-list"><li class="m-nav-item"><a href="/" class="waves-effect waves-light"><i class="fa-fw fas fa-home"></i> 首页</a></li><li class="m-nav-item"><a href="/tags" class="waves-effect waves-light"><i class="fa-fw fas fa-tags"></i> 标签</a></li><li class="m-nav-item"><a href="/categories" class="waves-effect waves-light"><i class="fa-fw fas fa-bookmark"></i> 分类</a></li><li class="m-nav-item"><a href="/archives" class="waves-effect waves-light"><i class="fa-fw fas fa-archive"></i> 归档</a></li><li class="m-nav-item"><a href="/about" class="waves-effect waves-light"><i class="fa-fw fas fa-user-circle"></i> 关于</a></li><li class="m-nav-item"><a href="/contact" class="waves-effect waves-light"><i class="fa-fw fas fa-comments"></i> 留言板</a></li><li><div class="divider"></div></li><li><a href="https://github.com/nana-hana/" class="waves-effect waves-light" target="_blank"><i class="fab fa-github-square fa-fw"></i>Fork Me</a></li></ul></div></div><style>.nav-transparent .github-corner{display:none!important}.github-corner{position:absolute;z-index:10;top:0;right:0;border:0;transform:scale(1.1)}.github-corner svg{color:#9e71bf;fill:#fff;height:64px;width:64px}.github-corner:hover .octo-arm{animation:a .56s ease-in-out}.github-corner .octo-arm{animation:none}@keyframes a{0%,to{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}</style><a href="https://github.com/nana-hana/" class="github-corner tooltipped hide-on-med-and-down" target="_blank" data-tooltip="Fork Me" data-position="left" data-delay="50"><svg viewBox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin:130px 106px" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a></nav></header><div class="bg-cover pd-header post-cover" style="background-image:url(https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/featureimages/21.jpg)"><div class="container" style="right:0;left:0"><div class="row"><div class="col s12 m12 l12"><div class="brand"><h1 class="description center-align post-title">数据结构之图</h1></div></div></div></div></div><main class="post-container content"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/tocbot/tocbot.css"><style>#articleContent h1::before,#articleContent h2::before,#articleContent h3::before,#articleContent h4::before,#articleContent h5::before,#articleContent h6::before{display:block;content:" ";height:100px;margin-top:-100px;visibility:hidden}#articleContent :focus{outline:0}.toc-fixed{position:fixed;top:64px}.toc-widget{width:345px;padding-left:20px}.toc-widget .toc-title{margin:35px 0 15px 0;padding-left:17px;font-size:1.5rem;font-weight:700;line-height:1.5rem}.toc-widget ol{padding:0;list-style:none}#toc-content{height:calc(100vh - 250px);overflow:auto}#toc-content ol{padding-left:10px}#toc-content ol li{padding-left:10px}#toc-content .toc-link:hover{color:#42b983;font-weight:700;text-decoration:underline}#toc-content .toc-link::before{background-color:transparent;max-height:25px}#toc-content .is-active-link{color:#42b983}#toc-content .is-active-link::before{background-color:#42b983}#floating-toc-btn{position:fixed;right:15px;bottom:76px;padding-top:15px;margin-bottom:0;z-index:998}#floating-toc-btn .btn-floating{width:48px;height:48px}#floating-toc-btn .btn-floating i{line-height:48px;font-size:1.4rem}</style><div class="row"><div id="main-content" class="col s12 m12 l9"><div id="artDetail"><div class="card"><div class="card-content article-info"><div class="row tag-cate"><div class="col s7"><div class="article-tag"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="chip bg-color">数据结构</span></a></div></div><div class="col s5 right-align"><div class="post-cate"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">数据结构</a></div></div></div><div class="post-info"><div class="post-date info-break-policy"><i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2020-03-22</div><div class="post-date info-break-policy"><i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2020-03-24</div><div class="info-break-policy"><i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 6k</div><div id="busuanzi_container_page_pv" class="info-break-policy"><i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp; <span id="busuanzi_value_page_pv"></span></div></div></div><hr class="clearfix"><div class="card-content article-card-content"><div id="articleContent"><p>图$($Graph$)$由顶点$($V, vertex$)$和表示顶点之间关系的边$($E, edge, 弧$)$所组成。$V(G)$和$E(G)$分别表示图G的顶点集和边集，$E(G)$可为空集。</p><h2 id="基本术语"><a href="#基本术语" class="headerlink" title="基本术语"></a>基本术语</h2><p>设n为图中顶点数目，e为表示边的数目。</p><table><thead><tr><th>子图</th><th>一个图的顶点集和边集完全包含另一张图的顶点集和边集。</th></tr></thead><tbody><tr><td>无向完全图和有向完全图</td><td>完全图即顶点集中每两个顶点之间都至少有一条边，若有一条边则称为无向完全图，有两条互相指向对方的边则称为有向完全图。有n个顶点的无向完全图，具有$\frac{n(n-1)}{2}$条边，有向完全图的边数是其两倍，为$n(n-1)$。</td></tr><tr><td>稀疏图和稠密图</td><td>边数很少$(e\lt nlog_2n)$的图称为稀疏图，反之称为稠密图。</td></tr><tr><td>邻接点</td><td>无向图中，若两顶点之间有边则称这两个点相邻接。</td></tr><tr><td>度、入度和出度</td><td>无向图一个顶点有几条边，其度就是几，记作TD$($v$)$。有向图分为入度和出度，入度即其他顶点指向该顶点的边数，记作ID$($v$)$；出度即该顶点指向其他顶点的边数，记作OD$($v$)$；有向图的度等于入度加出度。</td></tr><tr><td>路径和路径长度</td><td>路径即一个顶点到另一个顶点经过的顶点的集合。路径长度是一条路径上经过的边的数目。有向图其路径也是有向的。</td></tr><tr><td>回路或环</td><td>第一个顶点和最后一个顶点相同的路径。</td></tr><tr><td>简单路径、简单回路或简单环</td><td>简单路径即序列中顶点不重复出现的路径。除第一个顶点和最后一个顶点之外，其余顶点不重复出现的回路称为简单回路或简单环。</td></tr><tr><td>连通、连通图和连通分量</td><td>若顶点v到顶点v’有路径，则称v和v’是连通的。若一张图任意两个顶点之间都是连通的，则该图是连通图。连通分量即无向图中的极大连通子图。</td></tr><tr><td>强连通图和强连通分量</td><td>在一张有向图中，对于任意两个顶点v和v’，存在v到v’和v’到v都存在路径，则该有向图是强连通图。有向图中的极大强连通子图就是有向图的强连通分量$($有向图不一定要是强连通图$)$。</td></tr><tr><td>连通图的生成树</td><td>一个包含了图中全部顶点的极小连通子图，且仅拥有足以构成一棵树的n-1条边，该连通子图就称为连通图的生成树。</td></tr><tr><td>有向树和生成森林</td><td>有向树即有一个顶点入度为0，其余顶点入度为1的有向图。一个有向图的生成树即由若干棵有向树组成，含有图中全部顶点，但只有足以构成若干棵不相交的有向树的边。</td></tr></tbody></table><h2 id="图的存储结构"><a href="#图的存储结构" class="headerlink" title="图的存储结构"></a>图的存储结构</h2><h3 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h3><ul><li><p>邻接矩阵$($Adjacency Matrix$)$是表示顶点之间相邻关系的矩阵。可以看作是一个矩阵，其行依次代表顶点$v_1, \dots, v_n$，其列也分别代表顶点$v_1, \dots, v_n$。因此可以用一个二维数组来存储边相关信息，一个一维数组存储顶点信息。</p><table><thead><tr><th></th><th>优点</th><th>缺点</th></tr></thead><tbody><tr><td>邻接矩阵</td><td>1.便于计算两个顶点之间是否有边；<br>2.便于计算各个顶点之间的度，例如行和就是该顶点的入度，列和就是该顶点的出度。</td><td>1.不利于增删顶点；不便统计边的条数，每次统计需要扫描整个表，时间复杂度为$O(n^2)$；<br>2.空间复杂度为$O(n^2)$；适合表示稠密图。</td></tr></tbody></table></li><li><p>具体代码演示：</p><pre class="language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * @Author 喵粮都输光了
+ * @Date 2020/3/23 10:27
+ * @Description 有向图邻接矩阵
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdjacencyMatrix</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+     * 邻接矩阵主体
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> arcs<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+     * 图最大顶点数和当前的边数
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> vexMaxNum<span class="token punctuation">,</span> arcNum<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+     * 顶点表
+     */</span>
+    <span class="token keyword">private</span> List<span class="token operator">&lt;</span>Object<span class="token operator">></span> vexs<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+     * 初始化一个空邻接矩阵
+     * @param vexMaxNum 图总顶点数
+     */</span>
+    <span class="token keyword">public</span> <span class="token function">AdjacencyMatrix</span><span class="token punctuation">(</span><span class="token keyword">int</span> vexMaxNum<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>vexMaxNum <span class="token operator">=</span> vexMaxNum<span class="token punctuation">;</span>
+        arcNum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        arcs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>vexMaxNum<span class="token punctuation">]</span><span class="token punctuation">[</span>vexMaxNum<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        vexs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span>vexMaxNum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 返回顶点在图中所在位置(下标)
+     * @param vex 顶点
+     * @return 下标，-1为空
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">locateVex</span><span class="token punctuation">(</span>Object vex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>vexs<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>vex<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> vexs<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>vex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 根据下标获取顶点
+     *
+     * @param index 顶点下标
+     * @return 顶点
+     */</span>
+    <span class="token keyword">public</span> Object <span class="token function">getVex</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>index <span class="token operator">>=</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"没有该顶点"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> vexs<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 将顶点加入顶点表
+     * @param vex 顶点
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">insertVex</span><span class="token punctuation">(</span>Object vex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 满了直接返回</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>vexMaxNum <span class="token operator">==</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"顶点表满了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>vex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 根据顶点下标删除顶点
+     * @param index 顶点下标
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteVex</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"顶点为空"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        vexs<span class="token punctuation">.</span><span class="token function">remove</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 删除边表中该顶点所在行列</span>
+        <span class="token keyword">int</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">]</span> finalArcs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">int</span><span class="token punctuation">[</span>arcs<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">[</span>arcs<span class="token punctuation">.</span>length<span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> fi <span class="token operator">=</span> i<span class="token punctuation">;</span> i <span class="token operator">&lt;</span> arcs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>i <span class="token operator">!=</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> fj <span class="token operator">=</span> j<span class="token punctuation">;</span> j <span class="token operator">&lt;</span> arcs<span class="token punctuation">.</span>length<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">!=</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                        finalArcs<span class="token punctuation">[</span>fi<span class="token punctuation">]</span><span class="token punctuation">[</span>fj<span class="token punctuation">]</span> <span class="token operator">=</span> arcs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                        fj<span class="token operator">++</span><span class="token punctuation">;</span>
+                    <span class="token punctuation">}</span>
+                <span class="token punctuation">}</span>
+                fi<span class="token operator">++</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        arcs <span class="token operator">=</span> finalArcs<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 插入顶点1和顶点2的边
+     * @param v1Index 顶点1
+     * @param v2Index 顶点2
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">insertArc</span><span class="token punctuation">(</span><span class="token keyword">int</span> v1Index<span class="token punctuation">,</span> <span class="token keyword">int</span> v2Index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 无向图边最多为顶点数*(顶点数-1)/2，有向图边数是无向图边数*2</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arcNum <span class="token operator">==</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token punctuation">(</span>vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"已达顶点所能拥有的最大边数"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        arcs<span class="token punctuation">[</span>v1Index<span class="token punctuation">]</span><span class="token punctuation">[</span>v2Index<span class="token punctuation">]</span><span class="token operator">++</span><span class="token punctuation">;</span>
+        arcNum<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 删除顶点1和顶点2的边
+     * @param v1Index 顶点1
+     * @param v2Index 顶点2
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">deleteArc</span><span class="token punctuation">(</span><span class="token keyword">int</span> v1Index<span class="token punctuation">,</span> <span class="token keyword">int</span> v2Index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arcNum <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">throw</span> <span class="token keyword">new</span> <span class="token class-name">ArrayIndexOutOfBoundsException</span><span class="token punctuation">(</span><span class="token string">"图中连一条边都没有"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>arcs<span class="token punctuation">[</span>v1Index<span class="token punctuation">]</span><span class="token punctuation">[</span>v2Index<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            arcs<span class="token punctuation">[</span>v1Index<span class="token punctuation">]</span><span class="token punctuation">[</span>v2Index<span class="token punctuation">]</span><span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        arcNum<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 根据顶点下标返回该顶点的第一个邻接顶点下标
+     * @param index 顶点下标
+     * @return 邻接顶点下标，-1为空。
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">firstAdjVex</span><span class="token punctuation">(</span><span class="token keyword">int</span> index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 列和表示出度</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>arcs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">/**
+     * 返回顶点v1相对于其邻接顶点v2
+     * @param v1Index 顶点v1
+     * @param v2Index 顶点v1的一个邻接顶点v2
+     * @return 下一个邻接顶点下标
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">nextAdjVex</span><span class="token punctuation">(</span><span class="token keyword">int</span> v1Index<span class="token punctuation">,</span> <span class="token keyword">int</span> v2Index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 列和表示出度</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> v2Index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>arcs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>v1Index<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                <span class="token keyword">return</span> i<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></li></ul><h3 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h3><ul><li><p>邻接表$($Adjacency List$)$由表头结点表和边表组成：</p><ul><li>表头结点表使用一维数组存储表头结点，而表头结点包含data$($数据域$)$和firstarc$($指向邻接结点$)$。</li><li>边表结点包含adjvex$($邻接点域，与表头结点中顶点邻接的顶点的位置$)$、info$($边相关信息，如权值$)$和nextarc$($与表头结点中顶点邻接的下一个邻接结点$)$。</li></ul><table><thead><tr><th></th><th>优点</th><th>缺点</th></tr></thead><tbody><tr><td>邻接表</td><td>1. 便于增删顶点；<br>2.便于统计边的数目，按定点表顺序扫描所有边表即可获得数目，其时间复杂度为$O(n+e)$；<br>3.空间效率高，有向图的边表结点为e个，无向图边表结点为2e个，其空间复杂度为$O(n+e)$，适合表示稀疏图。</td><td>1.不便于判断顶点之间是否有边。<br>2.不便于计算有向图各个顶点的度。在有向图中遍历某个表头结点的边表是该顶点的出度，如果要获得入度则需要遍历全表，可以为邻接表建立逆邻接表获得入度。（逆邻接表就是边表存储该顶点的入度，但是获取出度困难。）</td></tr></tbody></table></li><li><p>具体代码演示：</p><pre class="language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * @Author 喵粮都输光了
+ * @Date 2020/3/23 13:31
+ * @Description 边
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Edge</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+    * 弧尾
+    */</span>
+    VexNode start<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+    * 弧头
+    */</span>
+    VexNode end<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">Edge</span><span class="token punctuation">(</span>VexNode start<span class="token punctuation">,</span> VexNode end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>start <span class="token operator">=</span> start<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>end <span class="token operator">=</span> end<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * @Author 喵粮都输光了
+ * @Date 2020/3/23 13:33
+ * @Description 表头结点
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VexNode</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+    * 顶点包含数据
+    */</span>
+    Object data<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+    * 与该顶点邻接的第一个边
+    */</span>
+    ArcNode firstArc<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">VexNode</span><span class="token punctuation">(</span>Object data<span class="token punctuation">,</span> ArcNode firstArc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>firstArc <span class="token operator">=</span> firstArc<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token function">VexNode</span><span class="token punctuation">(</span>Object data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+        firstArc <span class="token operator">=</span> null<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * @Author 喵粮都输光了
+ * @Date 2020/3/23 13:33
+ * @Description 边表结点
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArcNode</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+    * 边相关信息，如权值
+    */</span>
+    <span class="token keyword">int</span> info<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+    * 邻接点域，与表头结点中顶点邻接的顶点的位置
+    */</span>
+    VexNode adjVex<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+    * 与表头结点中顶点邻接的下一个边结点
+    */</span>
+    ArcNode nextArc<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token function">ArcNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> info<span class="token punctuation">,</span> VexNode adjVex<span class="token punctuation">,</span> ArcNode nextArc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>info <span class="token operator">=</span> info<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>adjVex <span class="token operator">=</span> adjVex<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>nextArc <span class="token operator">=</span> nextArc<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token function">ArcNode</span><span class="token punctuation">(</span>VexNode adjVex<span class="token punctuation">,</span> ArcNode nextArc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        info <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>adjVex <span class="token operator">=</span> adjVex<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>nextArc <span class="token operator">=</span> nextArc<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">public</span> <span class="token function">ArcNode</span><span class="token punctuation">(</span>VexNode adjVex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        info <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>adjVex <span class="token operator">=</span> adjVex<span class="token punctuation">;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>nextArc <span class="token operator">=</span> null<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+* @Author 喵粮都输光了
+* @Date 2020/3/23 12:02
+* @Description 邻接表
+*/</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdjacencyList</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">/**
+    * 顶点结点表
+    */</span>
+    <span class="token keyword">private</span> List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">;</span>
+     <span class="token comment" spellcheck="true">/**
+     * 图最大顶点数和当前的边数
+     */</span>
+    <span class="token keyword">private</span> <span class="token keyword">int</span> vexMaxNum<span class="token punctuation">,</span> arcNum<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">/**
+    * 根据顶点集和边集初始化邻接表
+    * @param vexs  顶点集
+    * @param edges 边集
+    */</span>
+    <span class="token keyword">public</span> <span class="token function">AdjacencyList</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>vexs <span class="token operator">==</span> null <span class="token operator">||</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">return</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        vexMaxNum <span class="token operator">=</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 将顶点集的顶点存入顶点结点表</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>vexs <span class="token operator">=</span> vexs<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">// 将边信息存入边结点，并与其邻接点相连</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>edges <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>Edge edge <span class="token operator">:</span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              VexNode startNode <span class="token operator">=</span> edge<span class="token punctuation">.</span>start<span class="token punctuation">;</span>
+              ArcNode arcNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArcNode</span><span class="token punctuation">(</span>edge<span class="token punctuation">.</span>end<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              arcNode<span class="token punctuation">.</span>nextArc <span class="token operator">=</span> startNode<span class="token punctuation">.</span>firstArc<span class="token punctuation">;</span>
+              startNode<span class="token punctuation">.</span>firstArc <span class="token operator">=</span> arcNode<span class="token punctuation">;</span>
+              arcNum<span class="token operator">++</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java"><span class="token comment" spellcheck="true">/**
+ * @Author 喵粮都输光了
+ * @Date 2020/3/23 13:46
+ * @Description 测试
+ */</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        VexNode v1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        VexNode v2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        VexNode v3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        VexNode v4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">new</span> <span class="token class-name">AdjacencyList</span><span class="token punctuation">(</span>vexs<span class="token punctuation">,</span> edges<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre></li></ul><h3 id="十字链表"><a href="#十字链表" class="headerlink" title="十字链表"></a>十字链表</h3><ul><li><p>十字链表$($Orthogonal List$)$相当于有向图的邻接表和逆邻接表结合所得到的一种链表。它由顶点结点和边结点组成：</p><ul><li>顶点结点包含data$($数据域$)$、firstin$($指向以该顶点为弧头的顶点，即该顶点的入度表$)$和firstout$($指向以该顶点为弧尾的顶点，即该顶点的出度表$)$。</li><li>边结点包含tailvex$($尾域，弧尾指向的结点$)$、headvex$($头域，弧头指向的结点$)$、hlink$($头链域，以头域所指顶点为弧头的下一个结点，即头域所指结点的入度表$)$、tlink$($尾链域，以尾域所指顶点为弧尾的下一个结点，即尾域所指结点的出度表$)$和info$($边相关信息，如权值$)$。</li></ul></li><li><p>优点：时间复杂度和邻接表一样都是$O(n+e)$，且容易求得顶点的出度和入度。</p></li><li><p>具体代码演示：</p><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 13:31
+   * @Description 边
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Edge</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 弧尾
+       */</span>
+      VexNode start<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 弧头
+       */</span>
+      VexNode end<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token function">Edge</span><span class="token punctuation">(</span>VexNode start<span class="token punctuation">,</span> VexNode end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>start <span class="token operator">=</span> start<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>end <span class="token operator">=</span> end<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 13:59
+   * @Description 表头结点
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VexNode</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 顶点包含数据
+       */</span>
+      Object data<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 指向以该顶点为弧头的边，即该顶点的入度表
+       */</span>
+      ArcNode firstIn<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 指向以该顶点为弧尾的边，即该顶点的出度表
+       */</span>
+      ArcNode firstOut<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token function">VexNode</span><span class="token punctuation">(</span>Object data<span class="token punctuation">,</span> ArcNode firstIn<span class="token punctuation">,</span> ArcNode firstOut<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>firstIn <span class="token operator">=</span> firstIn<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>firstOut <span class="token operator">=</span> firstOut<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token function">VexNode</span><span class="token punctuation">(</span>Object data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>firstIn <span class="token operator">=</span> null<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>firstOut <span class="token operator">=</span> null<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 14:00
+   * @Description 边表结点
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArcNode</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 边相关信息，如权值
+       */</span>
+      <span class="token keyword">int</span> info<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 尾域，弧尾指向的结点
+       */</span>
+      VexNode tailVex<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 头域，弧头指向的结点
+       */</span>
+      VexNode headVex<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 头链域，以头域所指顶点为弧头的下一个结点，即头域所指结点的入度表
+       */</span>
+      ArcNode headLink<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 尾链域，以尾域所指顶点为弧尾的下一个结点，即尾域所指结点的出度表
+       */</span>
+      ArcNode tailLink<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token function">ArcNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> info<span class="token punctuation">,</span> VexNode tailVex<span class="token punctuation">,</span> VexNode headVex<span class="token punctuation">,</span> ArcNode headLink<span class="token punctuation">,</span> ArcNode tailLink<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>info <span class="token operator">=</span> info<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>tailVex <span class="token operator">=</span> tailVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>headVex <span class="token operator">=</span> headVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>headLink <span class="token operator">=</span> headLink<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>tailLink <span class="token operator">=</span> tailLink<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token function">ArcNode</span><span class="token punctuation">(</span>VexNode tailVex<span class="token punctuation">,</span> VexNode headVex<span class="token punctuation">,</span> ArcNode headLink<span class="token punctuation">,</span> ArcNode tailLink<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>info <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>tailVex <span class="token operator">=</span> tailVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>headVex <span class="token operator">=</span> headVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>headLink <span class="token operator">=</span> headLink<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>tailLink <span class="token operator">=</span> tailLink<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 14:05
+   * @Description 十字链表
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">OrthogonalList</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 顶点结点表
+       */</span>
+      <span class="token keyword">private</span> List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 图最大顶点数和当前的边数
+       */</span>
+      <span class="token keyword">private</span> <span class="token keyword">int</span> vexMaxNum<span class="token punctuation">,</span> arcNum<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 根据顶点集和边集初始化十字链表
+       * @param vexs  顶点集
+       * @param edges 边集
+       */</span>
+      <span class="token keyword">public</span> <span class="token function">OrthogonalList</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>vexs <span class="token operator">==</span> null <span class="token operator">||</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          vexMaxNum <span class="token operator">=</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 将顶点集的顶点存入顶点结点表</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>vexs <span class="token operator">=</span> vexs<span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 将边信息存入边结点，并与其邻接点相连</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>edges <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">for</span> <span class="token punctuation">(</span>Edge edge <span class="token operator">:</span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token comment" spellcheck="true">// edge.start是弧尾</span>
+                  VexNode startNode <span class="token operator">=</span> edge<span class="token punctuation">.</span>start<span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// edge.end是弧头</span>
+                  VexNode endNode <span class="token operator">=</span> edge<span class="token punctuation">.</span>end<span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// 参数分别为尾域、头域、头链域、尾链域，</span>
+                  ArcNode arcNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArcNode</span><span class="token punctuation">(</span>startNode<span class="token punctuation">,</span> endNode<span class="token punctuation">,</span> endNode<span class="token punctuation">.</span>firstIn<span class="token punctuation">,</span> startNode<span class="token punctuation">.</span>firstOut<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// 指向下一个出度结点</span>
+                  startNode<span class="token punctuation">.</span>firstOut <span class="token operator">=</span> arcNode<span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// 指向下一个入度结点</span>
+                  endNode<span class="token punctuation">.</span>firstIn <span class="token operator">=</span> arcNode<span class="token punctuation">;</span>
+                  arcNum<span class="token operator">++</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">/**
+       * 输出
+       */</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"出"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>VexNode vexNode <span class="token operator">:</span> vexs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token string">" -> "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              ArcNode arcNode <span class="token operator">=</span> vexNode<span class="token punctuation">.</span>firstOut<span class="token punctuation">;</span>
+              <span class="token keyword">while</span> <span class="token punctuation">(</span>arcNode <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>arcNode<span class="token punctuation">.</span>headVex<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token string">" -> "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  arcNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>tailLink<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"入"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>VexNode vexNode <span class="token operator">:</span> vexs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token string">" &lt;- "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              ArcNode arcNode <span class="token operator">=</span> vexNode<span class="token punctuation">.</span>firstIn<span class="token punctuation">;</span>
+              <span class="token keyword">while</span> <span class="token punctuation">(</span>arcNode <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>arcNode<span class="token punctuation">.</span>tailVex<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token string">" &lt;- "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  arcNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>headLink<span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/19 10:37
+   * @Description 算法测试
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          VexNode v1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          OrthogonalList s <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">OrthogonalList</span><span class="token punctuation">(</span>vexs<span class="token punctuation">,</span> edges<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          s<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre></li></ul><h3 id="邻接多重表"><a href="#邻接多重表" class="headerlink" title="邻接多重表"></a>邻接多重表</h3><ul><li><p>邻接多重表$($Adjacency Multilist$)$是无向图的另一种链式存储结构。在邻接表中同一条边所对应的两个顶点分别在两个不相同的边表中，当有需求寻找一条边的两个顶点时，采用邻接多重表操作图比较方便。邻接多重表和十字链表一样由顶点结点和边结点组成：</p><ul><li>顶点结点包含firstedge$($指向第一条依附该顶点的边$)$和data$($数据域$)$。</li><li>边结点包含mark$($标记域，标记该边是否被搜索过$)$、ivex$($该边依附的顶点i$)$、ilink$($指向依附于顶点i的另一条边$)$、jvex$($该边依附的顶点j$)$、jlink$($指向依附于顶点j的另一条边$)$和info$($边相关信息，如权值$)$。</li></ul></li><li><p>优点：邻接多重表除了每个边结点比邻接表多边结点一个标记域，其所需存储量和邻接表相同。</p></li><li><p>具体代码演示：</p><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 13:31
+   * @Description 边
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Edge</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 弧尾
+       */</span>
+      VexNode start<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 弧头
+       */</span>
+      VexNode end<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token function">Edge</span><span class="token punctuation">(</span>VexNode start<span class="token punctuation">,</span> VexNode end<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>start <span class="token operator">=</span> start<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>end <span class="token operator">=</span> end<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 17:24
+   * @Description 表头结点
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VexNode</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 顶点包含数据
+       */</span>
+      Object data<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 指向第一条依附该顶点的边
+       */</span>
+      ArcNode firstEdge<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token function">VexNode</span><span class="token punctuation">(</span>Object data<span class="token punctuation">,</span> ArcNode firstEdge<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>firstEdge <span class="token operator">=</span> firstEdge<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token function">VexNode</span><span class="token punctuation">(</span>Object data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>data <span class="token operator">=</span> data<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>firstEdge <span class="token operator">=</span> null<span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 17:24
+   * @Description 边表结点
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ArcNode</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 边相关信息，如权值
+       */</span>
+      <span class="token keyword">int</span> info<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 标记域，是否被搜索过
+       */</span>
+      <span class="token keyword">boolean</span> isSearched<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 该边依附的顶点i
+       */</span>
+      VexNode iVex<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 指向依附于顶点i的另一条边
+       */</span>
+      ArcNode iLink<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 该边依附的顶点j
+       */</span>
+      VexNode jVex<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 指向依附于顶点j的另一条边
+       */</span>
+      ArcNode jLink<span class="token punctuation">;</span>
+      <span class="token keyword">public</span> <span class="token function">ArcNode</span><span class="token punctuation">(</span><span class="token keyword">int</span> info<span class="token punctuation">,</span> VexNode iVex<span class="token punctuation">,</span> ArcNode iLink<span class="token punctuation">,</span> VexNode jVex<span class="token punctuation">,</span> ArcNode jLink<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>info <span class="token operator">=</span> info<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>iVex <span class="token operator">=</span> iVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>iLink <span class="token operator">=</span> iLink<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>jVex <span class="token operator">=</span> jVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>jLink <span class="token operator">=</span> jLink<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>isSearched <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token keyword">public</span> <span class="token function">ArcNode</span><span class="token punctuation">(</span>VexNode iVex<span class="token punctuation">,</span> ArcNode iLink<span class="token punctuation">,</span> VexNode jVex<span class="token punctuation">,</span> ArcNode jLink<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>info <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>iVex <span class="token operator">=</span> iVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>iLink <span class="token operator">=</span> iLink<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>jVex <span class="token operator">=</span> jVex<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>jLink <span class="token operator">=</span> jLink<span class="token punctuation">;</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>isSearched <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 17:26
+   * @Description 邻接多重表
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdjacencyMultiList</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 顶点结点表
+       */</span>
+      <span class="token keyword">private</span> List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 图最大顶点数和当前的边数
+       */</span>
+      <span class="token keyword">private</span> <span class="token keyword">int</span> vexMaxNum<span class="token punctuation">,</span> arcNum<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 根据顶点集和边集初始化邻接多重表
+       * @param vexs  顶点集
+       * @param edges 边集
+       */</span>
+      <span class="token keyword">public</span> <span class="token function">AdjacencyMultiList</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>vexs <span class="token operator">==</span> null <span class="token operator">||</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          vexMaxNum <span class="token operator">=</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 将顶点集的顶点存入顶点结点表</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>vexs <span class="token operator">=</span> vexs<span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 将边信息存入边结点，并与其邻接点相连</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>edges <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">for</span> <span class="token punctuation">(</span>Edge edge <span class="token operator">:</span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token comment" spellcheck="true">// edge.start是弧尾</span>
+                  VexNode startNode <span class="token operator">=</span> edge<span class="token punctuation">.</span>start<span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// edge.end是弧头</span>
+                  VexNode endNode <span class="token operator">=</span> edge<span class="token punctuation">.</span>end<span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// 创建这两个结点的边结点，两个顶点共用一条边</span>
+                  ArcNode arcNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArcNode</span><span class="token punctuation">(</span>startNode<span class="token punctuation">,</span> startNode<span class="token punctuation">.</span>firstEdge<span class="token punctuation">,</span> endNode<span class="token punctuation">,</span> endNode<span class="token punctuation">.</span>firstEdge<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// 弧头的另一个边</span>
+                  startNode<span class="token punctuation">.</span>firstEdge <span class="token operator">=</span> arcNode<span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// 弧尾的另一个边</span>
+                  endNode<span class="token punctuation">.</span>firstEdge <span class="token operator">=</span> arcNode<span class="token punctuation">;</span>
+                  arcNum<span class="token operator">++</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">/**
+       * 输出
+       */</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>VexNode vex <span class="token operator">:</span> vexs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span>vex<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token string">" -> "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+              ArcNode arcNode <span class="token operator">=</span> vex<span class="token punctuation">.</span>firstEdge<span class="token punctuation">;</span>
+              <span class="token keyword">while</span> <span class="token punctuation">(</span>arcNode <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token string">" | "</span> <span class="token operator">+</span> arcNode<span class="token punctuation">.</span>iVex<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token string">"-"</span> <span class="token operator">+</span> arcNode<span class="token punctuation">.</span>jVex<span class="token punctuation">.</span>data <span class="token operator">+</span> <span class="token string">" | -> "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  <span class="token comment" spellcheck="true">// 需要输出某个顶点的所有边，需要判断当前边的iVex还是jVex等于需要输出的结点来决定下一个访问iLink还是JLink。</span>
+                  <span class="token keyword">if</span> <span class="token punctuation">(</span>vex <span class="token operator">==</span> arcNode<span class="token punctuation">.</span>iVex<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                      arcNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>iLink<span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+                      arcNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>jLink<span class="token punctuation">;</span>
+                  <span class="token punctuation">}</span>
+              <span class="token punctuation">}</span>
+              System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"\n"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/19 10:37
+   * @Description 算法测试
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          VexNode v1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v2<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v2<span class="token punctuation">,</span> v5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v3<span class="token punctuation">,</span> v5<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v3<span class="token punctuation">,</span> v4<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          AdjacencyMultiList adjacencyMultiList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AdjacencyMultiList</span><span class="token punctuation">(</span>vexs<span class="token punctuation">,</span> edges<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          adjacencyMultiList<span class="token punctuation">.</span><span class="token function">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre></li></ul><h2 id="图的遍历"><a href="#图的遍历" class="headerlink" title="图的遍历"></a>图的遍历</h2><h3 id="深度优先搜索"><a href="#深度优先搜索" class="headerlink" title="深度优先搜索"></a>深度优先搜索</h3><ul><li><p>深度优先搜索$($Depth First Search, DFS$)$遍历思路$($类似树的先序遍历$)$：从图中某个顶点开始遍历，将遍历过的顶点标上已遍历的标记，随意选择一个邻接顶点遍历它并选择这个顶点的邻接顶点遍历，不断重复，当遍历到某个顶点发现这个顶点没有未标记的邻接顶点时就往回退返回上一个邻接顶点，从上一个邻接顶点选择其他未标记的邻接顶点遍历，以此类推直到图中所有邻接顶点都标记过了遍历就完成了。通过深度优先搜索遍历路径构成的树称为深度优先生成树。</p></li><li><p>时间复杂度：当使用邻接矩阵存储时，每个顶点都要遍历n次寻找邻接顶点，其时间复杂度为$O(n^2)$；当用邻接表存储时，每个顶点只需要查找其相连的边即可，即查找邻接顶点时间复杂度为$O(e)$，所以整体遍历时间复杂度为$O(n+e)$。</p></li><li><p>算法实现：通常使用递归实现，此处实现遍历非连通的邻接表结构的图。</p><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/23 12:02
+   * @Description 邻接表
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">AdjacencyList</span> <span class="token punctuation">{</span>
+      <span class="token comment" spellcheck="true">/**
+       * 顶点结点表
+       */</span>
+      <span class="token keyword">private</span> List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 图最大顶点数和当前的边数
+       */</span>
+      <span class="token keyword">private</span> <span class="token keyword">int</span> vexMaxNum<span class="token punctuation">,</span> arcNum<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 存储顶点是否被遍历过的信息
+       */</span>
+      <span class="token keyword">private</span> <span class="token keyword">boolean</span><span class="token punctuation">[</span><span class="token punctuation">]</span> state<span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">/**
+       * 根据顶点集和边集初始化邻接表
+       * @param vexs  顶点集
+       * @param edges 边集
+       */</span>
+      <span class="token keyword">public</span> <span class="token function">AdjacencyList</span><span class="token punctuation">(</span>List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs<span class="token punctuation">,</span> List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>vexs <span class="token operator">==</span> null <span class="token operator">||</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">return</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+          vexMaxNum <span class="token operator">=</span> vexs<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 将顶点集的顶点存入顶点结点表</span>
+          <span class="token keyword">this</span><span class="token punctuation">.</span>vexs <span class="token operator">=</span> vexs<span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 将边信息存入边结点，并与其邻接点相连</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span>edges <span class="token operator">!=</span> null<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">for</span> <span class="token punctuation">(</span>Edge edge <span class="token operator">:</span> edges<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  VexNode startNode <span class="token operator">=</span> edge<span class="token punctuation">.</span>start<span class="token punctuation">;</span>
+                  ArcNode arcNode <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArcNode</span><span class="token punctuation">(</span>edge<span class="token punctuation">.</span>end<span class="token punctuation">)</span><span class="token punctuation">;</span>
+                  arcNode<span class="token punctuation">.</span>nextArc <span class="token operator">=</span> startNode<span class="token punctuation">.</span>firstArc<span class="token punctuation">;</span>
+                  startNode<span class="token punctuation">.</span>firstArc <span class="token operator">=</span> arcNode<span class="token punctuation">;</span>
+                  arcNum<span class="token operator">++</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">/**
+       * 查找顶点所在位置
+       * @param vexNode 需要查找的顶点
+       * @return 顶点下标
+       */</span>
+      <span class="token keyword">public</span> <span class="token keyword">int</span> <span class="token function">getVexIndex</span><span class="token punctuation">(</span>VexNode vexNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> vexs<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">/**
+       * 顶点是否被遍历
+       * @param vexNode 顶点
+       * @return true or false
+       */</span>
+      <span class="token keyword">private</span> <span class="token keyword">boolean</span> <span class="token function">isVisited</span><span class="token punctuation">(</span>VexNode vexNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">return</span> state<span class="token punctuation">[</span><span class="token function">getVexIndex</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">/**
+       * 深度优先遍历
+       */</span>
+      <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">dfsTraverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          state <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">boolean</span><span class="token punctuation">[</span>vexMaxNum<span class="token punctuation">]</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 若图非连通，遍历所有子连通图</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>VexNode vexNode <span class="token operator">:</span> vexs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isVisited</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">dfs</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+      <span class="token comment" spellcheck="true">/**
+       * 深度优先遍历子图
+       * @param vexNode 需要遍历的结点
+       */</span>
+      <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">dfs</span><span class="token punctuation">(</span>VexNode vexNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token comment" spellcheck="true">// 将遍历顶点设置称true</span>
+          state<span class="token punctuation">[</span><span class="token function">getVexIndex</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token comment" spellcheck="true">// 寻找下一条边的另一个顶点，判断是否遍历过，若未遍历过则递归遍历，遍历过就寻找下一个邻接点</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>ArcNode arcNode <span class="token operator">=</span> vexNode<span class="token punctuation">.</span>firstArc<span class="token punctuation">;</span> arcNode <span class="token operator">!=</span> null<span class="token punctuation">;</span> arcNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>nextArc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              vexNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>adjVex<span class="token punctuation">;</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isVisited</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  <span class="token function">dfs</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/24 10:18
+   * @Description 测试
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          VexNode v1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          AdjacencyList adjacencyList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AdjacencyList</span><span class="token punctuation">(</span>vexs<span class="token punctuation">,</span> edges<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"深度"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          adjacencyList<span class="token punctuation">.</span><span class="token function">dfsTraverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre></li></ul><h3 id="广度优先搜索"><a href="#广度优先搜索" class="headerlink" title="广度优先搜索"></a>广度优先搜索</h3><ul><li><p>广度优先搜索$($Breadth Firsh Search, BFS$)$遍历思路$($类似树的层序遍历$)$：从图中某个顶点开始遍历，将遍历过的顶点标上已遍历的标记，遍历所有该顶点的邻接顶点，然后分别从刚访问过的邻接顶点出发依次访问它们的邻接顶点，直到图中所有邻接顶点都标记过了遍历就完成了。通过广度优先搜索遍历路径构成的树称为广度优先生成树。</p></li><li><p>时间复杂度：时间复杂度和深度优先搜索相同，使用邻接矩阵时时间复杂度为$O(n^2)$，使用连接表时时间复杂度为$O(n+e)$。因此两者的区别仅仅是遍历顺序不同而已。</p></li><li><p>算法实现：通常使用队列实现，此处实现遍历非连通的邻接表结构的图。</p><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * 广度优先遍历
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">bfsTraverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      state <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">boolean</span><span class="token punctuation">[</span>vexMaxNum<span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token comment" spellcheck="true">// 若图非连通，遍历所有子连通图</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span>VexNode vexNode <span class="token operator">:</span> vexs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isVisited</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              <span class="token function">bfs</span><span class="token punctuation">(</span>vexNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">/**
+   * 广度优先遍历子图
+   * @param rootNode 需要遍历的结点
+   */</span>
+  <span class="token keyword">private</span> <span class="token keyword">void</span> <span class="token function">bfs</span><span class="token punctuation">(</span>VexNode rootNode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      Queue<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> queue <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">LinkedList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span>rootNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token operator">!</span>queue<span class="token punctuation">.</span><span class="token function">isEmpty</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          rootNode <span class="token operator">=</span> queue<span class="token punctuation">.</span><span class="token function">poll</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          state<span class="token punctuation">[</span><span class="token function">getVexIndex</span><span class="token punctuation">(</span>rootNode<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>rootNode<span class="token punctuation">.</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">for</span> <span class="token punctuation">(</span>ArcNode arcNode <span class="token operator">=</span> rootNode<span class="token punctuation">.</span>firstArc<span class="token punctuation">;</span> arcNode <span class="token operator">!=</span> null<span class="token punctuation">;</span> arcNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>nextArc<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+              rootNode <span class="token operator">=</span> arcNode<span class="token punctuation">.</span>adjVex<span class="token punctuation">;</span>
+              <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isVisited</span><span class="token punctuation">(</span>rootNode<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                  queue<span class="token punctuation">.</span><span class="token function">offer</span><span class="token punctuation">(</span>rootNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+              <span class="token punctuation">}</span>
+          <span class="token punctuation">}</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre><pre class="language-java"><code class="language-java">  <span class="token comment" spellcheck="true">/**
+   * @Author 喵粮都输光了
+   * @Date 2020/3/24 10:18
+   * @Description 测试
+   */</span>
+  <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Main</span> <span class="token punctuation">{</span>
+      <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String<span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          VexNode v1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v1"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v2 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v3 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v3"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v4 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v4"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          VexNode v5 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VexNode</span><span class="token punctuation">(</span><span class="token string">"v5"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>VexNode<span class="token operator">></span> vexs <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v4<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          vexs<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>v5<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          List<span class="token operator">&lt;</span>Edge<span class="token operator">></span> edges <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ArrayList</span><span class="token operator">&lt;</span><span class="token operator">></span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v1<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          edges<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Edge</span><span class="token punctuation">(</span>v4<span class="token punctuation">,</span> v3<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          AdjacencyList adjacencyList <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">AdjacencyList</span><span class="token punctuation">(</span>vexs<span class="token punctuation">,</span> edges<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"广度"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          adjacencyList<span class="token punctuation">.</span><span class="token function">dfsTraverse</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span></code></pre></li></ul><h2 id="常用图算法"><a href="#常用图算法" class="headerlink" title="常用图算法"></a>常用图算法</h2><ul><li><p>最小生成树：又称为最小代价生成树$($Minimum Cost Spanning Tree$)$，是在一个连通网的所有生成树中，各边的代价之和最小的那棵生成树。其常用算法有 Prim 算法和 Kruskal 算法。</p></li><li><p>最短路径：从一个顶点到另一个顶点之间各边代价之和最小的那条路径。在带权有向网中，第一个顶点称为源点$($Source$)$，最后一个顶点称为终点$($Destination$)$。其常用算法有 Dijkstra 算法和 Floyd 算法。</p></li><li><p>拓扑排序：</p><ul><li>有向无环图$($Directed Acycline Graph, DAG$)$：一个无环的有向图。</li><li>AOV网$($Activity On Vertex Network$)$：用顶点表示活动，用弧表示活动之间的优先关系的有向无环图称为顶点表示活动的网。例如游戏中做某个任务，但是这个任务有多个前置任务，需要先做了前置任务才能进行该任务。</li><li>拓扑排序：将AOV网中所有顶点排成一个线性序列，该序列满足：若AOV网中由顶点$V_i$到顶点$V_j$有一条路径，则在该线性序列中的顶点$V_i$必定在顶点$V_j$之前。排序方法为：删除图中一个无前驱的顶点$($包括和该顶点有关的边$)$并输出顶点，重复直至图中无顶点为止。</li></ul></li><li><p>关键路径：</p><ul><li>AOE网$($Activity On Edge Network$)$：用顶点表示事件，用弧表示活动，权表示活动持续的事件的带权有向无环图称为以边表示活动的网。</li><li>源点和汇点：网中有一个入度为零的点称为源点，也仅有一个出度为零的点称为汇点。</li><li>带权路径长度：一条路径各弧上的权值之和。</li><li>关键路径$($Critical Path$)$：从源点到汇点的带权路径长度最长的路径。</li><li>关键活动：在关键路径上的活动都称为关键活动。</li></ul></li></ul><script>document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });</script></div><hr><div class="reprint" id="reprint-statement"><div class="reprint__author"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-user">文章作者: </i></span><span class="reprint-info"><a href="https://blog.kuukokawaii.com" rel="external nofollow noreferrer">喵粮都输光了</a></span></div><div class="reprint__type"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-link">文章链接: </i></span><span class="reprint-info"><a href="https://blog.kuukokawaii.com/posts/f932ba85/">https://blog.kuukokawaii.com/posts/f932ba85/</a></span></div><div class="reprint__notice"><span class="reprint-meta" style="font-weight:700"><i class="fas fa-copyright">版权声明: </i></span><span class="reprint-info">本博客所有文章除特別声明外，均采用 <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a> 许可协议。转载请注明来源 <a href="https://blog.kuukokawaii.com" target="_blank">喵粮都输光了</a> !</span></div></div><script async defer>document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }</script><div class="tag_share" style="display:block"><div class="post-meta__tag-list" style="display:inline-block"><div class="article-tag"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="chip bg-color">数据结构</span></a></div></div><div class="post_share" style="zoom:80%;width:fit-content;display:inline-block;float:right;margin:-.15rem 0"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/share/css/share.min.css"><div id="article-share"><div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/share/js/social-share.min.js"></script></div></div></div></div></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/gitalk/gitalk.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/css/my-gitalk.css"><div class="card gitalk-card" data-aos="fade-up"><div class="comment_headling" style="font-size:20px;font-weight:700;position:relative;left:20px;top:15px;padding-bottom:5px"><i class="fas fa-comments fa-fw" aria-hidden="true"></i> <span>评论</span></div><div id="gitalk-container" class="card-content"></div></div><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/gitalk/gitalk.min.js"></script><script>let gitalk = new Gitalk({
+        clientID: 'd5486fd8d317f4dc0523',
+        clientSecret: '8b650ba460c20493d62aac30581f44c1c98fd9b5',
+        repo: 'nanahana.github.io',
+        owner: 'nana-hana',
+        admin: "nana-hana",
+        id: '2020-03-22T12-49-06',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');</script><article id="prenext-posts" class="prev-next articles"><div class="row article-row"><div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up"><div class="article-badge left-badge text-color"><i class="far fa-dot-circle"></i>&nbsp;本篇</div><div class="card"><a href="/posts/f932ba85/"><div class="card-image"><img src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/loading.gif" alt="" data-original="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/featureimages/21.jpg" class="responsive-img" alt="数据结构之图"> <span class="card-title">数据结构之图</span></div></a><div class="card-content article-content"><div class="summary block-with-text">图是一种多对多的非线性数据结构。<br><br><br></div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2020-03-22 </span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">数据结构</a></span></div></div><div class="card-action article-tags"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="chip bg-color">数据结构</span></a></div></div></div><div class="article col s12 m6" data-aos="fade-up"><div class="article-badge right-badge text-color">下一篇&nbsp;<i class="fas fa-chevron-right"></i></div><div class="card"><a href="/posts/6c17d6bd/"><div class="card-image"><img src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/loading.gif" alt="" data-original="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/featureimages/16.jpg" class="responsive-img" alt="数据结构之树"> <span class="card-title">数据结构之树</span></div></a><div class="card-content article-content"><div class="summary block-with-text">树是以分支关系定义层次的结构，是非线性数据结构。二叉树是树结构中最为常用的一种。<br><br><br></div><div class="publish-info"><span class="publish-date"><i class="far fa-clock fa-fw icon-date"></i>2020-03-21 </span><span class="publish-author"><i class="fas fa-bookmark fa-fw icon-category"></i> <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="post-category">数据结构</a></span></div></div><div class="card-action article-tags"><a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"><span class="chip bg-color">数据结构</span></a></div></div></div></div></article></div><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/codeBlock/codeBlockFuction.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/codeBlock/codeLang.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/codeBlock/codeCopy.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/codeBlock/codeShrink.js"></script><style type="text/css">code[class*=language-],pre[class*=language-]{white-space:pre!important}</style></div><div id="toc-aside" class="expanded col l3 hide-on-med-and-down"><div class="toc-widget"><div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div><div id="toc-content"></div></div></div></div><div id="floating-toc-btn" class="hide-on-med-and-down"><a class="btn-floating btn-large bg-color"><i class="fas fa-list-ul"></i></a></div><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/tocbot/tocbot.min.js"></script><script>$(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });</script></main><script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><script>MathJax.Hub.Config({tex2jax:{inlineMath:[["$","$"],["(",")"]]}})</script><footer class="page-footer bg-color"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/aplayer/APlayer.min.css"><style>.aplayer .aplayer-lrc p{font-size:12px;font-weight:700;line-height:16px!important}.aplayer .aplayer-lrc p.aplayer-lrc-current{font-size:15px;color:#BE74EC}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body{left:-66px!important}.aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover{left:0!important}</style><div><div class="row"><meting-js class="col l8 offset-l2 m10 offset-m1 s12" server="netease" type="playlist" id="2215112986" fixed="true" autoplay theme="#BE74EC" loop order="random" preload="auto" volume="0.1" list-folded="true"></meting-js></div></div><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/aplayer/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script><div class="container row center-align" style="margin-bottom:0!important"><div class="col s12 m8 l8 copy-right">Copyright&nbsp;&copy; <span id="year">2019</span> <a href="https://blog.kuukokawaii.com" target="_blank">喵粮都输光了</a> |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a> |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a><br>&nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span class="white-color">107.2k</span>&nbsp;字 <span id="busuanzi_container_site_pv">|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv" class="white-color"></span>&nbsp;次</span><br><br></div><div class="col s12 m4 l4 social-link social-statis"><a href="mailto:na@kuukokawaii.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50"><i class="fas fa-envelope-open"></i> </a><a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50"><i class="fas fa-rss"></i></a></div></div></footer><div class="progress-bar"></div><div id="searchModal" class="modal"><div class="modal-content"><div class="search-header"><span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span> <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字" class="search-input"></div><div id="searchResult"></div></div></div><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/js/search.js"></script><script type="text/javascript">$(function(){searchFunc("https://blog.kuukokawaii.com/search.xml","searchInput","searchResult")})</script><div id="backTop" class="top-scroll"><a class="btn-floating btn-large waves-effect waves-light" href="#!"><i class="fas fa-arrow-up"></i></a></div><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/materialize/materialize.min.js"></script><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/masonry/masonry.pkgd.min.js"></script><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/aos/aos.js"></script><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/scrollprogress/scrollProgress.min.js"></script><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/lightGallery/js/lightgallery-all.min.js"></script><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/js/matery.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=UA-152985184-1"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-152985184-1")</script><script>var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?cf000f141067bb5e00a4f0dbf60fae4e";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)}()</script><script>!function(){var t=document.createElement("script"),s=window.location.protocol.split(":")[0];"https"===s?t.src="https://zz.bdstatic.com/linksubmit/push.js":t.src="http://push.zhanzhang.baidu.com/push.js";var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}()</script><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/others/clicklove.js" async></script><script async src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/others/busuanzi.pure.mini.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/background/ribbon-dynamic.js" async></script><script src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/libs/instantpage/instantpage.js" type="module"></script><script>!function(e){var c=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){for(var r=0;r<c.length;r++)t=c[r],0<=(n=t.getBoundingClientRect()).bottom&&0<=n.left&&n.top<=(e.innerHeight+240||document.documentElement.clientHeight+240)&&function(){var t,n,e,i,o=c[r];t=o,n=function(){c=c.filter(function(t){return o!==t})},e=new Image,i=t.getAttribute("data-original"),e.onload=function(){t.src=i,n&&n()},e.src=i}();var t,n}i(),e.addEventListener("scroll",function(){var t,n;t=i,n=e,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(n)},500)})}(this);</script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script></body></html><!-- rebuild by neat -->
