@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-28T13:43:42.470Z</updated>
+  <updated>2020-03-29T12:11:51.508Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java 基础</title>
+    <link href="https://blog.kuukokawaii.com/posts/a019e08c/"/>
+    <id>https://blog.kuukokawaii.com/posts/a019e08c/</id>
+    <published>2020-03-29T02:37:16.000Z</published>
+    <updated>2020-03-29T12:11:51.508Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;数据类型&quot;&gt;&lt;a href=&quot;#数据类型&quot; class=&quot;headerlink&quot; title=&quot;数据类型&quot;&gt;&lt;/a&gt;数据类型&lt;/h2&gt;&lt;h3 id=&quot;基本数据类型&quot;&gt;&lt;a href=&quot;#基本数据类型&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>算法之字符串</title>
@@ -519,33 +546,6 @@
         
         
           &lt;h2 id=&quot;工厂模式&quot;&gt;&lt;a href=&quot;#工厂模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之装饰者模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/2ba79d9e/"/>
-    <id>https://blog.kuukokawaii.com/posts/2ba79d9e/</id>
-    <published>2020-03-11T04:12:09.000Z</published>
-    <updated>2020-03-18T08:13:27.487Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;装饰者模式&quot;&gt;&lt;a href=&quot;#装饰者模式&quot; class=&quot;headerlink&quot;
         
       
     
