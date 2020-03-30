@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-30T05:27:46.233Z</updated>
+  <updated>2020-03-30T16:21:40.292Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Java I/O体系</title>
+    <link href="https://blog.kuukokawaii.com/posts/9185735d/"/>
+    <id>https://blog.kuukokawaii.com/posts/9185735d/</id>
+    <published>2020-03-30T05:32:21.000Z</published>
+    <updated>2020-03-30T16:21:40.292Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Java I/O 流大致可以分成如下五类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象操作：Serializable&lt;/li&gt;
+&lt;li&gt;磁盘操作：File&lt;/li&gt;
+&lt;li&gt;字节操作：InputStream 和 OutputStream&lt;/li&gt;
+&lt;li&gt;字符操作：Reader 和
+        
+      
+    
+    </summary>
+    
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/categories/java/"/>
+    
+    
+      <category term="java" scheme="https://blog.kuukokawaii.com/tags/java/"/>
+    
+  </entry>
   
   <entry>
     <title>Java 容器</title>
@@ -519,33 +551,6 @@
         
         
           &lt;h2 id=&quot;命令模式&quot;&gt;&lt;a href=&quot;#命令模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之单件模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/9b1fa808/"/>
-    <id>https://blog.kuukokawaii.com/posts/9b1fa808/</id>
-    <published>2020-03-12T03:30:49.000Z</published>
-    <updated>2020-03-18T08:19:37.606Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;单件模式&quot;&gt;&lt;a href=&quot;#单件模式&quot; class=&quot;headerlink&quot;
         
       
     
