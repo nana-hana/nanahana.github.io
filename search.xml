@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>计算机网络概述</title>
+      <link href="/posts/7c4ca347/"/>
+      <url>/posts/7c4ca347/</url>
+      
+        <content type="html"><![CDATA[<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><p>网络把许多计算机连接在一起，而互联网则把许多网络连接在一起，因此互联网被称为”网络的网络”。</p><h2 id="ISP"><a href="#ISP" class="headerlink" title="ISP"></a>ISP</h2><p>互联网服务提供者 ISP(Internet Service Provider)，又称为互联网服务提供商，互联网交换点 IXP(Internet eXchange Point)主要作用就是允许两个网络(通常是两个同层网络)直接相连并交换分组，而不需要再通过第三个网络来转发分组。如今的互联网是一种多层次的 ISP 结构。较低层的 ISP 与较高层的 ISP 相连，较高层的 ISP 彼此互联。用户和内容提供商是较低层 ISP 的客户，较低层 ISP 是叫高层 ISP 的客户。如下图所示：<br><img src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/loading.gif" alt="" data-original="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/post_img/ISP.png"></p><h2 id="网络边缘部分"><a href="#网络边缘部分" class="headerlink" title="网络边缘部分"></a>网络边缘部分</h2><p>网络边缘部分由所有连接在互联网上的主机组成。主机又称为端系统，在网络边缘的端系统之间的通信方式通常可划分为两大类：客户-服务器方式(C/S 方式，Client/Server)和对等方式(P2P 方式，Peer-to-Peer)。</p><ul><li>C/S 方式：客户是服务请求方，服务器是服务提供方。</li><li>P2P 方式：本质上与 C/S 方式差不多，只是对等连接中的每一台主机既是客户又同时是服务器。</li></ul><h2 id="网络核心部分"><a href="#网络核心部分" class="headerlink" title="网络核心部分"></a>网络核心部分</h2><p>网络核心部分由大量网络和连接这些网络的路由器组成，通过使用路由器转发收到的分组为边缘部分提供连通性服务。转发数据的方法有两种分别为电路交换和分组交换。</p><ul><li>电路交换：用一个交换机连接许多部电话并通过交换机使用交换方法(按照某种方式动态地分配传输线路的资源)，让通话双方始终占用端到端的通信资源直至挂断。当将电路交换应用于传输计算机数据时，其线路的传输效率往往很低，因为用户不用一直占用资源。简单说电路交换需要先建立连接再传输报文，适用于连续传送大量的数据。</li><li>分组交换：主要用处为转发收到的分组，通常由路由器实现。分组交换采用存储转发技术，将一个报文(需要发送的整块数据)划分为几个分组(等长数据段加上由控制信息组成的首部，若分组称为包，则首部称为包头)后再进行传送。路由器在接收到分组时会先存储分组，检查其首部获得该分组目的地址并在查找转发表后从合适的接口转发出去交给下一个路由器。简单说分组交换不需要建立连接，直接传输分组，因此时延小，灵活性很好。</li></ul><h2 id="网络性能"><a href="#网络性能" class="headerlink" title="网络性能"></a>网络性能</h2><ul><li>速率(理论速度)：指的是数据的传送速率，常称为数据率或比特率，其单位为 bit/s 或 bps。</li><li>带宽(最高速度)：表示在单位时间内网络中的某信道所能通过的”最高数据率”，其单位为 bit/s。</li><li>吞吐量(实际传输量)：表示在单位时间内通过某个网络的实际的数据量。</li><li>时延(实际传输耗时)：指数据从网络的一端传送到另一端所需的时间。总时延=发送时延+传播时延+处理时延+排队时延。<ul><li>发送时延：主机或路由器发送数据帧所需要的时间。发送时延=数据帧长度/发送速率。</li><li>传播时延：电磁波在信道中传播一定的距离需要花费的时间。传播时延=信道长度/电磁波在信道上的传播速率。</li><li>处理时延：主机或路由器在收到分组时需要花费一定的时间进行处理。</li><li>排队时延：分组在经过网络传输时，进入路由器需要在输入队列中排队等待处理，处理完成后还要再输出队列中排队等待转发。</li></ul></li><li>时延带宽积：带宽可以看成一条路的宽度，而传播时延可以堪称长度，因此时延带宽积可以表示这段链路可容纳多少个比特。时延带宽积=传播时延*带宽。</li><li>往返时间：RTT(Round-Trip Time)=发送时间+返回时间，发送时间=数据长度/发送速率。应用场景当 A 向 B 发送数据后，B 向 A 发送确认，A 才会继续发送数据。</li><li>利用率：分信道利用率和网络利用率。信道利用率指某信道有百分之几的时间是被利用的(有数据通过的)，而网络利用率则是全网络的信道利用率的加权平均值，网络当前时延=网络空闲时延/(1-利用率)。</li></ul><h2 id="计算机网络体系结构"><a href="#计算机网络体系结构" class="headerlink" title="计算机网络体系结构"></a>计算机网络体系结构</h2><p>各体系比对：</p><ul><li>OSI 体系结构复杂不实用。</li><li>TCP/IP 体系结构得到了广泛的应用，但是其网络接口层用于解决不同网络的互联问题，但实际没有什么具体的内容。</li><li>五层协议：对 OSI 和 TCP/IP 体系结构进行折中，能更好的体现计算机网络的原理。</li></ul><p><img src="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/medias/loading.gif" alt="" data-original="https://cdn.jsdelivr.net/gh/nana-hana/blog.source@latest/post_img/computerNetworkArchitecture.png"></p><p>体系结构的构造：</p><ol><li>为了进行通信，需要端到端连接，所以要先设计网。已知有电路交换和分组交换两种网，电路交换在现实生活中的场景是很久以前的拨号连接，需要通过电话线连接网络，一打电话就无法上网，一上网就无法打电话，非常的不适用，而且建立连接代价太高，所以抛弃。而分组交换又分为虚电路和数据报两种，虚电路的特点是实时性且实现复杂，互联网没有这个需求，所以使用数据报。此处可以使用物理电路传输数据报，因此需要一个可以将数据与物理信号相互转化的层，也就是物理层。</li><li>当连接的主机变多了，就不知道要发送数据给哪个主机了，而每个主机出场时有一个全球唯一的 MAC 地址，因此可以通过 MAC 地址来寻址发送数据，这就是物理链路层。</li><li>主机越来越多，通过 MAC 地址寻址已经变得很困难了，因为 MAC 地址分布无规律，无法通过 MAC 地址得知该主机所处的大概位置。因此出现了新的逻辑地址 IP，通过 IP 确认唯一的主机进行寻址。此时网络层就诞生了。</li><li>因为对数据连接的需求不同，有些人想要速度更快，不介意数据丢失，因此出现了 UDP，有些人不介意速度慢点，但是要求数据必须是可靠的，因此出现了 TCP，而且一台主机不可能就和一个服务器进行通信，为了实现并行通信，因此有了端口号，这就是运输层。</li><li>为了应对越来越多不同的需求，对这些常用需求进行封装，因此诞生了应用层。</li></ol><table><thead><tr><th>各层</th><th>作用</th></tr></thead><tbody><tr><td>物理层</td><td>在物理层上所传数据的单位是比特。</td></tr><tr><td>数据链路层</td><td>在两个相邻结点之间传送数据时，数据链路层将网络层交下来的 IP 数据报组装成帧，在两个相邻结点间的链路上传送帧。每一帧包括数据和必要的控制信息(同步信息、地址信息、差错控制等)。</td></tr><tr><td>网络层</td><td>负责为分组交换(分组在 TCP/IP 中常称为数据包)网上的不同主机提供通信服务(IP)。</td></tr><tr><td>运输层</td><td>负责向两台主机之间的通信提供通用的的数据传输服务(TCP 或 UDP)。</td></tr><tr><td>应用层</td><td>通过应用进程间的交互来完成特定网络应用。</td></tr></tbody></table><p>各层之间通过不同的协议(控制两个或多个通信实体进行通信的规则)进行通信。常见的协议：</p><ul><li>网络层协议：IP 协议、ICMP 协议、ARP 协议、RARP 协议。</li><li>传输层协议：TCP 协议、UDP 协议。</li><li>应用层协议：FTP 协议、Telnet 协议、SMTP 协议、HTTP 协议、RIP 协议、NFS 协议、DNS 协议、RSTP 协议。</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java I/O体系</title>
       <link href="/posts/9185735d/"/>
       <url>/posts/9185735d/</url>
