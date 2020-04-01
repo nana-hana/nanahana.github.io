@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-03-31T11:43:09.257Z</updated>
+  <updated>2020-04-01T12:09:21.419Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络之数据链路层</title>
+    <link href="https://blog.kuukokawaii.com/posts/c9d999de/"/>
+    <id>https://blog.kuukokawaii.com/posts/c9d999de/</id>
+    <published>2020-04-01T06:57:47.000Z</published>
+    <updated>2020-04-01T12:09:21.419Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;数据链路层提供的服务&quot;&gt;&lt;a href=&quot;#数据链路层提供的服务&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络之物理层</title>
+    <link href="https://blog.kuukokawaii.com/posts/18784b9d/"/>
+    <id>https://blog.kuukokawaii.com/posts/18784b9d/</id>
+    <published>2020-04-01T06:01:51.000Z</published>
+    <updated>2020-04-01T06:48:46.982Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;信号&quot;&gt;&lt;a href=&quot;#信号&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络概述</title>
@@ -498,60 +552,6 @@
         
         
           &lt;h2 id=&quot;迭代器模式&quot;&gt;&lt;a href=&quot;#迭代器模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之模板方法模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/6948162f/"/>
-    <id>https://blog.kuukokawaii.com/posts/6948162f/</id>
-    <published>2020-03-14T05:07:55.000Z</published>
-    <updated>2020-03-18T08:21:20.675Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;模板方法模式&quot;&gt;&lt;a href=&quot;#模板方法模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之适配器模式与外观模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/aa979c82/"/>
-    <id>https://blog.kuukokawaii.com/posts/aa979c82/</id>
-    <published>2020-03-13T06:12:37.000Z</published>
-    <updated>2020-03-17T17:08:33.142Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;适配器模式&quot;&gt;&lt;a href=&quot;#适配器模式&quot; class=&quot;headerlink&quot;
         
       
     

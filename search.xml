@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>计算机网络之数据链路层</title>
+      <link href="/posts/c9d999de/"/>
+      <url>/posts/c9d999de/</url>
+      
+        <content type="html"><![CDATA[<h2 id="数据链路层提供的服务"><a href="#数据链路层提供的服务" class="headerlink" title="数据链路层提供的服务"></a>数据链路层提供的服务</h2><p>数据链路层把网络层交付下来的数据构成帧发送到链路上，以及把接收到的帧中的数据取出并上交给网络层。数据链路层的传输单元为帧。因此链路层协议能够提供的服务包括：</p><ul><li>封装成帧：将网络层交付下来的数据根据链路层协议封装成相应的帧进行传输。</li><li>链路接入：媒体访问控制(Medium Access Control，MAC)协议规定帧在链路上的传输规则。</li><li>可靠交付：当链路层协议提供可靠交付时，它保证无差错地经链路层移动每个网络层数据报。如果是尽最大努力交付，当发现数据错误时不进行重发只是丢弃差错数据，可靠性由上层判断。高差错率链路提供可靠交付，否则只是检测差错进行尽最大努力交付。</li><li>差错检测：当传输的数据出现了差错时，可以通过差错检测出来。常见的差错检测有循环冗余检测(CRC 检验，对数据比特进行模2运算获得的余数加在数据尾作为校验码)和奇偶校验(通过一个附加比特记录1或0，使得数据加附加比特中1的总数为偶数个)。</li></ul><h2 id="链路层信道"><a href="#链路层信道" class="headerlink" title="链路层信道"></a>链路层信道</h2><p>链路层使用的信道有两大类：点对点信道和广播信道。</p><ul><li>点对点信道：一对一通信，不会发生碰撞，常用 PPP 协议进行控制。</li><li>广播信道：一对多通信，一个节点发送的数据能够被广播信道上所有的节点接收到，容易发生碰撞，需要使用多路访问协议进行协调。</li></ul><h2 id="链路层协议"><a href="#链路层协议" class="headerlink" title="链路层协议"></a>链路层协议</h2><h3 id="点对点协议"><a href="#点对点协议" class="headerlink" title="点对点协议"></a>点对点协议</h3><p>互联网用户通常需要连接到某个 ISP 之后才能接入到互联网，点对点协议(Point-to-Point Protocol，PPP)是用户计算机和 ISP 进行通信时所使用的数据链路层协议。PPP 协议是尽最大努力交付的协议，还有一种高级数据链路控制(high-level data link control，HDLC)协议是可靠交付的协议，但是因为如今链路差错率较低，所以几乎不使用。</p><h3 id="多路访问协议"><a href="#多路访问协议" class="headerlink" title="多路访问协议"></a>多路访问协议</h3><p>多路访问协议通常分为三类：信道划分协议、随机接入协议和轮流协议。</p><ul><li>信道划分协议：通过信道进行划分通常使用时分多路复用或频分多路复用在所有共享信道结点之间划分广播信道带宽。</li><li>随机接入协议：一个传输结点总是以信道的全部速率进行发送，当发生碰撞时，碰撞的结点反复的重发它的帧直至无碰撞为止，通常使用 CSMA 协议。</li><li>轮流协议：常用的有轮询协议和令牌传递协议，轮询协议是主结点以循环的方式轮询每个结点，而令牌传递协议用一个称为令牌的小的特殊帧在结点之间以某种固定的次序进行交换，获得令牌的可以发送数据，如果没有数据要发送，则赶紧将令牌传递给下一个结点。</li></ul><p>载波监听多点接入/碰撞检测(Carrier Sense Multiple Access with Collision Detection，CSMA/CD)协议：</p><ul><li>多点接入：说明是总线型网络，计算机以多点接入的方式连接在一根总线上。</li><li>载波监听：不断检测信道，如果信道一直被使用则只能等待，否则进行数据发送。</li><li>碰撞检测：在发送中，如果监听到信道已有其它主机正在发送数据，就表示发生了碰撞。此时发生碰撞的主机等待一个随机时间重新发送帧。</li></ul><h2 id="链路层寻址和-ARP"><a href="#链路层寻址和-ARP" class="headerlink" title="链路层寻址和 ARP"></a>链路层寻址和 ARP</h2><ul><li>MAC 地址：又称为硬件地址或物理地址，长度为48位全球地址，用于唯一标识网络适配器，存在于适配器的 ROM 中。</li><li>ARP(地址解析协议)：通过 ARP 表进行 IP 地址和 MAC 地址之间的转化，表中 IP 地址和 MAC 地址有一一映射的关系，并且有一个 TTL 值记载其寿命，寿命一到就会删除映射。</li><li>MAC帧：包含目的地址、源地址、类型(上一层使用的协议类型)、数据和 FCS 帧检验序列(使用 CRC 检验)。</li></ul><h2 id="局域网和以太网"><a href="#局域网和以太网" class="headerlink" title="局域网和以太网"></a>局域网和以太网</h2><ul><li>局域网是一种典型的广播信道，主要特点是网络为一个单位所拥有，且地理范围和站点数目均有限，以太网是一种星型拓扑结构局域网，目前以太网占领着有线局域网市场。</li><li>集线器：以太网早期使用集线器进行连接，集线器是一种物理层设备，当一个比特到达接口时，集线器重新生成这个比特，并将其能量强度放大，从而扩大网络的传输距离。如果集线器同时收到两个不同接口的帧，那么就发生了碰撞。</li><li>网桥(代替集线器)：网桥对收到的帧根据其 MAC 帧的目的地址进行转发和过滤。接收到帧时，根据帧的目的 MAC 地址，查找网桥中的地址表，然后从合适的发送接口发送，但是接收到两个不同接口的帧还是会发生碰撞。</li><li>交换机(代替网桥)：交换机相当于多接口的网桥，是一种即插即用设备，其内部的地址表是通过自学习算法自动地逐渐建立起来的。当地址表中没有目的地址时候会发送广播，否则进行单播。</li><li>虚拟局域网(VLAN，Virtual LAN)：虚拟局域网可以建立与物理位置无关的逻辑组，只有在同一个虚拟局域网中的成员才会收到链路层广播信息。</li></ul><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>计算机网络之物理层</title>
+      <link href="/posts/18784b9d/"/>
+      <url>/posts/18784b9d/</url>
+      
+        <content type="html"><![CDATA[<h2 id="信号"><a href="#信号" class="headerlink" title="信号"></a>信号</h2><p>模拟信号(连续信号)：即消息的参数的取值是连续的，如调制解调器到电话网之间的信号。<br>数字信号(离散信号)：即消息的参数的取值是离散的，如计算机到调制解调器之间的信号。</p><h2 id="通信方式"><a href="#通信方式" class="headerlink" title="通信方式"></a>通信方式</h2><p>单向通信(单工通信)：只能单向通信。<br>双向交替通信(半双工通信)：双方不能同时发送和接收消息。<br>双向同时通信(全双工通信)：双方可以同时发送和接收消息。</p><h2 id="调制"><a href="#调制" class="headerlink" title="调制"></a>调制</h2><p>基带调制：对基带信号(来自信源的信号)进行调制，将数字信号1或0直接用两种不同的电压来表示，然后送到线路上去传输，该过程常被称为编码。<br>带通调制：是将基带信号进行调制后形成的频分复用模拟信号。</p><h2 id="信道复用技术"><a href="#信道复用技术" class="headerlink" title="信道复用技术"></a>信道复用技术</h2><table><thead><tr><th>技术</th><th>作用</th></tr></thead><tbody><tr><td>频分复用(FDM，Frequency Division Multiplexing)</td><td>用户在相同时间内占用不同的频带宽度。</td></tr><tr><td>时分复用(TDM，Time Division Multiplexing)</td><td>用户在不同的时间内占用同样的频带宽度。</td></tr><tr><td>统计时分复用(STDM，Statistic TDM)</td><td>与时分复用类似，但是使用集中器作为输入缓存，当集中器存满了1帧(不是数据链路层的帧)数据就会真正的发送出去。</td></tr><tr><td>波分复用(WDM，Wavelength Division Multiplexing)</td><td>相当于光的频分复用，例如应用于光纤技术。</td></tr><tr><td>码分复用(CDM，Code Division Multiplexing)</td><td>用户可以在同样的时间使用同样的频带进行通信。因为每个用户使用经过特殊挑选的不同码型，所以不会互相干扰。</td></tr></tbody></table><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      <categories>
+          
+          <category> 计算机网络 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 计算机网络 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>计算机网络概述</title>
       <link href="/posts/7c4ca347/"/>
       <url>/posts/7c4ca347/</url>
