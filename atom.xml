@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-04-01T12:11:20.709Z</updated>
+  <updated>2020-04-03T13:02:49.775Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机网络之传输层</title>
+    <link href="https://blog.kuukokawaii.com/posts/9120eb8f/"/>
+    <id>https://blog.kuukokawaii.com/posts/9120eb8f/</id>
+    <published>2020-04-03T07:10:06.000Z</published>
+    <updated>2020-04-03T13:02:49.775Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;两台主机进行通信就是两台主机中的应用进程互相通信，IP 协议只是将分组送到了目的主机，还需要传输层将分组搬运到适应的目标进程中。也就是说网络层提供主机之间的逻辑通信，而运输层提供应用进程间的逻辑通信。&lt;/p&gt;
+&lt;h2 id=&quot;UDP&quot;&gt;&lt;a href=&quot;#UDP&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机网络之网络层</title>
+    <link href="https://blog.kuukokawaii.com/posts/bc654c1/"/>
+    <id>https://blog.kuukokawaii.com/posts/bc654c1/</id>
+    <published>2020-04-01T12:14:55.000Z</published>
+    <updated>2020-04-03T07:16:27.196Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务。在网络层提供连接服务的计算机网络称为虚电路网络，在网络层提供无连接服务的计算机网络称为数据报网络。&lt;/p&gt;
+&lt;h2 id=&quot;网际协议-IP&quot;&gt;&lt;a href=&quot;#网际协议-IP&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机网络之数据链路层</title>
     <link href="https://blog.kuukokawaii.com/posts/c9d999de/"/>
     <id>https://blog.kuukokawaii.com/posts/c9d999de/</id>
     <published>2020-04-01T06:57:47.000Z</published>
-    <updated>2020-04-01T12:11:20.709Z</updated>
+    <updated>2020-04-03T03:22:04.434Z</updated>
     
     <summary type="html">
     
@@ -498,60 +554,6 @@
         
         
           &lt;h2 id=&quot;代理模式&quot;&gt;&lt;a href=&quot;#代理模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之状态模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/61e067b6/"/>
-    <id>https://blog.kuukokawaii.com/posts/61e067b6/</id>
-    <published>2020-03-16T01:38:00.000Z</published>
-    <updated>2020-03-18T08:20:20.594Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;状态模式&quot;&gt;&lt;a href=&quot;#状态模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之迭代器模式与组合模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/f8e48b7d/"/>
-    <id>https://blog.kuukokawaii.com/posts/f8e48b7d/</id>
-    <published>2020-03-15T02:16:31.000Z</published>
-    <updated>2020-03-18T08:17:17.785Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;迭代器模式&quot;&gt;&lt;a href=&quot;#迭代器模式&quot; class=&quot;headerlink&quot;
         
       
     
