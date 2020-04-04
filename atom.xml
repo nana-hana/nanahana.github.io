@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-04-03T13:02:49.775Z</updated>
+  <updated>2020-04-04T05:27:12.756Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机网络之应用层</title>
+    <link href="https://blog.kuukokawaii.com/posts/41158dda/"/>
+    <id>https://blog.kuukokawaii.com/posts/41158dda/</id>
+    <published>2020-04-04T01:53:37.000Z</published>
+    <updated>2020-04-04T05:27:12.756Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;不同的网络应用的应用进程之间需要不同的通信规则，因此需要使用应用层协议。&lt;/p&gt;
+&lt;h2 id=&quot;域名系统-DNS&quot;&gt;&lt;a href=&quot;#域名系统-DNS&quot; class=&quot;headerlink&quot; title=&quot;域名系统 DNS&quot;&gt;&lt;/a&gt;域名系统
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络之传输层</title>
@@ -527,33 +555,6 @@
         
         
           &lt;h2 id=&quot;复合模式&quot;&gt;&lt;a href=&quot;#复合模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之代理模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/907a70d0/"/>
-    <id>https://blog.kuukokawaii.com/posts/907a70d0/</id>
-    <published>2020-03-17T01:49:06.000Z</published>
-    <updated>2020-03-18T08:19:14.547Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;代理模式&quot;&gt;&lt;a href=&quot;#代理模式&quot; class=&quot;headerlink&quot;
         
       
     
