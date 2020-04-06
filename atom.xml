@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-04-04T05:27:12.756Z</updated>
+  <updated>2020-04-06T04:46:06.653Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP 协议</title>
+    <link href="https://blog.kuukokawaii.com/posts/1e0873bb/"/>
+    <id>https://blog.kuukokawaii.com/posts/1e0873bb/</id>
+    <published>2020-04-05T02:00:23.000Z</published>
+    <updated>2020-04-06T04:46:06.653Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;URI-和-URL&quot;&gt;&lt;a href=&quot;#URI-和-URL&quot; class=&quot;headerlink&quot; title=&quot;URI 和 URL&quot;&gt;&lt;/a&gt;URI 和 URL&lt;/h2&gt;&lt;p&gt;URI 是包含具体路径(不一定含文件)，URL
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="计算机网络" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>计算机网络之应用层</title>
@@ -49,7 +76,7 @@
     <link href="https://blog.kuukokawaii.com/posts/9120eb8f/"/>
     <id>https://blog.kuukokawaii.com/posts/9120eb8f/</id>
     <published>2020-04-03T07:10:06.000Z</published>
-    <updated>2020-04-03T13:02:49.775Z</updated>
+    <updated>2020-04-05T02:31:52.978Z</updated>
     
     <summary type="html">
     
@@ -538,33 +565,6 @@
     
     
       <category term="数据结构" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>设计模式之复合模式</title>
-    <link href="https://blog.kuukokawaii.com/posts/198c6c0a/"/>
-    <id>https://blog.kuukokawaii.com/posts/198c6c0a/</id>
-    <published>2020-03-18T02:42:34.000Z</published>
-    <updated>2020-03-18T07:48:06.052Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;复合模式&quot;&gt;&lt;a href=&quot;#复合模式&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
-    
-    
-      <category term="设计模式" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
   </entry>
   
