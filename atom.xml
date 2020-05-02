@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://blog.kuukokawaii.com/"/>
-  <updated>2020-04-06T04:46:06.653Z</updated>
+  <updated>2020-05-02T08:38:24.197Z</updated>
   <id>https://blog.kuukokawaii.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机操作系统</title>
+    <link href="https://blog.kuukokawaii.com/posts/f55dd124/"/>
+    <id>https://blog.kuukokawaii.com/posts/f55dd124/</id>
+    <published>2020-04-06T05:00:17.000Z</published>
+    <updated>2020-05-02T08:38:24.197Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;功能&quot;&gt;&lt;a href=&quot;#功能&quot; class=&quot;headerlink&quot; title=&quot;功能&quot;&gt;&lt;/a&gt;功能&lt;/h2&gt;&lt;h3 id=&quot;并发与并行&quot;&gt;&lt;a href=&quot;#并发与并行&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="计算机操作系统" scheme="https://blog.kuukokawaii.com/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+    
+      <category term="计算机操作系统" scheme="https://blog.kuukokawaii.com/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>HTTP 协议</title>
@@ -528,33 +555,6 @@
         
         
           &lt;h2 id=&quot;线性表特点&quot;&gt;&lt;a href=&quot;#线性表特点&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="数据结构" scheme="https://blog.kuukokawaii.com/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-    
-      <category term="数据结构" scheme="https://blog.kuukokawaii.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构简介</title>
-    <link href="https://blog.kuukokawaii.com/posts/b8928e0e/"/>
-    <id>https://blog.kuukokawaii.com/posts/b8928e0e/</id>
-    <published>2020-03-19T11:14:55.000Z</published>
-    <updated>2020-03-24T08:28:25.106Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;基本概念及术语&quot;&gt;&lt;a href=&quot;#基本概念及术语&quot; class=&quot;headerlink&quot;
         
       
     
