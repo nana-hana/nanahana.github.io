@@ -435,11 +435,11 @@
   </entry>
   
   <entry>
-    <title>Java I/O体系</title>
+    <title>Java I/O 体系</title>
     <link href="https://blog.kuukokawaii.com/posts/9185735d/"/>
     <id>https://blog.kuukokawaii.com/posts/9185735d/</id>
     <published>2020-03-30T05:32:21.000Z</published>
-    <updated>2020-11-02T06:31:29.241Z</updated>
+    <updated>2020-11-02T11:52:37.375Z</updated>
     
     <summary type="html">
     
@@ -447,12 +447,12 @@
       
         
         
-          &lt;p&gt;Java I/O 流大致可以分成如下五类：&lt;/p&gt;
+          &lt;p&gt;Java I/O 流大致可以分成如下五类:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;对象操作：Serializable&lt;/li&gt;
-&lt;li&gt;磁盘操作：File&lt;/li&gt;
-&lt;li&gt;字节操作：InputStream 和 OutputStream&lt;/li&gt;
-&lt;li&gt;字符操作：Reader 和
+&lt;li&gt;对象操作: Serializable&lt;/li&gt;
+&lt;li&gt;磁盘操作: File&lt;/li&gt;
+&lt;li&gt;字节操作: InputStream 和 OutputStream&lt;/li&gt;
+&lt;li&gt;字符操作:
         
       
     
@@ -471,7 +471,7 @@
     <link href="https://blog.kuukokawaii.com/posts/f431e3b/"/>
     <id>https://blog.kuukokawaii.com/posts/f431e3b/</id>
     <published>2020-03-30T02:22:38.000Z</published>
-    <updated>2020-11-02T06:31:05.840Z</updated>
+    <updated>2020-11-02T11:29:41.724Z</updated>
     
     <summary type="html">
     
@@ -498,7 +498,7 @@
     <link href="https://blog.kuukokawaii.com/posts/a019e08c/"/>
     <id>https://blog.kuukokawaii.com/posts/a019e08c/</id>
     <published>2020-03-29T02:37:16.000Z</published>
-    <updated>2020-11-02T09:22:52.096Z</updated>
+    <updated>2020-11-02T11:04:26.996Z</updated>
     
     <summary type="html">
     
