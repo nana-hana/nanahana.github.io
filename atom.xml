@@ -73,11 +73,11 @@
   </entry>
   
   <entry>
-    <title>coding 部署前后端分离项目</title>
+    <title>CODING 部署前后端分离项目</title>
     <link href="https://blog.kuukokawaii.com/posts/c42f8baa/"/>
     <id>https://blog.kuukokawaii.com/posts/c42f8baa/</id>
     <published>2020-08-13T03:47:56.000Z</published>
-    <updated>2020-08-13T13:47:43.035Z</updated>
+    <updated>2020-11-02T13:26:26.402Z</updated>
     
     <summary type="html">
     
@@ -86,7 +86,7 @@
         
         
           &lt;h2 id=&quot;后端代码部署&quot;&gt;&lt;a href=&quot;#后端代码部署&quot; class=&quot;headerlink&quot; title=&quot;后端代码部署&quot;&gt;&lt;/a&gt;后端代码部署&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;coding 部署 SpringBoot
+&lt;li&gt;&lt;p&gt;CODING 部署 Spring Boot
         
       
     
@@ -96,13 +96,13 @@
       <category term="部署" scheme="https://blog.kuukokawaii.com/categories/%E9%83%A8%E7%BD%B2/"/>
     
     
-      <category term="coding" scheme="https://blog.kuukokawaii.com/tags/coding/"/>
+      <category term="CODING" scheme="https://blog.kuukokawaii.com/tags/CODING/"/>
     
-      <category term="docker" scheme="https://blog.kuukokawaii.com/tags/docker/"/>
+      <category term="Docker" scheme="https://blog.kuukokawaii.com/tags/Docker/"/>
     
-      <category term="jenkins" scheme="https://blog.kuukokawaii.com/tags/jenkins/"/>
+      <category term="Jenkins" scheme="https://blog.kuukokawaii.com/tags/Jenkins/"/>
     
-      <category term="nginx" scheme="https://blog.kuukokawaii.com/tags/nginx/"/>
+      <category term="Nginx" scheme="https://blog.kuukokawaii.com/tags/Nginx/"/>
     
   </entry>
   
